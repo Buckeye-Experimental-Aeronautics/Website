@@ -38,8 +38,8 @@ export default function TeamsPage() {
         alt="A member working through vehicle documentation and control system mapping across two monitors"
         eyebrow="How The Work Happens"
         caption="Component research, wiring definitions, and control mapping before anything gets built."
-        heightClass="md:h-[440px]"
-        focus="center 38%"
+        heightClass="md:h-[620px]"
+        focus="center 55%"
         width={1600}
         height={1067}
       />

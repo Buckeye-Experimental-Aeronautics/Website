@@ -33,6 +33,9 @@ export interface PrototypeDetail extends Prototype {
   objective: string;
   milestones: string[];
   teamsInvolved: string[];
+  /** Photo for the card's side slot; a placeholder box shows without one */
+  image?: string;
+  imageAlt?: string;
 }
 
 export interface ValueProp {

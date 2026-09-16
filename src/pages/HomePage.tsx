@@ -17,17 +17,16 @@ export default function HomePage() {
     <>
       <HeroSection />
       <JetStreak />
-      <PillarsSection />
-      <WorkPhilosophySection />
       <PhotoBand
         src={teamGroupPhoto}
         alt="BExA members with the EDF test bed aircraft"
-        eyebrow="The Team"
-        caption="Members from every sub-team with V01, our electric ducted fan test bed."
+        caption="THE TEAM - AU26"
         focus="center 45%"
         width={2000}
         height={1019}
       />
+      <PillarsSection />
+      <WorkPhilosophySection />
       <JetStreak direction="rtl" />
       <TeamsPreviewSection />
       <JetStreak />

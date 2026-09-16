@@ -71,13 +71,21 @@ export default function EffortDetailCard({ effort }: EffortDetailCardProps) {
           </div>
         </div>
 
-        {/* Right: Image placeholder */}
+        {/* Right: photo, or a placeholder box until there is one */}
         <div className="md:w-64 shrink-0">
-          <div className="w-full h-40 md:h-full rounded-lg bg-border/30 border border-border/50 flex items-center justify-center">
-            <span className="text-xs text-muted">
-              [Photo TBD]
-            </span>
-          </div>
+          {effort.image ? (
+            <img
+              src={effort.image}
+              alt={effort.imageAlt ?? effort.title}
+              loading="lazy"
+              decoding="async"
+              className="w-full h-48 md:h-full md:min-h-[200px] object-cover rounded-lg border border-white/[0.06]"
+            />
+          ) : (
+            <div className="w-full h-40 md:h-full rounded-lg bg-border/30 border border-border/50 flex items-center justify-center">
+              <span className="text-xs text-muted">[Photo TBD]</span>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -53,14 +53,17 @@ export default function PhotoBand({
         style={{ objectPosition: focus }}
       />
 
-      {/* Feather the page background into the photo edges */}
+      {/* Light feather so the photo meets the page background without a hard
+          seam. The bottom is deeper only because the caption sits on it. */}
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-bg to-transparent pointer-events-none"
+        className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-bg to-transparent pointer-events-none"
       />
       <div
         aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-bg via-bg/70 to-transparent pointer-events-none"
+        className={`absolute inset-x-0 bottom-0 bg-gradient-to-t from-bg to-transparent pointer-events-none ${
+          caption ? "h-20 via-bg/55" : "h-10"
+        }`}
       />
 
       {caption && (

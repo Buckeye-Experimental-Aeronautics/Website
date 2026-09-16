@@ -350,6 +350,8 @@ export const PROTOTYPES_DETAIL: PrototypeDetail[] = [
       "Avionics",
       "Flight Test",
     ],
+    image: v01Assembly,
+    imageAlt: "Airframe assembly on the V01 EDF test bed",
   },
   {
     title: "Prototype 2: Jet Engine",
