@@ -28,7 +28,11 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://flybexa.com/projects/supersonic-rc-aircraft</loc>
+    <loc>https://flybexa.com/projects/jetcat-characterization</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flybexa.com/projects/custom-jet-aircraft</loc>
     <priority>0.7</priority>
   </url>
 </urlset>

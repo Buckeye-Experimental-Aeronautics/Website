@@ -135,26 +135,42 @@ export default function ProjectPage() {
             </motion.figure>
           )}
 
-          {/* More photos as testing progresses */}
+          {/* Supporting photos, or placeholder slots until there are any */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
             className={`grid gap-4 mb-12 ${
-              project.image ? "grid-cols-2" : "grid-cols-2 sm:grid-cols-3"
+              project.gallery?.length
+                ? "grid-cols-1 sm:grid-cols-2"
+                : project.image
+                  ? "grid-cols-2"
+                  : "grid-cols-2 sm:grid-cols-3"
             }`}
           >
-            {(project.image ? [0, 1] : [0, 1, 2]).map((i) => (
-              <div
-                key={i}
-                className="aspect-video rounded-lg bg-border/30 border border-border/50 flex items-center justify-center"
-              >
-                <span className="text-xs text-muted">
-                  {project.image ? "[More photos TBD]" : "[Photo TBD]"}
-                </span>
-              </div>
-            ))}
+            {project.gallery?.length
+              ? project.gallery.map((photo) => (
+                  <figure key={photo.src} className="m-0">
+                    <img
+                      src={photo.src}
+                      alt={photo.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-64 sm:h-72 object-cover rounded-lg border border-white/[0.06]"
+                    />
+                  </figure>
+                ))
+              : (project.image ? [0, 1] : [0, 1, 2]).map((i) => (
+                  <div
+                    key={i}
+                    className="aspect-video rounded-lg bg-border/30 border border-border/50 flex items-center justify-center"
+                  >
+                    <span className="text-xs text-muted">
+                      {project.image ? "[More photos TBD]" : "[Photo TBD]"}
+                    </span>
+                  </div>
+                ))}
           </motion.div>
 
           <div className="text-center">

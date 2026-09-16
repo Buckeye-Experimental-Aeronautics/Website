@@ -75,6 +75,9 @@ export interface ProjectItem {
   blurb: string;
   /** Longer copy for the project page; falls back to a generic notice */
   description?: string;
+  /** Lead image shown full width under the write-up */
   image?: string;
   imageAlt?: string;
+  /** Supporting photos below the lead image; placeholder boxes show if empty */
+  gallery?: { src: string; alt: string }[];
 }

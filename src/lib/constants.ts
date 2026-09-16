@@ -13,6 +13,8 @@ import type {
 } from "./types";
 import edfTestBedPhoto from "@/assets/edf-test-bed.jpg";
 import supersonicTeaser from "@/assets/supersonic-teaser.jpg";
+import v01Assembly from "@/assets/v01-assembly.jpg";
+import v01FanInstall from "@/assets/v01-fan-install.jpg";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
@@ -76,28 +78,35 @@ export const PROJECTS: ProjectItem[] = [
     slug: "edf-test-bed",
     status: "In Development",
     blurb:
-      "Our proof-of-concept flight platform, instrumented to capture thrust, RPM, efficiency, and flight data from static and airborne testing.",
+      "An electric ducted fan aircraft flown in two configurations, first on a complete flight definition and then on control and data systems we build ourselves.",
     description:
-      "The EDF Test Bed is our proof of concept: put an aircraft in the air and bring real data back down. Built around an electric ducted fan, the platform is instrumented to characterize thrust, RPM, efficiency, and flight performance through both static ground runs and flight testing. Just as importantly, it is the foundation of our avionics, sensing, and RC flight operations. Every system and process we prove here carries forward to the faster, more complex airframes that come next.",
+      "The EDF Test Bed is our first flying platform and the foundation for everything after it. V01 flies the aircraft under a complete flight definition, which establishes our flight operations, safety procedures, and a baseline set of performance data. V02 flies the same airframe using data collection and control methods developed in house, replacing the stock systems with our own avionics and instrumentation. Proving both stages on a recoverable, low risk platform is what makes the turbine powered aircraft that follow possible.",
     image: edfTestBedPhoto,
     imageAlt: "BExA EDF test bed aircraft",
+    gallery: [
+      { src: v01Assembly, alt: "Airframe assembly on the V01 EDF test bed" },
+      { src: v01FanInstall, alt: "Installing the ducted fan unit into the V01 airframe" },
+    ],
   },
   {
-    name: "Supersonic RC Aircraft",
-    slug: "supersonic-rc-aircraft",
+    name: "JetCat Hot Fire and Characterization",
+    slug: "jetcat-characterization",
     status: "In Planning",
     blurb:
-      "A sub-25 kg remotely piloted aircraft designed to go supersonic: takeoff, sustained flight, and total recovery.",
+      "Ground testing a JetCat turbine to characterize thrust, fuel flow, and thermal behavior before it is integrated into an airframe.",
     description:
-      "Our boldest effort yet: a supersonic, sub-25 kg remotely piloted aircraft. The mission is simple to state and enormously hard to do: take off, sustain supersonic flight, and recover the vehicle intact, all under remote control. Concept work is underway now; airframe design, propulsion selection, and test milestones are still ahead. More to come.",
-    image: supersonicTeaser,
-    imageAlt: "Supersonic RC aircraft, coming soon teaser",
+      "Before a turbine goes into an aircraft, we need measured data on how it actually behaves. This project runs a JetCat engine through hot fire testing on an instrumented stand, recording thrust, fuel consumption, exhaust gas temperature, and spool response across the operating range. The scope covers test stand design, instrumentation and data acquisition, and the operating procedures that jet fuel and high temperature exhaust require. The resulting performance envelope is what our first turbine powered airframe gets designed around.",
   },
   {
-    name: "Project 3: TBD",
-    slug: "project-3",
+    name: "Custom Jet Powered Aircraft",
+    slug: "custom-jet-aircraft",
     status: "Planned",
-    blurb: "Project details coming soon as this effort develops.",
+    blurb:
+      "A jet powered aircraft designed and manufactured entirely in house, targeting flight by May 2027.",
+    description:
+      "Our first aircraft built from our own design rather than adapted from an existing airframe. Structure, propulsion integration, avionics, and control systems are all designed, manufactured, and tested by the team. The target is a flying jet powered vehicle by May 2027. It depends on the flight operations proven on the EDF test bed and the engine data produced by turbine characterization, which is why those two projects come first.",
+    image: supersonicTeaser,
+    imageAlt: "Custom jet powered aircraft, in development",
   },
 ];
 
