@@ -12,10 +12,9 @@ export default function HeroSection() {
       <div className="max-w-6xl mx-auto px-4 py-14 md:py-20">
         <div className="grid md:grid-cols-[1fr_auto] gap-10 md:gap-14 items-center">
           <div className="max-w-xl">
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-[2.75rem] font-bold leading-[1.1] tracking-tight">
-              We build engineers.
-              <br />
-              Aircraft are how.
+            <h1 className="font-heading text-[1.6rem] sm:text-3xl md:text-[2.1rem] font-bold leading-[1.15] tracking-tight text-balance">
+              Building the next generation of Buckeye engineers while chasing
+              advanced aviation records.
             </h1>
 
             <p className="mt-5 text-sm sm:text-base leading-relaxed text-white/80 max-w-md">

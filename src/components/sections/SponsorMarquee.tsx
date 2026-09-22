@@ -21,8 +21,9 @@ export default function SponsorMarquee() {
           <img
             src={s.logo}
             alt={s.name}
-            height={28}
-            className="h-6 md:h-7 w-auto object-contain opacity-70"
+            className={`w-auto object-contain opacity-80 ${
+              s.stacked ? "h-12 md:h-14" : "h-6 md:h-7"
+            }`}
           />
         ) : (
           <span className="font-heading text-sm md:text-base font-semibold tracking-tight text-paper-ink/70 whitespace-nowrap">

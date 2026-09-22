@@ -19,6 +19,7 @@ import tiLogo from "@/assets/sponsors/ti.png";
 import cocaColaLogo from "@/assets/sponsors/coca-cola.png";
 import corvacLogo from "@/assets/sponsors/corvac.svg";
 import andurilLogo from "@/assets/sponsors/anduril.png";
+import osuCarLogo from "@/assets/sponsors/osu-car.png";
 
 // Labels changed 2026-09-22 to match the redesign. The underlying routes are
 // deliberately unchanged so existing links and the sitemap keep working.
@@ -69,10 +70,17 @@ export const PROCESS_STEPS_DETAIL = [
 //
 // Marks were taken from each owner's canonical source: Wikimedia Commons for
 // Coca-Cola, Anduril and Texas Instruments, and corvaccomposites.com for
-// CORVAC. Ohio State's Center for Automotive Research publishes no standalone
-// mark, so it renders as type until CAR supplies one. Do not substitute the
-// College of Engineering lockup: that would name the wrong sponsor.
-export const SPONSORS: { name: string; logo?: string; url?: string }[] = [
+// CORVAC. CAR's stacked lockup was supplied by the team; its white background
+// is multiply-composited onto --color-paper, so it only sits correctly on that
+// band. Regenerate it if the band colour changes.
+// `stacked` marks a square/vertical lockup, which needs more height than a
+// horizontal wordmark to stay legible at marquee size.
+export const SPONSORS: {
+  name: string;
+  logo?: string;
+  url?: string;
+  stacked?: boolean;
+}[] = [
   { name: "Texas Instruments", logo: tiLogo, url: "https://www.ti.com" },
   { name: "Coca-Cola", logo: cocaColaLogo, url: "https://www.coca-cola.com" },
   {
@@ -83,7 +91,9 @@ export const SPONSORS: { name: string; logo?: string; url?: string }[] = [
   { name: "Anduril", logo: andurilLogo, url: "https://www.anduril.com" },
   {
     name: "Ohio State Center for Automotive Research",
+    logo: osuCarLogo,
     url: "https://car.osu.edu",
+    stacked: true,
   },
 ];
 
