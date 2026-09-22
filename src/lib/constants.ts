@@ -16,14 +16,58 @@ import supersonicTeaser from "@/assets/supersonic-teaser.jpg";
 import v01Assembly from "@/assets/v01-assembly.jpg";
 import v01FanInstall from "@/assets/v01-fan-install.jpg";
 
+// Labels changed 2026-09-22 to match the redesign. The underlying routes are
+// deliberately unchanged so existing links and the sitemap keep working.
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Teams", href: "/teams" },
-  { label: "Efforts", href: "/efforts" },
-  { label: "Join", href: "/join" },
-  { label: "Sponsor", href: "/sponsor" },
+  { label: "Program", href: "/efforts" },
+  { label: "Process", href: "/#process" },
+  { label: "Team", href: "/teams" },
+  { label: "Sponsors", href: "/sponsor" },
   // { label: "News", href: "/news", hidden: true },
   // { label: "Resources", href: "/resources", hidden: true },
+];
+
+// The flight program, shown as a timeline on the home page. Dates and scope
+// come from the project rescope; do not add phases that are not real.
+export const PROGRAM_PHASES = [
+  {
+    period: "Fall 2026",
+    status: "In progress" as const,
+    title: "EDF platform and turbine hot fire",
+  },
+  {
+    period: "Spring 2027",
+    status: "Planned" as const,
+    title: "25 to 100 kg airframe, 15 km record",
+  },
+  {
+    period: "2027",
+    status: "Planned" as const,
+    title: "World record attempt",
+  },
+  {
+    period: "2028",
+    status: "Planned" as const,
+    title: "Supersonic attempt",
+  },
+];
+
+// How the team works. Four steps, in order, so they are numbered.
+export const PROCESS_STEPS_DETAIL = [
+  { label: "Build", note: "Prototype early" },
+  { label: "Fly", note: "Test in the air" },
+  { label: "Validate", note: "Learn from the data" },
+  { label: "Repeat", note: "Improve the design" },
+];
+
+// Real sponsors only. An empty list renders nothing rather than placeholders.
+// `logo` is an imported image; without one the name renders as set type.
+export const SPONSORS: { name: string; logo?: string; url?: string }[] = [
+  { name: "Texas Instruments" },
+  { name: "Coca-Cola" },
+  { name: "CORVAC Composites" },
+  { name: "Anduril" },
+  { name: "The Ohio State University" },
 ];
 
 // Slide: "Work Philosophy": three cards + Research/Design/Test/Refine cycle
@@ -500,10 +544,27 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   },
 ];
 
+// NOTE: the three officer addresses were transcribed from the design mockup
+// image and have NOT been verified. Confirm each one before this ships.
 export const LEADERSHIP: LeadershipMember[] = [
-  { name: "Viktor Bakhurynskyy", title: "President", linkedin: "https://www.linkedin.com/in/vikibax/" },
-  { name: "Sam Patterson", title: "Technical Director", linkedin: "https://www.linkedin.com/in/sampatterson521/" },
-  { name: "Quinn Cohen", title: "Vice President", linkedin: "https://www.linkedin.com/in/quinnmcohen/" },
+  {
+    name: "Viktor Bakhurynskyy",
+    title: "President",
+    linkedin: "https://www.linkedin.com/in/vikibax/",
+    email: "bakhurynskyy.1@osu.edu",
+  },
+  {
+    name: "Sam Patterson",
+    title: "Technical Director",
+    linkedin: "https://www.linkedin.com/in/sampatterson521/",
+    email: "patterson.1368@osu.edu",
+  },
+  {
+    name: "Quinn Cohen",
+    title: "Vice President",
+    linkedin: "https://www.linkedin.com/in/quinnmcohen/",
+    email: "cohen.1344@osu.edu",
+  },
   { name: "Dr. Matthew H. McCrink", title: "Advisor" },
 ];
 

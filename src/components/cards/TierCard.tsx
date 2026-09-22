@@ -8,10 +8,10 @@ interface TierCardProps {
 export default function TierCard({ tier }: TierCardProps) {
   return (
     <div
-      className={`group relative h-full p-6 rounded-lg bg-[rgba(22,22,24,0.7)] backdrop-blur-[12px] glass-blur transition-all duration-300 hover:-translate-y-1 ${
+      className={`group relative h-full p-6 surface transition-all duration-300 hover:-translate-y-1 ${
         tier.highlight
-          ? "border border-primary/40 shadow-[0_0_20px_rgba(187,0,0,0.15)] hover:shadow-[0_0_28px_rgba(187,0,0,0.25)]"
-          : "border border-white/[0.06] hover:border-primary/30 hover:shadow-[0_0_20px_rgba(187,0,0,0.1)]"
+          ? "border border-primary/40"
+          : "border border-white/[0.06] surface-interactive"
       }`}
     >
       {tier.highlight && (

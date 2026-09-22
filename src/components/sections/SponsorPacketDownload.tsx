@@ -11,7 +11,7 @@ export default function SponsorPacketDownload() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex flex-col sm:flex-row items-center gap-4 p-6 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur"
+          className="flex flex-col sm:flex-row items-center gap-4 p-6 surface"
         >
           <FilePdf
             size={40}
@@ -26,7 +26,7 @@ export default function SponsorPacketDownload() {
           {/* TODO: Replace with a direct download link once the final packet PDF is approved */}
           <a
             href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent("BExA Sponsorship Packet Request")}`}
-            className="inline-flex h-10 px-5 items-center justify-center rounded-md border border-primary/40 text-primary text-sm font-medium transition-all hover:bg-primary hover:text-white hover:shadow-[0_0_20px_rgba(187,0,0,0.3)] active:scale-[0.98] shrink-0"
+            className="inline-flex h-10 px-5 items-center justify-center rounded-md border border-primary/40 text-primary text-sm font-medium transition-all hover:bg-primary hover:text-white active:scale-[0.98] shrink-0"
           >
             Request Packet
           </a>

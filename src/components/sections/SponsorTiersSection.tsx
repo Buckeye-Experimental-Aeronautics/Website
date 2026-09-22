@@ -57,7 +57,7 @@ export default function SponsorTiersSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={viewport}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="mt-10 flex flex-col sm:flex-row items-center gap-4 p-6 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur"
+          className="mt-10 flex flex-col sm:flex-row items-center gap-4 p-6 surface"
         >
           <HandHeart size={36} weight="duotone" className="text-primary shrink-0" />
           <p className="text-sm text-muted leading-relaxed text-center sm:text-left">

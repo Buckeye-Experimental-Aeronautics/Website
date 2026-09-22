@@ -29,7 +29,7 @@ export default function JoinCTASection() {
         </p>
         <Link
           to="/join"
-          className="inline-flex h-11 px-6 items-center justify-center rounded-md bg-primary text-white text-sm font-medium transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(187,0,0,0.3)] active:scale-[0.98]"
+          className="inline-flex h-11 px-6 items-center justify-center rounded-md bg-primary text-white text-sm font-medium transition-all hover:bg-primary/90 active:scale-[0.98]"
         >
           Join BExA
         </Link>

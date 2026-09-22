@@ -57,6 +57,8 @@ export interface LeadershipMember {
   title: string;
   linkedin?: string;
   image?: string;
+  /** Shown in the footer contact column. Verify before publishing. */
+  email?: string;
 }
 
 export interface NavLink {

@@ -55,7 +55,7 @@ export default function PositionsSection() {
                 {tier.map((role) => (
                   <span
                     key={role}
-                    className="inline-flex items-center px-5 py-2.5 rounded-md bg-[rgba(22,22,24,0.7)] border border-white/[0.08] backdrop-blur-[12px] glass-blur font-heading text-sm font-medium text-text transition-colors duration-300 hover:border-primary/40"
+                    className="inline-flex items-center px-5 py-2.5 surface surface-interactive font-heading text-sm font-medium text-text transition-colors duration-300 hover:border-primary/40"
                   >
                     {role}
                   </span>

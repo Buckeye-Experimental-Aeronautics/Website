@@ -37,7 +37,7 @@ export default function ProjectPage() {
             <Link
               key={p.slug}
               to={`/projects/${p.slug}`}
-              className="inline-flex items-center px-4 py-2 rounded-md bg-[rgba(22,22,24,0.7)] border border-white/[0.08] text-sm text-text hover:border-primary/40 transition-colors"
+              className="inline-flex items-center px-4 py-2 surface surface-interactive text-sm text-text"
             >
               {p.name}
             </Link>
@@ -86,7 +86,7 @@ export default function ProjectPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="p-8 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur mb-8"
+            className="p-8 surface mb-8"
           >
             {project.description ? (
               <>

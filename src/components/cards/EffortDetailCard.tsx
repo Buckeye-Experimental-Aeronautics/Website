@@ -8,7 +8,7 @@ export default function EffortDetailCard({ effort }: EffortDetailCardProps) {
   const isActive = effort.badge === "Active";
 
   return (
-    <div className="p-6 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_rgba(187,0,0,0.1)]">
+    <div className="p-6 surface transition-all duration-300 surface-interactive">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left: Content */}
         <div className="flex-1">

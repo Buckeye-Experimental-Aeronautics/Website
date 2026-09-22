@@ -117,7 +117,7 @@ export default function JoinForm() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="p-6 md:p-8 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur"
+          className="p-6 md:p-8 surface"
         >
           {submitted ? (
             <motion.div
@@ -323,7 +323,7 @@ export default function JoinForm() {
                 <button
                   type="submit"
                   disabled={sending}
-                  className="w-full h-11 rounded-md bg-primary text-white text-sm font-medium transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(187,0,0,0.3)] active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full h-11 rounded-md bg-primary text-white text-sm font-medium transition-all hover:bg-primary/90 active:scale-[0.99] disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {sending ? "Sending..." : "Submit Interest Form"}
                 </button>
