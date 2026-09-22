@@ -14,7 +14,7 @@ export default function TeamCard({ team }: TeamCardProps) {
       className="group h-full p-6 surface transition-all duration-300 surface-interactive scroll-mt-24"
     >
       <div className="flex items-start gap-4 mb-4">
-        <div className="shrink-0 p-3 rounded-lg bg-primary/10">
+        <div className="shrink-0 p-3 rounded-[3px] bg-primary/10">
           <Icon size={32} weight="duotone" className="text-primary" />
         </div>
         <div>

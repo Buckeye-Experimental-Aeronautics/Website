@@ -47,38 +47,18 @@ export default function ProjectPage() {
     );
   }
 
-  const isActive = project.status === "In Development";
-
   return (
     <>
-      <PageHero heading={project.name} subtext={project.blurb} />
+      <PageHero
+        eyebrow={`Project · ${project.status}`}
+        heading={project.name}
+        subtext={project.blurb}
+      />
 
-      <section className="pb-16 md:pb-24">
+      <section className="pt-14 md:pt-20 pb-16 md:pb-24">
         <div className="max-w-3xl mx-auto px-4">
-          {/* Status */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={viewport}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="flex justify-center mb-10"
-          >
-            <span
-              className={`inline-flex items-center gap-2 px-3 py-1 rounded-sm text-sm font-medium ${
-                isActive
-                  ? "bg-success/10 text-success border border-success/20"
-                  : "bg-neutral/10 text-neutral border border-neutral/20"
-              }`}
-            >
-              <span
-                aria-hidden="true"
-                className={`w-1.5 h-1.5 rounded-full ${
-                  isActive ? "bg-success" : "bg-neutral"
-                }`}
-              />
-              {project.status}
-            </span>
-          </motion.div>
+          {/* Status now reads in the masthead eyebrow; a second centered pill
+              here duplicated it and fought the left-aligned page system. */}
 
           {/* Project write-up, or a generic notice until one exists */}
           <motion.div
@@ -130,7 +110,7 @@ export default function ProjectPage() {
                 alt={project.imageAlt ?? project.name}
                 loading="lazy"
                 decoding="async"
-                className="w-full rounded-lg border border-white/[0.06] object-cover"
+                className="w-full rounded-[3px] border border-white/[0.06] object-cover"
               />
             </motion.figure>
           )}
@@ -157,14 +137,14 @@ export default function ProjectPage() {
                       alt={photo.alt}
                       loading="lazy"
                       decoding="async"
-                      className="w-full h-64 sm:h-72 object-cover rounded-lg border border-white/[0.06]"
+                      className="w-full h-64 sm:h-72 object-cover rounded-[3px] border border-white/[0.06]"
                     />
                   </figure>
                 ))
               : (project.image ? [0, 1] : [0, 1, 2]).map((i) => (
                   <div
                     key={i}
-                    className="aspect-video rounded-lg bg-border/30 border border-border/50 flex items-center justify-center"
+                    className="aspect-video rounded-[3px] bg-border/30 border border-border/50 flex items-center justify-center"
                   >
                     <span className="text-xs text-muted">
                       {project.image ? "[More photos TBD]" : "[Photo TBD]"}

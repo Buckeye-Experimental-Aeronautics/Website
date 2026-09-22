@@ -12,7 +12,7 @@ import teamGroupPhoto from "@/assets/team-group.jpg";
  */
 export default function TeamsStrip() {
   return (
-    <section className="bg-bg pb-14 md:pb-20">
+    <section className="bg-bg pt-6 md:pt-10 pb-14 md:pb-20">
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid md:grid-cols-[1fr_auto] gap-8 md:gap-12 items-start mb-10">
           <div className="max-w-md">
@@ -41,7 +41,7 @@ export default function TeamsStrip() {
       <div className="overflow-x-auto md:overflow-visible">
         <div className="max-w-6xl mx-auto px-4">
           <ul
-            className="list-none p-0 m-0 flex md:grid md:grid-cols-8 min-w-max md:min-w-0 border border-hairline bg-surface md:-skew-x-[9deg]"
+            className="list-none p-0 m-0 flex md:grid md:grid-cols-8 min-w-max md:min-w-0 border border-hairline bg-surface overflow-hidden md:-skew-x-[9deg]"
             style={{ borderRadius: "var(--radius-panel)" }}
           >
             {TEAMS_PREVIEW.map((team, i) => (
@@ -51,13 +51,18 @@ export default function TeamsStrip() {
               >
                 <Link
                   to={`/teams#${team.slug}`}
-                  className="block px-5 py-4 md:px-3 md:py-5 h-full transition-colors hover:bg-surface-raised md:skew-x-[9deg]"
+                  className="block px-5 py-4 md:px-3 md:py-5 h-full transition-colors hover:bg-surface-raised"
                 >
-                  <span className="block text-[10px] font-semibold text-accent tabular-nums">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="block mt-1.5 font-heading text-xs md:text-[0.78rem] font-semibold text-text leading-tight whitespace-nowrap md:whitespace-normal">
-                    {team.name}
+                  {/* Counter-skew the text only. The link's hover fill has to
+                      stay in the parent's skewed frame or it paints an upright
+                      rectangle inside a slanted cell. */}
+                  <span className="block md:skew-x-[9deg]">
+                    <span className="block text-[10px] font-semibold text-accent tabular-nums">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="block mt-1.5 font-heading text-xs md:text-[0.78rem] font-semibold text-text leading-tight whitespace-nowrap md:whitespace-normal">
+                      {team.name}
+                    </span>
                   </span>
                 </Link>
               </li>
@@ -65,10 +70,12 @@ export default function TeamsStrip() {
             <li>
               <Link
                 to="/teams"
-                className="block px-5 py-4 md:px-3 md:py-5 h-full transition-colors hover:bg-surface-raised md:skew-x-[9deg]"
+                className="block px-5 py-4 md:px-3 md:py-5 h-full transition-colors hover:bg-surface-raised"
               >
-                <span className="block mt-[18px] font-heading text-xs md:text-[0.78rem] font-semibold text-accent leading-tight whitespace-nowrap">
-                  Meet the team &rarr;
+                <span className="block md:skew-x-[9deg]">
+                  <span className="block mt-[18px] font-heading text-xs md:text-[0.78rem] font-semibold text-accent leading-tight whitespace-nowrap">
+                    Meet the team &rarr;
+                  </span>
                 </span>
               </Link>
             </li>

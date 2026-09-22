@@ -11,6 +11,7 @@ export default function JoinPage() {
   return (
     <>
       <PageHero
+        eyebrow="Join the team"
         heading="Build Real Aircraft Before You Graduate"
         subtext="Get hands-on aerospace engineering experience. Build real aircraft. Work with real tools. Join a team that's going for a world record."
       />

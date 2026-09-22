@@ -41,7 +41,7 @@ export default function WorkPhilosophySection() {
                 className="h-full"
               >
                 <div className="group h-full p-6 surface transition-all duration-300 surface-interactive">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-primary/10 mb-4">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-[3px] bg-primary/10 mb-4">
                     <Icon size={30} weight="duotone" className="text-primary" />
                   </div>
                   <h3 className="font-heading text-lg font-semibold text-text mb-3">

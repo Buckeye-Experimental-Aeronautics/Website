@@ -79,10 +79,10 @@ export default function EffortDetailCard({ effort }: EffortDetailCardProps) {
               alt={effort.imageAlt ?? effort.title}
               loading="lazy"
               decoding="async"
-              className="w-full h-48 md:h-full md:min-h-[200px] object-cover rounded-lg border border-white/[0.06]"
+              className="w-full h-48 md:h-full md:min-h-[200px] object-cover rounded-[3px] border border-white/[0.06]"
             />
           ) : (
-            <div className="w-full h-40 md:h-full rounded-lg bg-border/30 border border-border/50 flex items-center justify-center">
+            <div className="w-full h-40 md:h-full rounded-[3px] bg-border/30 border border-border/50 flex items-center justify-center">
               <span className="text-xs text-muted">[Photo TBD]</span>
             </div>
           )}
