@@ -15,6 +15,10 @@ import edfTestBedPhoto from "@/assets/edf-test-bed.jpg";
 import supersonicTeaser from "@/assets/supersonic-teaser.jpg";
 import v01Assembly from "@/assets/v01-assembly.jpg";
 import v01FanInstall from "@/assets/v01-fan-install.jpg";
+import tiLogo from "@/assets/sponsors/ti.png";
+import cocaColaLogo from "@/assets/sponsors/coca-cola.png";
+import corvacLogo from "@/assets/sponsors/corvac.svg";
+import andurilLogo from "@/assets/sponsors/anduril.png";
 
 // Labels changed 2026-09-22 to match the redesign. The underlying routes are
 // deliberately unchanged so existing links and the sitemap keep working.
@@ -62,12 +66,25 @@ export const PROCESS_STEPS_DETAIL = [
 
 // Real sponsors only. An empty list renders nothing rather than placeholders.
 // `logo` is an imported image; without one the name renders as set type.
+//
+// Marks were taken from each owner's canonical source: Wikimedia Commons for
+// Coca-Cola, Anduril and Texas Instruments, and corvaccomposites.com for
+// CORVAC. Ohio State's Center for Automotive Research publishes no standalone
+// mark, so it renders as type until CAR supplies one. Do not substitute the
+// College of Engineering lockup: that would name the wrong sponsor.
 export const SPONSORS: { name: string; logo?: string; url?: string }[] = [
-  { name: "Texas Instruments" },
-  { name: "Coca-Cola" },
-  { name: "CORVAC Composites" },
-  { name: "Anduril" },
-  { name: "The Ohio State University" },
+  { name: "Texas Instruments", logo: tiLogo, url: "https://www.ti.com" },
+  { name: "Coca-Cola", logo: cocaColaLogo, url: "https://www.coca-cola.com" },
+  {
+    name: "CORVAC Composites",
+    logo: corvacLogo,
+    url: "https://corvaccomposites.com",
+  },
+  { name: "Anduril", logo: andurilLogo, url: "https://www.anduril.com" },
+  {
+    name: "Ohio State Center for Automotive Research",
+    url: "https://car.osu.edu",
+  },
 ];
 
 // Slide: "Work Philosophy": three cards + Research/Design/Test/Refine cycle
@@ -544,8 +561,8 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   },
 ];
 
-// NOTE: the three officer addresses were transcribed from the design mockup
-// image and have NOT been verified. Confirm each one before this ships.
+// Officer addresses confirmed by the team 2026-09-22, including the .1 on
+// Viktor's. These render publicly in the footer, so re-confirm before editing.
 export const LEADERSHIP: LeadershipMember[] = [
   {
     name: "Viktor Bakhurynskyy",
