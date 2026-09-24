@@ -23,7 +23,7 @@ export default function SponsorsFooter() {
                 delay: i * 0.06,
                 ease: "easeOut",
               }}
-              className="flex items-center justify-center h-20 rounded-lg bg-border/30 border border-border/50 text-xs text-muted transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_rgba(187,0,0,0.1)] grayscale hover:grayscale-0 cursor-default"
+              className="flex items-center justify-center h-20 rounded-lg bg-border/30 border border-border/50 text-xs text-muted transition-all duration-300 surface-interactive grayscale hover:grayscale-0 cursor-default"
             >
               Your Logo Here
             </motion.div>

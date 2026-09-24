@@ -12,6 +12,7 @@ export default function SponsorPage() {
   return (
     <>
       <PageHero
+        eyebrow="Sponsorship"
         heading="Partner With BExA"
         subtext="Support the next generation of aerospace engineers. Your sponsorship fuels real flight hardware, student development, and cutting-edge research."
       />

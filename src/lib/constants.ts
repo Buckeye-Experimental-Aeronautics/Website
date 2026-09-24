@@ -15,15 +15,86 @@ import edfTestBedPhoto from "@/assets/edf-test-bed.jpg";
 import supersonicTeaser from "@/assets/supersonic-teaser.jpg";
 import v01Assembly from "@/assets/v01-assembly.jpg";
 import v01FanInstall from "@/assets/v01-fan-install.jpg";
+import tiLogo from "@/assets/sponsors/ti.png";
+import cocaColaLogo from "@/assets/sponsors/coca-cola.png";
+import corvacLogo from "@/assets/sponsors/corvac.svg";
+import andurilLogo from "@/assets/sponsors/anduril.png";
+import osuCarLogo from "@/assets/sponsors/osu-car.png";
 
+// Labels changed 2026-09-22 to match the redesign. The underlying routes are
+// deliberately unchanged so existing links and the sitemap keep working.
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/" },
-  { label: "Teams", href: "/teams" },
-  { label: "Efforts", href: "/efforts" },
-  { label: "Join", href: "/join" },
-  { label: "Sponsor", href: "/sponsor" },
+  { label: "Program", href: "/efforts" },
+  { label: "Process", href: "/#process" },
+  { label: "Team", href: "/teams" },
+  { label: "Sponsors", href: "/sponsor" },
   // { label: "News", href: "/news", hidden: true },
   // { label: "Resources", href: "/resources", hidden: true },
+];
+
+// The flight program, shown as a timeline on the home page. Dates and scope
+// come from the project rescope; do not add phases that are not real.
+export const PROGRAM_PHASES = [
+  {
+    period: "Fall 2026",
+    status: "In progress" as const,
+    title: "EDF platform and turbine hot fire",
+  },
+  {
+    period: "Spring 2027",
+    status: "Planned" as const,
+    title: "25 to 100 kg airframe, 15 km record",
+  },
+  {
+    period: "2027",
+    status: "Planned" as const,
+    title: "World record attempt",
+  },
+  {
+    period: "2028",
+    status: "Planned" as const,
+    title: "Supersonic attempt",
+  },
+];
+
+// How the team works. Four steps, in order, so they are numbered.
+export const PROCESS_STEPS_DETAIL = [
+  { label: "Build", note: "Prototype early" },
+  { label: "Fly", note: "Test in the air" },
+  { label: "Validate", note: "Learn from the data" },
+  { label: "Repeat", note: "Improve the design" },
+];
+
+// Real sponsors only. An empty list renders nothing rather than placeholders.
+// `logo` is an imported image; without one the name renders as set type.
+//
+// Marks were taken from each owner's canonical source: Wikimedia Commons for
+// Coca-Cola, Anduril and Texas Instruments, and corvaccomposites.com for
+// CORVAC. CAR's stacked lockup was supplied by the team; its white background
+// is multiply-composited onto --color-paper, so it only sits correctly on that
+// band. Regenerate it if the band colour changes.
+// `stacked` marks a square/vertical lockup, which needs more height than a
+// horizontal wordmark to stay legible at marquee size.
+export const SPONSORS: {
+  name: string;
+  logo?: string;
+  url?: string;
+  stacked?: boolean;
+}[] = [
+  { name: "Texas Instruments", logo: tiLogo, url: "https://www.ti.com" },
+  { name: "Coca-Cola", logo: cocaColaLogo, url: "https://www.coca-cola.com" },
+  {
+    name: "CORVAC Composites",
+    logo: corvacLogo,
+    url: "https://corvaccomposites.com",
+  },
+  { name: "Anduril", logo: andurilLogo, url: "https://www.anduril.com" },
+  {
+    name: "Ohio State Center for Automotive Research",
+    logo: osuCarLogo,
+    url: "https://car.osu.edu",
+    stacked: true,
+  },
 ];
 
 // Slide: "Work Philosophy": three cards + Research/Design/Test/Refine cycle
@@ -500,10 +571,27 @@ export const SPONSOR_TIERS: SponsorTier[] = [
   },
 ];
 
+// Officer addresses confirmed by the team 2026-09-22, including the .1 on
+// Viktor's. These render publicly in the footer, so re-confirm before editing.
 export const LEADERSHIP: LeadershipMember[] = [
-  { name: "Viktor Bakhurynskyy", title: "President", linkedin: "https://www.linkedin.com/in/vikibax/" },
-  { name: "Sam Patterson", title: "Technical Director", linkedin: "https://www.linkedin.com/in/sampatterson521/" },
-  { name: "Quinn Cohen", title: "Vice President", linkedin: "https://www.linkedin.com/in/quinnmcohen/" },
+  {
+    name: "Viktor Bakhurynskyy",
+    title: "President",
+    linkedin: "https://www.linkedin.com/in/vikibax/",
+    email: "bakhurynskyy.1@osu.edu",
+  },
+  {
+    name: "Sam Patterson",
+    title: "Technical Director",
+    linkedin: "https://www.linkedin.com/in/sampatterson521/",
+    email: "patterson.1368@osu.edu",
+  },
+  {
+    name: "Quinn Cohen",
+    title: "Vice President",
+    linkedin: "https://www.linkedin.com/in/quinnmcohen/",
+    email: "cohen.1344@osu.edu",
+  },
   { name: "Dr. Matthew H. McCrink", title: "Advisor" },
 ];
 

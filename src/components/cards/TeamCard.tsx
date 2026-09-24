@@ -11,10 +11,10 @@ export default function TeamCard({ team }: TeamCardProps) {
   return (
     <div
       id={team.slug}
-      className="group h-full p-6 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_rgba(187,0,0,0.1)] scroll-mt-24"
+      className="group h-full p-6 surface transition-all duration-300 surface-interactive scroll-mt-24"
     >
       <div className="flex items-start gap-4 mb-4">
-        <div className="shrink-0 p-3 rounded-lg bg-primary/10">
+        <div className="shrink-0 p-3 rounded-[3px] bg-primary/10">
           <Icon size={32} weight="duotone" className="text-primary" />
         </div>
         <div>

@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import SponsorsFooter from "./SponsorsFooter";
 
 interface PageWrapperProps {
   children: ReactNode;
@@ -14,10 +13,11 @@ export default function PageWrapper({ children }: PageWrapperProps) {
         Skip to main content
       </a>
       <Navbar />
-      <main id="main-content" className="flex-1 pt-16">
+      <main id="main-content" className="flex-1 pt-14">
         {children}
       </main>
-      <SponsorsFooter />
+      {/* SponsorsFooter removed 2026-09-22: it rendered six "Your Logo Here"
+          placeholders. Real sponsors now run in the marquee on the home page. */}
       <Footer />
     </div>
   );

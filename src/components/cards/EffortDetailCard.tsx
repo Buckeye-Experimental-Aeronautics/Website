@@ -8,7 +8,7 @@ export default function EffortDetailCard({ effort }: EffortDetailCardProps) {
   const isActive = effort.badge === "Active";
 
   return (
-    <div className="p-6 rounded-lg bg-[rgba(22,22,24,0.7)] border border-white/[0.06] backdrop-blur-[12px] glass-blur transition-all duration-300 hover:border-primary/30 hover:shadow-[0_0_20px_rgba(187,0,0,0.1)]">
+    <div className="p-6 surface transition-all duration-300 surface-interactive">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Left: Content */}
         <div className="flex-1">
@@ -79,10 +79,10 @@ export default function EffortDetailCard({ effort }: EffortDetailCardProps) {
               alt={effort.imageAlt ?? effort.title}
               loading="lazy"
               decoding="async"
-              className="w-full h-48 md:h-full md:min-h-[200px] object-cover rounded-lg border border-white/[0.06]"
+              className="w-full h-48 md:h-full md:min-h-[200px] object-cover rounded-[3px] border border-white/[0.06]"
             />
           ) : (
-            <div className="w-full h-40 md:h-full rounded-lg bg-border/30 border border-border/50 flex items-center justify-center">
+            <div className="w-full h-40 md:h-full rounded-[3px] bg-border/30 border border-border/50 flex items-center justify-center">
               <span className="text-xs text-muted">[Photo TBD]</span>
             </div>
           )}
