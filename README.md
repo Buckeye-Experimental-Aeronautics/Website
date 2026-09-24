@@ -1,19 +1,19 @@
-# BExA — Buckeye Experimental Aeronautics Website
+# flybexa.com
 
-Official website for Buckeye Experimental Aeronautics (BExA), a student-led
-aerospace engineering program building high-speed, remotely piloted aircraft
-and autonomous systems.
+Website for Buckeye Experimental Aeronautics, a student program building
+high-speed, remotely piloted aircraft and autonomous systems.
 
-**Live at [flybexa.com](https://flybexa.com)**
+Live at [flybexa.com](https://flybexa.com).
 
-## Tech Stack
+## Stack
 
 - React + Vite + TypeScript
 - Tailwind CSS v4
-- Framer Motion (animations)
+- Framer Motion
 - Phosphor Icons + Lucide React
-- pnpm (package manager — do not use npm)
 - Deployed on Vercel
+
+Use pnpm. Do not use npm.
 
 ## Development
 
@@ -24,21 +24,30 @@ pnpm build       # production build to dist/
 pnpm preview     # serve the production build locally
 ```
 
-## Editing Content
+Run `pnpm build` before you push. A type error fails the Vercel build.
 
-Most site copy lives in `src/lib/constants.ts` — sub-teams, projects,
-sponsorship tiers, leadership, contact email, social links, and SEO
-titles/descriptions. Edit there rather than in individual components.
+## Editing content
 
-- Contact email: `CONTACT_EMAIL` in `src/lib/constants.ts`
-- Social links: `SOCIAL_LINKS` in `src/lib/constants.ts`
-- Sponsorship tiers: `SPONSOR_TIERS` in `src/lib/constants.ts`
-- Images/logos: `src/assets/`
+Most copy is data, not markup. It lives in `src/lib/constants.ts`: sub-teams,
+projects, sponsorship tiers, leadership, contact email, social links, and SEO
+titles and descriptions. Edit there rather than in individual components.
 
-## Ownership
+| What | Where |
+|------|-------|
+| Contact email | `CONTACT_EMAIL` in `src/lib/constants.ts` |
+| Social links | `SOCIAL_LINKS` in `src/lib/constants.ts` |
+| Sponsorship tiers | `SPONSOR_TIERS` in `src/lib/constants.ts` |
+| Images and logos | `src/assets/` |
 
-This repository belongs to the `bexa-aero` organization so it outlives any
-individual member. Three accounts run the site:
+The join form on `/join` posts to a Google Form owned by the club Gmail. The
+option strings in `TEAM_OPTIONS` and `YEAR_OPTIONS` have to match that form's
+choices exactly. Google drops values it does not recognise without reporting an
+error, so a typo here loses real responses silently.
+
+## Accounts
+
+Three accounts run the site. All three belong to the club, not to any one
+member.
 
 | Service | What it does |
 |---------|--------------|
@@ -46,20 +55,20 @@ individual member. Three accounts run the site:
 | GitHub  | Holds this code |
 | Vercel  | Builds and serves the site |
 
-Access questions go to bexa.aero@gmail.com. When officers change over, hand
-off all three, not just this repo.
+Access questions go to bexa.aero@gmail.com. When officers change over, hand off
+all three, not just this repo.
 
 ## Deployment
 
-Every push to `main` auto-deploys via Vercel. `vercel.json` handles the
+Every push to `main` deploys on its own. `vercel.json` handles the
 single-page-app routing rewrites.
 
 `www.flybexa.com` is a 308 redirect to the apex domain, which is canonical.
 
-**Keep this repository public.** Vercel's free Hobby plan does not support
-private repositories owned by an organization. If it is switched to private,
-deploys stop firing while the Vercel dashboard still reports "Connected" —
-a silent failure that is hard to diagnose.
+**Keep this repository public.** Vercel's free Hobby plan will not deploy a
+private repository owned by an organisation. Switch it to private and deploys
+stop firing while the dashboard still reports "Connected". Nothing reports the
+failure, which makes it hard to diagnose.
 
 If the domain ever changes, update `SITE_URL` in `src/lib/constants.ts` plus
 the matching URLs in `public/sitemap.xml`, `public/robots.txt`, and
