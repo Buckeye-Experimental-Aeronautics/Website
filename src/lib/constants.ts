@@ -497,7 +497,7 @@ export const SPONSOR_VALUE_PROPS: ValueProp[] = [
   {
     icon: "Handshake",
     title: "Community Impact",
-    body: "Fund real student-led aerospace research. Help build the engineers who will shape the future of flight, defense, and space.",
+    body: "Fund student-led aerospace research directly. Sponsorship pays for airframe materials, propulsion hardware, machine time, and the flight test campaigns students plan and run themselves.",
   },
 ];
 
