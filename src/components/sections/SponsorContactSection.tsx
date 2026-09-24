@@ -21,7 +21,7 @@ export default function SponsorContactSection() {
             Read first
           </p>
           <h2 className="mt-2 font-heading text-xl md:text-2xl font-bold tracking-tight">
-            Get the sponsorship packet.
+            Get the Sponsorship Packet
           </h2>
           <p className="mt-3 text-sm text-muted leading-relaxed">
             Full breakdown of the program, the aircraft, and what each level
@@ -48,7 +48,7 @@ export default function SponsorContactSection() {
             Ready to talk
           </p>
           <h2 className="mt-2 font-heading text-xl md:text-2xl font-bold tracking-tight">
-            Start the conversation.
+            Start the Conversation
           </h2>
           <p className="mt-3 text-sm text-white/80 leading-relaxed">
             Our business team handles sponsorship directly. Tell us what your

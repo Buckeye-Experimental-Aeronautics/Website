@@ -35,10 +35,10 @@ export default function SponsorTiersSection() {
         <div className="grid md:grid-cols-[1fr_auto] gap-6 md:gap-12 items-end mb-8 md:mb-10">
           <div className="max-w-md">
             <h2 className="font-heading text-2xl md:text-3xl font-bold tracking-tight">
-              What each level covers.
+              Sponsorship Tier Breakdown:
             </h2>
             <p className="mt-3 text-sm text-muted leading-relaxed">
-              Every level includes everything below it. Amounts are annual.
+              What is included with your investment in us?
             </p>
           </div>
           <a
@@ -48,7 +48,7 @@ export default function SponsorTiersSection() {
             className="inline-flex h-10 px-5 items-center justify-center bg-primary text-white text-sm font-semibold transition-colors hover:bg-primary/90 shrink-0 justify-self-start"
             style={{ borderRadius: "var(--radius-panel)" }}
           >
-            Talk to us
+            Contact
           </a>
         </div>
 
@@ -101,28 +101,36 @@ export default function SponsorTiersSection() {
                   {SPONSOR_TIERS.map((tier, tierIndex) => {
                     const included = tierIndex >= row.from;
                     return (
-                      <td key={tier.name} className="py-3 px-2 text-center">
-                        {included ? (
-                          <>
-                            <Check
-                              size={15}
-                              weight="bold"
-                              aria-hidden="true"
-                              className={
-                                tier.highlight ? "text-accent" : "text-primary"
-                              }
-                            />
-                            <span className="sr-only">Included</span>
-                          </>
-                        ) : (
-                          <>
-                            <span
-                              aria-hidden="true"
-                              className="inline-block w-2 h-px bg-border align-middle"
-                            />
-                            <span className="sr-only">Not included</span>
-                          </>
-                        )}
+                      <td key={tier.name} className="py-3 px-2">
+                        {/* Both states centre inside the same box. The check
+                            is an inline SVG on the text baseline and the dash
+                            was a 1px box on the middle, so they never sat on
+                            the same line. */}
+                        <span className="flex items-center justify-center h-4">
+                          {included ? (
+                            <>
+                              <Check
+                                size={15}
+                                weight="bold"
+                                aria-hidden="true"
+                                className={
+                                  tier.highlight
+                                    ? "text-accent"
+                                    : "text-primary"
+                                }
+                              />
+                              <span className="sr-only">Included</span>
+                            </>
+                          ) : (
+                            <>
+                              <span
+                                aria-hidden="true"
+                                className="block w-2 h-px bg-border"
+                              />
+                              <span className="sr-only">Not included</span>
+                            </>
+                          )}
+                        </span>
                       </td>
                     );
                   })}

@@ -15,7 +15,7 @@ export default function WhySponsorSection() {
         <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           <div className="max-w-sm">
             <h2 className="font-heading text-2xl md:text-3xl font-bold tracking-tight leading-tight">
-              What sponsorship actually buys.
+              What Sponsorship Actually Buys
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-muted">
               We are a student team building real hardware on a student budget.
