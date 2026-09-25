@@ -26,8 +26,9 @@ to build — edit a file under `site/` and reload.
 
 - Pages: `index`, `team`, `program`, `process`, `sponsors`, `join`
   (`.html`, at the root of `site/`). `styleguide.html` documents the design
-  system. `concepts*.html` are unlinked, noindexed design sandboxes — not
-  live pages.
+  system and is `noindex`'d but otherwise live. Early design-exploration
+  sandbox pages (`concepts*.html`) were never linked from the site and live
+  in the project folder's `docs/concepts-sandbox/` instead, not in this repo.
 - CSS: `site/assets/css/styles.css` (all shared components/styles).
 - JS: `site/assets/js/` — `site.js` (scroll-progress bar, header condense),
   `programs.js` (the tab/chip panel switcher used on Programs and Process),
@@ -54,11 +55,8 @@ Edit the page directly for wording changes.
 | Subteam descriptions | `team.html` and `index.html` — sourced verbatim from each subteam's brochure, see `docs/source-material/` in the project folder |
 | SEO title/description | Each page's own `<title>`/`<meta name="description">` in `<head>` |
 
-`/join.html` is a plain email CTA + a 3-step "how to join" list right now —
-no form. (The earlier React build had a Google Form here; that's gone in
-this rebuild. If a form comes back, note its option strings have to match
-the Google Form's choices exactly — Google drops unrecognized values
-without reporting an error, so a typo loses real responses silently.)
+`/join.html` links out to the club's Google Form (same form the earlier React
+build posted to directly) plus a 3-step "how to join" list.
 
 ## Live task data
 
@@ -77,6 +75,26 @@ Full setup, field-name assumptions, and the safety rules both scripts follow
 data) are documented in the project folder's `docs/work-sync/README.md` —
 that folder isn't part of this repo since it's about infrastructure in other
 repos, not this site.
+
+## Deployment
+
+Every push to `main` deploys on its own via Vercel's GitHub integration —
+`vercel.json` points it at `site/` as the output directory, no build command.
+
+**Keep this repository public.** Vercel's free Hobby plan will not deploy a
+private repository owned by an organisation. Switch it to private and
+deploys silently stop firing while the dashboard still reports "Connected" —
+nothing reports the failure, which makes it hard to diagnose.
+
+`www.flybexa.com` redirects to the apex domain, which is canonical (a Vercel
+domain setting, not anything in this repo).
+
+If the domain ever changes, update it in `site/sitemap.xml` and
+`site/robots.txt` — those are the only two places the origin is hard-coded
+in this static rebuild (the old React build also had it in
+`src/lib/constants.ts` and `index.html`; neither exists as hard-coded origin
+strings here since there's no `SITE_URL` constant or canonical `<link>` tag
+in the current pages).
 
 ## Accounts
 
