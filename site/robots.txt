@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide.html
+Disallow: /concepts.html
+Disallow: /concepts-programs.html
+Disallow: /concepts-programs-2.html
+
+Sitemap: https://flybexa.com/sitemap.xml

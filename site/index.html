@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BExA — Buckeye Experimental Aeronautics</title>
+<meta name="description" content="Ohio State's student team for experimental aircraft. We design, build and flight-test, then do it again, faster.">
+<link rel="icon" href="/assets/img/favicon-96.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=70">
+</head>
+<body>
+
+<!-- FOCUS -->
+<div class="site-top">
+  <div class="site-header">
+    <a href="/"><img class="logo" src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <nav class="site-nav">
+      <a href="/program.html">Programs</a>
+      <a href="/process.html">Process</a>
+      <a href="/team.html">Team</a>
+      <a href="/sponsors.html">Sponsors</a>
+      <a href="/join.html" class="btn btn-fill-cream sm"><span>Join</span></a>
+    </nav>
+  </div>
+  <svg class="taper-bar" id="progress-bar" height="26" aria-hidden="true">
+      <rect id="pb-track" y="12" width="1440" height="1" fill="rgba(255,241,220,0.28)"></rect>
+      <polygon id="pb-body" points="0,12 96,9.5 96,15.5 0,13" fill="#fff1dc"></polygon>
+      <polygon id="pb-head" points="120,12.5 84,1.5 92.5,12.5 87.5,19.3" fill="#fff1dc"></polygon>
+    </svg>
+</div>
+
+<section style="position:relative;background:var(--red);">
+  <div class="wrap hero-row" style="position:relative;padding:80px 64px 96px;display:flex;gap:40px;align-items:flex-start;flex-wrap:wrap;">
+    <div style="flex:1 1 500px;max-width:660px;min-width:0;">
+      <h1 class="hero-h1" style="font-size:68px;line-height:1.06;">We build engineers. Aircraft are how.</h1>
+      <p style="margin:28px 0 0;font-size:22px;line-height:1.45;max-width:560px;">Ohio State's student team for experimental aircraft. We design, build and flight-test, then do it again, faster.</p>
+      <div style="display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;">
+        <a href="/join.html" class="btn btn-fill-cream"><span>Join the team</span></a>
+        <a href="/sponsors.html" class="btn btn-outline-cream"><span>Sponsor us</span></a>
+      </div>
+    </div>
+    <div class="hero-photo" style="flex:1 1 420px;max-width:576px;min-width:0;height:380px;border-radius:var(--r-m);background:var(--red-deep);overflow:hidden;position:relative;">
+      <img src="/assets/img/hero-night.jpg" alt="BExA jet on the hangar apron at night" style="width:100%;height:100%;object-fit:cover;object-position:60% 60%;">
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="sponsor-row">
+  <div class="sponsor-track">
+    <img src="/assets/img/sponsor-osu-engineering.png" alt="Ohio State College of Engineering" style="height:72px;">
+    <img src="/assets/img/sponsor-osu-engineering.png" alt="Ohio State College of Engineering" style="height:72px;">
+  </div>
+</section>
+
+<!-- WHAT WE'RE UP TO -->
+<section class="block" style="background:var(--black);">
+  <div class="wrap">
+    <div class="mission-head">
+      <h2>What we're up to</h2>
+    </div>
+    <div class="wt-card">
+      <div class="wt-bar"><span class="wt-title">Tasks completed per day<span id="hm-total" style="color:var(--gray);font-weight:500;"></span></span><span class="wt-ex">Example data</span></div>
+      <div class="hm-scroll"><div class="hm" id="hm" aria-label="Activity grid: tasks completed per day over the last year"></div></div>
+      <div class="hm-legend"><span>Less</span><i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i><span>More</span></div>
+    </div>
+  </div>
+</section>
+<script src="/assets/js/heatmap.js?v=3"></script>
+
+<!-- ROADMAP -->
+<section class="block" style="background:var(--black);border-top:none;">
+  <div class="wrap">
+    <div class="mission-card">
+      <div class="mission-head">
+        <h2>Programs</h2>
+        <a href="/program.html" class="btn btn-outline-cream sm"><span>See all programs →</span></a>
+      </div>
+      <div class="mission-table">
+        <div class="mission-row mission-cols"><span>Date</span><span>Program</span><span>Milestone</span><span>Stage</span><span></span></div>
+        <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-prog">Vehicle 01</span><span class="m-name">EDF test platform</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live" href="/program.html#vehicle-01">In progress</a></span></div>
+        <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-prog">Thrust Stand</span><span class="m-name">Turbine hotfire</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live" href="/program.html#thrust-stand">In progress</a></span></div>
+        <div class="mission-row"><span class="m-date">Spring 2027</span><span class="m-prog">Vehicle 02</span><span class="m-name">25–100kg, 15km record</span><span class="m-dim">Demonstrators</span><span class="m-status"><a class="pill" href="/program.html#vehicle-02">Planned</a></span></div>
+        <div class="mission-row"><span class="m-date">2027</span><span class="m-prog">Vehicle 03</span><span class="m-name">World record</span><span class="m-dim">Advanced demonstrators</span><span class="m-status"><a class="pill" href="/program.html#vehicle-03">Planned</a></span></div>
+        <div class="mission-row"><span class="m-date">2028</span><span class="m-prog">Vehicle 04</span><span class="m-name">Supersonic attempt</span><span class="m-dim">Flagship attempt</span><span class="m-status"><a class="pill" href="/program.html#vehicle-04">Planned</a></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR TEAMS -->
+<section class="block" style="background:var(--black);">
+  <div class="wrap">
+    <div style="display:flex;gap:40px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;">
+      <div style="flex:1 1 420px;max-width:640px;min-width:0;">
+        <h2>Our teams</h2>
+      </div>
+    </div>
+
+    <div class="team-accordion" style="margin-top:40px;">
+      <a class="team-panel" href="/team.html#aerothermal" style="background-image:url('/assets/img/edf-test-bed.jpg');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Aerothermal</div>
+          <p class="tp-desc">The Aerothermal Subteam is responsible for understanding and predicting the aerodynamic and thermal environments of the BExA prototype aircraft across all phases of flight.</p>
+        </div>
+      </a>
+      <a class="team-panel" href="/team.html#structures" style="background-image:url('/assets/img/v01-assembly.jpg');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Structures</div>
+          <p class="tp-desc">The Structures Subteam is responsible for the design, analysis, manufacturing, and testing of the BExA prototype aircraft primary structure.</p>
+        </div>
+      </a>
+      <a class="team-panel" href="/team.html#propulsion" style="background-image:url('/assets/img/v01-fan-install.jpg');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Propulsion</div>
+          <p class="tp-desc">The Propulsion Subteam is responsible for the design, integration, testing, and validation of all propulsion systems.</p>
+        </div>
+      </a>
+      <a class="team-panel" href="/team.html#controls" style="background-image:url('/assets/img/supersonic-teaser.jpg');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Controls</div>
+          <p class="tp-desc">The Controls Subteam designs, develops, and validates the dynamic models, control architectures, and autonomous flight systems required to ensure stable, predictable, and repeatable aircraft behavior across all flight regimes.</p>
+        </div>
+      </a>
+      <a class="team-panel" href="/team.html#avionics" style="background-image:url('/assets/img/team-legacy.jpg');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Avionics</div>
+          <p class="tp-desc">The Avionics Subteam designs, develops, integrates, and validates all electronic systems that support sensing, communication, power distribution, and onboard computation for the aircraft.</p>
+        </div>
+      </a>
+      <a class="team-panel" href="/team.html#flight-ops" style="background-image:url('/assets/img/team-photo.webp');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Flight Integration and Test</div>
+          <p class="tp-desc">The Flight Integration and Test Subteam plans, executes, and evaluates all flight operations to ensure safe, controlled, and repeatable testing of BExA prototype aircraft.</p>
+        </div>
+      </a>
+      <a class="team-panel" href="/team.html#business" style="background-image:url('/assets/img/edf-test-bed.jpg');">
+        <div class="tp-overlay"></div>
+        <div class="tp-content">
+          <div class="tp-name">Business</div>
+          <p class="tp-desc">The Business Subteam manages the financial, sponsorship, and outreach activities that enable the BExA to design, build, test, and achieve its mission.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="block cream">
+  <div class="wrap" style="display:flex;gap:24px 64px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;">
+    <div style="flex:1 1 380px;max-width:520px;">
+      <h2>Process</h2>
+      <p class="lede">We build to NASA's systems-engineering process, with a review at every stage. If we can't explain why it flies, it doesn't fly.</p>
+      <a href="/process.html" class="btn btn-outline-cream sm" style="border-color:#161616;color:#161616;margin-top:28px;"><span>How we build →</span></a>
+    </div>
+    <div style="flex:1 1 380px;max-width:640px;border-top:1.5px solid #161616;">
+      <div style="display:flex;gap:24px;height:64px;align-items:center;border-bottom:1px solid #cbbfa6;"><span style="color:var(--red);font-weight:700;width:28px;">01</span><span style="font-weight:700;font-size:28px;letter-spacing:-0.02em;width:170px;font-family:var(--font-display);">Define</span><span style="font-size:18px;color:#4a463f;">The mission</span></div>
+      <div style="display:flex;gap:24px;height:64px;align-items:center;border-bottom:1px solid #cbbfa6;"><span style="color:var(--red);font-weight:700;width:28px;">02</span><span style="font-weight:700;font-size:28px;letter-spacing:-0.02em;width:170px;font-family:var(--font-display);">Design</span><span style="font-size:18px;color:#4a463f;">Engineer the vehicle</span></div>
+      <div style="display:flex;gap:24px;height:64px;align-items:center;border-bottom:1px solid #cbbfa6;"><span style="color:var(--red);font-weight:700;width:28px;">03</span><span style="font-weight:700;font-size:28px;letter-spacing:-0.02em;width:170px;font-family:var(--font-display);">Test</span><span style="font-size:18px;color:#4a463f;">Prove it works</span></div>
+      <div style="display:flex;gap:24px;height:64px;align-items:center;border-bottom:1.5px solid #161616;"><span style="color:var(--red);font-weight:700;width:28px;">04</span><span style="font-weight:700;font-size:28px;letter-spacing:-0.02em;width:170px;font-family:var(--font-display);">Fly</span><span style="font-size:18px;color:#4a463f;">Take it to the air</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block" style="background:var(--black);">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div style="background:var(--panel-2);border-radius:var(--r-m);padding:36px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;">
+      <div><div style="font-size:15px;color:var(--gray);">Sponsors &amp; faculty</div><div style="font-weight:700;font-size:38px;letter-spacing:-0.03em;line-height:1.05;margin-top:10px;font-family:var(--font-display);">Work with us.</div></div>
+      <a href="/sponsors.html" class="btn btn-outline-cream" style="align-self:flex-start;"><span>Partner with us</span></a>
+    </div>
+    <div style="background:var(--red);border-radius:var(--r-m);padding:36px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;">
+      <div><div style="font-size:15px;opacity:0.85;">Students</div><div style="font-weight:700;font-size:38px;letter-spacing:-0.03em;line-height:1.05;margin-top:10px;font-family:var(--font-display);">Come build with us.</div></div>
+      <a href="/join.html" class="btn btn-fill-cream" style="align-self:flex-start;"><span>Join the team</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="col-brand">
+    <a href="/"><img src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <div class="sub">Buckeye Experimental Aeronautics<br>The Ohio State University</div>
+  </div>
+  <div class="col-links">
+    <h4>Site</h4>
+    <a href="/program.html">Programs</a>
+    <a href="/process.html">Process</a>
+    <a href="/team.html">Team</a>
+    <a href="/sponsors.html">Sponsors</a>
+  </div>
+  <div class="col-contact">
+    <h4>Contact</h4>
+    President — <a href="mailto:bakhurynskyy.1@osu.edu">bakhurynskyy.1@osu.edu</a><br>
+    Engineering Director — <a href="mailto:patterson.1368@osu.edu">patterson.1368@osu.edu</a><br>
+    Vice President — <a href="mailto:cohen.1344@osu.edu">cohen.1344@osu.edu</a><br>
+    Advisor: Dr. Matthew H. McCrink
+  </div>
+</footer>
+
+<script src="/assets/js/site.js?v=7"></script>
+</body>
+</html>

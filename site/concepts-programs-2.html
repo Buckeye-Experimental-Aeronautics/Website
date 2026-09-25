@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Programs layout concepts 2 (Hermeus-style)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=26">
+<style>
+  .cp{max-width:1240px;margin:0 auto;padding:56px 32px 160px;}
+  .cp h1{font-size:44px;}
+  .intro{color:var(--gray);max-width:780px;line-height:1.6;margin-top:14px;}
+  .intro a{color:var(--cream);}
+  .cblock{margin-top:72px;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;}
+  .chead{padding:18px 26px;background:var(--panel-2);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;}
+  .chead b{font-family:var(--font-display);font-size:19px;}
+  .chead span{font-size:13px;color:var(--gray);}
+  .cbody{padding:32px;background:var(--black);}
+  .cnote{padding:16px 26px;border-top:1px solid var(--line);background:var(--panel-2);font-size:14px;color:var(--gray);line-height:1.55;}
+  .cnote b{color:var(--cream);font-weight:600;}
+  .mono{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;}
+
+  /* roadmap chip strip (Hermeus: year above, bracketed chips) */
+  .strip{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;padding-bottom:22px;border-bottom:1px solid var(--line);}
+  .chipcol{display:flex;flex-direction:column;gap:6px;}
+  .chipcol .yr{font:500 11px 'JetBrains Mono',monospace;color:var(--gray);letter-spacing:.06em;}
+  .chip2{position:relative;background:var(--panel-2);color:var(--cream);border:0;font:600 14px var(--font-body);padding:12px 20px;cursor:pointer;border-radius:0;}
+  .chip2::before,.chip2::after{content:"";position:absolute;top:-4px;bottom:-4px;width:1px;background:var(--gray);}
+  .chip2::before{left:0}.chip2::after{right:0}
+  .chip2:hover{background:#26262a;}
+  .chip2.on{background:var(--red);}
+  .chip2.plan{color:var(--gray);}
+  .chip2.on.plan{color:var(--cream);}
+
+  /* detail band */
+  .band{display:grid;grid-template-columns:200px 1fr auto;gap:28px;align-items:start;padding:36px 0 20px;}
+  .band h3{font-size:30px;letter-spacing:-.02em;}
+  .band .sub{color:var(--gray);font-size:14px;margin-top:6px;}
+  .band p{color:rgba(255,241,220,.85);line-height:1.55;margin:0;max-width:560px;}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
+  .tg{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.04em;text-transform:uppercase;padding:6px 10px;border-radius:var(--r-s);background:var(--cream);color:var(--red);white-space:nowrap;}
+  .tg.dim{background:transparent;border:1px solid rgba(255,255,255,.3);color:var(--cream);}
+  .stage{position:relative;height:400px;border-radius:var(--r-m);overflow:hidden;background:var(--panel-2) center/cover no-repeat;}
+  .arr{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:var(--r-s);border:1px solid rgba(255,255,255,.6);background:rgba(12,12,13,.5);color:#fff;font-size:20px;cursor:pointer;}
+  .arr.l{left:18px}.arr.r{right:18px}
+  .arr:hover{background:var(--red);border-color:var(--red);}
+  .dots{position:absolute;bottom:14px;left:0;right:0;display:flex;gap:6px;justify-content:center;}
+  .dots i{width:7px;height:7px;background:rgba(255,255,255,.4);border-radius:1px;}
+  .dots i.on{background:#fff;}
+  .sec{scroll-margin-top:110px;border-top:1px solid var(--line);}
+  .sec:first-child{border-top:0}
+
+  /* H3 timeline */
+  .axis{position:relative;height:110px;margin:8px 0 12px;}
+  .axis svg{position:absolute;left:0;right:0;top:46px;width:100%;height:26px;}
+  .axis .pt{position:absolute;transform:translateX(-2px);}
+  .axis .pt .yr{position:absolute;top:0;left:0;white-space:nowrap;}
+  .axis .pt.r1{top:0}.axis .pt.r2{top:0}
+  .axis .pt .chip2{position:absolute;top:70px;left:0;white-space:nowrap;}
+  .axis .pt.up .chip2{top:8px;}
+  .axis .pt .yr{top:0}
+  .checks{margin:0;padding:0;list-style:none;}
+  .checks li{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-size:16px;}
+  .checks li::before{content:"";width:16px;height:16px;border:2px solid var(--gray);border-radius:3px;flex:none;}
+  .checks li.done::before{background:var(--red);border-color:var(--red);}
+  .grid2{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;}
+  .kv{display:grid;grid-template-columns:auto 1fr;gap:10px 28px;font-size:15px;margin:0;}
+  .kv dt{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);padding-top:3px;}
+  .kv dd{margin:0}
+  @media(max-width:860px){.band{grid-template-columns:1fr}.tags{justify-content:flex-start}.grid2{grid-template-columns:1fr}.stage{height:260px}}
+</style>
+</head>
+<body>
+
+<div class="site-top">
+  <div class="site-header">
+    <a href="/"><img class="logo" src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <nav class="site-nav"><a href="/concepts-programs.html">First round</a><a href="/">Back to site</a></nav>
+  </div>
+  <svg class="taper-bar" id="progress-bar" height="26" aria-hidden="true">
+    <rect id="pb-track" y="12" width="1440" height="1" fill="rgba(255,241,220,0.28)"></rect>
+    <polygon id="pb-body" points="0,12 96,9.5 96,15.5 0,13" fill="#fff1dc"></polygon>
+    <polygon id="pb-head" points="120,12.5 84,1.5 92.5,12.5 87.5,19.3" fill="#fff1dc"></polygon>
+  </svg>
+</div>
+
+<div class="cp">
+  <h1>Programs: Hermeus-style concepts</h1>
+  <p class="intro">Round two, all built on the structure of <a href="https://hermeus.com/aircraft" target="_blank">hermeus.com/aircraft</a>: a <b style="color:var(--cream)">roadmap strip</b> of small bracketed chips (year above each) is the overview; below it, a <b style="color:var(--cream)">detail band</b> per aircraft with name, description and status tags, then a big image with arrows. Interactive, real programs, draft copy. Not linked from the site.</p>
+  <div id="mount"></div>
+</div>
+
+<script>
+var P=[
+ {id:'v1',pg:'Vehicle 01',yr:'2026',name:'EDF test platform',date:'Fall 2026',stage:'Foundation',live:1,tags:['In progress','Target Fall 2026'],prop:'Electric ducted fan (90 mm)',dir:'Ethan Hess',
+  blurb:'Use a consumer grade EDF aircraft as a workhorse testing platform to validate, test, and develop the avionics and control systems for following programs. Prove that BExA's processes and procedures work along the way.',
+  imgs:['/assets/img/edf-test-bed.jpg','/assets/img/v01-fan-install.jpg','/assets/img/hero-night.jpg'],
+  todo:[['Integrate EDF into the flight test platform',1],['Avionics, autonomy and telemetry systems',0],['Safety and documentation processes',0],['Flight test campaign',0]]},
+ {id:'ts',pg:'Thrust Stand',yr:'2026',name:'Turbine hotfire',date:'Fall 2026',stage:'Foundation',live:1,tags:['In progress','Target Fall 2026'],prop:'JetCat microturbine',dir:'TBD',
+  blurb:'Ground-test the microturbine: instrumentation, test stand, data acquisition and safe operating procedures for jet power.',
+  imgs:['/assets/img/v01-fan-install.jpg','/assets/img/v01-assembly.jpg'],
+  todo:[['Instrumentation',0],['Test stand',0],['Data acquisition',0],['Safe operating procedures',0],['Hotfire',0]]},
+ {id:'v2',pg:'Vehicle 02',yr:'2027',name:'25–100kg, 15km record',date:'Spring 2027',stage:'Demonstrators',live:0,tags:['Planned','Target Spring 2027'],prop:'Turbine (TBD)',dir:'TBD',
+  blurb:'First record attempt, in the weight class our platform is built for.',
+  imgs:['/assets/img/v01-assembly.jpg','/assets/img/supersonic-teaser.jpg'],todo:[['Scope and requirements (TBD)',0]]},
+ {id:'v3',pg:'Vehicle 03',yr:'2027',name:'World record',date:'2027',stage:'Advanced demonstrators',live:0,tags:['Planned','Target 2027'],prop:'TBD',dir:'TBD',
+  blurb:'Push the platform to its performance ceiling under a formally observed attempt.',
+  imgs:['/assets/img/team-legacy.jpg','/assets/img/supersonic-teaser.jpg'],todo:[['Scope and requirements (TBD)',0]]},
+ {id:'v4',pg:'Vehicle 04',yr:'2028',name:'Supersonic attempt',date:'2028',stage:'Flagship attempt',live:0,tags:['Planned','Target 2028'],prop:'TBD',dir:'TBD',
+  blurb:'A student-built aircraft flown past Mach 1.',
+  imgs:['/assets/img/supersonic-teaser.jpg','/assets/img/hero-night.jpg'],todo:[['Scope and requirements (TBD)',0]]}
+];
+function tags(p){return '<div class="tags">'+p.tags.map(function(t,i){return '<span class="tg'+(i&&!p.live?' dim':(i?' dim':''))+'">'+t+'</span>';}).join('')+'</div>';}
+function chips(sel,prefix){return '<div class="strip">'+P.map(function(p,i){return '<div class="chipcol"><span class="yr">'+p.yr+'</span><button class="chip2 '+(p.live?'':'plan')+'" data-i="'+i+'" data-k="'+prefix+'">'+p.pg+'</button></div>';}).join('')+'</div>';}
+function blk(t,ref,note,body){return '<div class="cblock"><div class="chead"><b>'+t+'</b><span>'+ref+'</span></div><div class="cbody">'+body+'</div><div class="cnote">'+note+'</div></div>';}
+function stage(p,k){return '<div class="stage" id="st-'+k+'-'+p.id+'" data-n="0" style="background-image:url('+p.imgs[0]+')"><button class="arr l" data-p="'+p.id+'" data-k="'+k+'" data-d="-1">←</button><button class="arr r" data-p="'+p.id+'" data-k="'+k+'" data-d="1">→</button><div class="dots">'+p.imgs.map(function(_,j){return '<i'+(j?'':' class="on"')+'></i>';}).join('')+'</div></div>';}
+
+/* H1: stacked bands, chips scroll */
+var H1=chips(0,'h1')+P.map(function(p){return '<section class="sec" id="h1-'+p.id+'"><div class="band"><div><h3>'+p.pg+'</h3><div class="sub">'+p.name+'</div></div><p>'+p.blurb+'</p>'+tags(p)+'</div>'+stage(p,'h1')+'<div style="height:36px"></div></section>';}).join('');
+/* H2: one band at a time, arrows step programs */
+var H2=chips(0,'h2')+'<div id="h2b"></div>';
+/* H3: proportional timeline + spec/checklist */
+var pos=[{l:1,up:0},{l:1,up:1},{l:40,up:0},{l:62,up:0},{l:88,up:0}];
+var H3='<div class="axis" id="axis"><svg viewBox="0 0 1000 26" preserveAspectRatio="none"><rect y="12" width="1000" height="1" fill="rgba(255,241,220,.28)"/><polygon points="0,12 330,9.5 330,15.5 0,13" fill="#BA0C2F"/><polygon points="366,12.5 330,1.5 338.5,12.5 333.5,19.3" fill="#BA0C2F" transform="translate(0,0)"/></svg>'+P.map(function(p,i){return '<div class="pt'+(pos[i].up?' up':'')+'" style="left:'+pos[i].l+'%"><span class="yr mono" style="color:var(--gray)">'+p.date+'</span><button class="chip2 '+(p.live?'':'plan')+'" data-i="'+i+'" data-k="h3">'+p.pg+'</button></div>';}).join('')+'</div><div id="h3d" style="margin-top:36px;border-top:1px solid var(--line);padding-top:28px"></div>';
+
+document.getElementById('mount').innerHTML=
+ blk('Concept H1: stacked bands','closest to Hermeus: strip anchors to a band per program','<b>Faithful adaptation.</b> The chip strip is the overview; clicking a chip scrolls to that program\'s band (name, description, status tags, image with arrows). The whole roadmap reads top-to-bottom as one page, and every program has an anchor. Long page, but nothing is hidden.',H1)+
+ blk('Concept H2: one band at a time','strip as selector; arrows step through programs','<b>Compact.</b> Same strip and band, but only the selected program shows, and the big arrows step to the next or previous program instead of through photos. Everything fits on one screen; you lose scroll-through-everything.',H2)+
+ blk('Concept H3: timeline strip + spec sheet','Hermeus chips placed on a dated axis, with our taper line as the axis','<b>Adds time.</b> Chips sit at their real dates along a taper-line axis (red = elapsed), so the overview also shows how the programs overlap. The detail below is a spec sheet plus checklist instead of a photo, which suits programs that don\'t have photos yet.',H3);
+
+function ph(k,id,d){var s=document.getElementById('st-'+k+'-'+id),p=P.filter(function(x){return x.id==id})[0],n=(+s.dataset.n+d+p.imgs.length)%p.imgs.length;s.dataset.n=n;s.style.backgroundImage='url('+p.imgs[n]+')';[].forEach.call(s.querySelectorAll('.dots i'),function(e,j){e.classList.toggle('on',j==n);});}
+function h2(i){var p=P[i];i=(i+P.length)%P.length;p=P[i];document.getElementById('h2b').innerHTML='<div class="band"><div><h3>'+p.pg+'</h3><div class="sub">'+p.name+'</div></div><p>'+p.blurb+'</p>'+tags(p)+'</div><div class="stage" style="background-image:url('+p.imgs[0]+')"><button class="arr l" data-s="'+(i-1)+'">←</button><button class="arr r" data-s="'+(i+1)+'">→</button></div>';[].forEach.call(document.querySelectorAll('[data-k=h2]'),function(e){e.classList.toggle('on',e.dataset.i==i);});}
+function h3(i){var p=P[i];document.getElementById('h3d').innerHTML='<div class="band" style="padding-top:0;grid-template-columns:200px 1fr auto"><div><h3>'+p.pg+'</h3><div class="sub">'+p.name+'</div></div><p>'+p.blurb+'</p>'+tags(p)+'</div><div class="grid2"><ul class="checks">'+p.todo.map(function(t){return '<li class="'+(t[1]?'done':'')+'">'+t[0]+'</li>';}).join('')+'</ul><dl class="kv"><dt>Target</dt><dd>'+p.date+'</dd><dt>Stage</dt><dd>'+p.stage+'</dd><dt>Propulsion</dt><dd>'+p.prop+'</dd><dt>Director</dt><dd>'+p.dir+'</dd></dl></div>';[].forEach.call(document.querySelectorAll('[data-k=h3]'),function(e){e.classList.toggle('on',e.dataset.i==i);});}
+document.addEventListener('click',function(e){
+ var c=e.target.closest('.chip2'),a=e.target.closest('.arr');
+ if(c){var i=+c.dataset.i;if(c.dataset.k=='h1'){document.getElementById('h1-'+P[i].id).scrollIntoView({behavior:'smooth'});[].forEach.call(document.querySelectorAll('[data-k=h1]'),function(x){x.classList.toggle('on',x===c)});}
+  else if(c.dataset.k=='h2')h2(i);else if(c.dataset.k=='h3')h3(i);}
+ if(a){if(a.dataset.p)ph(a.dataset.k,a.dataset.p,+a.dataset.d);else if(a.dataset.s!==undefined)h2(+a.dataset.s);}
+});
+document.querySelector('[data-k=h1]').classList.add('on');h2(0);h3(0);
+</script>
+<script src="/assets/js/site.js?v=7"></script>
+</body>
+</html>
