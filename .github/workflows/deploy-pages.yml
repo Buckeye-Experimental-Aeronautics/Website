@@ -43,10 +43,13 @@ jobs:
           find build -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) \
             -exec sed -i "s#/assets/#/$REPO/assets/#g" {} +
 
-          # Root-relative page links: href="/" and href="/<page>.html"
+          # Root-relative page links: href="/", href="/<page>.html", and
+          # href="/<page>.html#fragment" (the mission-table/team-accordion
+          # links on the homepage all carry a #fragment, so the file
+          # extension alone isn't the end of the match)
           find build -name '*.html' \
             -exec sed -i "s#href=\"/\"#href=\"/$REPO/\"#g" {} + \
-            -exec sed -i -E "s#href=\"/([a-zA-Z0-9_-]+\.html)\"#href=\"/$REPO/\1\"#g" {} +
+            -exec sed -i -E "s@href=\"/([a-zA-Z0-9_-]+\.html)(#[^\"]*)?\"@href=\"/$REPO/\1\2\"@g" {} +
 
           # Never let this temporary preview get indexed under the wrong domain
           find build -name '*.html' \
