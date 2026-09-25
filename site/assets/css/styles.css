@@ -425,4 +425,19 @@ section.block.cream p.lede{color:#4a463f;}
   .team-accordion{flex-direction:column !important;height:auto !important;}
   .team-panel{flex:0 0 auto !important;height:180px !important;}
   .tp-desc{max-height:200px !important;opacity:1 !important;margin-top:8px !important;}
+
+  /* homepage Process steps (Define/Design/Test/Fly): the label column and
+     gaps were sized for desktop and don't leave enough room for the longer
+     captions ("Engineer the vehicle") next to them on a phone */
+  .proc-row{gap:12px !important;}
+  .proc-label{width:88px !important;font-size:22px !important;}
+  .proc-cap{font-size:14px !important;}
+
+  /* homepage CTA cards: fixed two-column grid squeezes both cards unreadably narrow */
+  .proc-cta{grid-template-columns:1fr !important;}
+
+  /* team page: two roster groups sharing a row (each min-width:280px) don't
+     fit side by side on a phone at all — stack them */
+  .roster-row{flex-direction:column !important;}
+  .roster-row .roster-group{min-width:0 !important;}
 }

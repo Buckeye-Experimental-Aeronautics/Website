@@ -21,6 +21,18 @@
   function iso(dt){return dt.getFullYear()+'-'+String(dt.getMonth()+1).padStart(2,'0')+'-'+String(dt.getDate()).padStart(2,'0');}
   function level(c){return c<=0?0:c<2?1:c<4?2:c<7?3:4;}
 
+  /* On phones the grid is wider than the screen and scrolls horizontally;
+     browsers default that scroll to the left (oldest activity), so without
+     this someone on mobile sees months-old squares first and has to swipe
+     to reach today. Desktop already shows the whole grid, so this is a
+     no-op there. */
+  function scrollToLatest(){
+    if(window.innerWidth>640)return;
+    var scroller=g.closest('.hm-scroll');
+    if(!scroller)return;
+    requestAnimationFrame(function(){scroller.scrollLeft=scroller.scrollWidth;});
+  }
+
   function renderReal(counts){
     var h='',total=0;
     for(var w=0;w<53;w++){h+='<div class="hm-w">';for(var d=0;d<7;d++){
@@ -31,6 +43,7 @@
       h+='</div>';}
     g.innerHTML=h;
     showTotal(total);
+    scrollToLatest();
   }
 
   function renderExample(){
@@ -46,6 +59,7 @@
       h+='</div>';}
     g.innerHTML=h;
     showTotal(total);
+    scrollToLatest();
   }
 
   function wireTooltip(){
