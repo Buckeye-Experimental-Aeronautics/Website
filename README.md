@@ -7,42 +7,94 @@ Live at [flybexa.com](https://flybexa.com).
 
 ## Stack
 
-- React + Vite + TypeScript
-- Tailwind CSS v4
-- Framer Motion
-- Phosphor Icons + Lucide React
-- Deployed on Vercel
-
-Use pnpm. Do not use npm.
+Static multi-page HTML/CSS/JS — **no build step, no framework, no
+dependencies to install.** Deployed on Vercel, which serves `site/` directly
+(see `vercel.json`).
 
 ## Development
 
+Serve the `site/` folder with any static file server and open it, e.g.:
+
 ```bash
-pnpm install     # install dependencies
-pnpm dev         # dev server at http://localhost:5173
-pnpm build       # production build to dist/
-pnpm preview     # serve the production build locally
+python -m http.server 8791 --directory site
 ```
 
-Run `pnpm build` before you push. A type error fails the Vercel build.
+Then visit `http://localhost:8791/`. There's nothing to install and nothing
+to build — edit a file under `site/` and reload.
+
+## Site structure
+
+- Pages: `index`, `team`, `program`, `process`, `sponsors`, `join`
+  (`.html`, at the root of `site/`). `styleguide.html` documents the design
+  system and is `noindex`'d but otherwise live. Early design-exploration
+  sandbox pages (`concepts*.html`) were never linked from the site and live
+  in the project folder's `docs/concepts-sandbox/` instead, not in this repo.
+- CSS: `site/assets/css/styles.css` (all shared components/styles).
+- JS: `site/assets/js/` — `site.js` (scroll-progress bar, header condense),
+  `programs.js` (the tab/chip panel switcher used on Programs and Process),
+  `worktracking.js` (per-program Roadmap timelines), `heatmap.js` (homepage
+  activity grid). Both `worktracking.js` and `heatmap.js` fetch
+  `site/assets/data/work.json`, which is written by an external sync
+  process — see "Live task data" below.
+- Images: `site/assets/img/`.
+
+Bump a file's `?v=N` query string in whichever page's `<head>`/`<script>`
+references it when you change that CSS or JS file, since browsers cache
+aggressively — the version numbers aren't otherwise meaningful.
 
 ## Editing content
 
-Most copy is data, not markup. It lives in `src/lib/constants.ts`: sub-teams,
-projects, sponsorship tiers, leadership, contact email, social links, and SEO
-titles and descriptions. Edit there rather than in individual components.
+Most copy is written directly into each page's HTML — there's no CMS or data
+file driving it (this is a plain static site, not the earlier React build).
+Edit the page directly for wording changes.
 
 | What | Where |
 |------|-------|
-| Contact email | `CONTACT_EMAIL` in `src/lib/constants.ts` |
-| Social links | `SOCIAL_LINKS` in `src/lib/constants.ts` |
-| Sponsorship tiers | `SPONSOR_TIERS` in `src/lib/constants.ts` |
-| Images and logos | `src/assets/` |
+| Contact emails / roles | Footer of every page, and the Admin roster on `team.html` |
+| Sponsor logo | `site/assets/img/sponsor-osu-engineering.png` + references in `index.html`/`sponsors.html` |
+| Subteam descriptions | `team.html` and `index.html` — sourced verbatim from each subteam's brochure, see `docs/source-material/` in the project folder |
+| SEO title/description | Each page's own `<title>`/`<meta name="description">` in `<head>` |
 
-The join form on `/join` posts to a Google Form owned by the club Gmail. The
-option strings in `TEAM_OPTIONS` and `YEAR_OPTIONS` have to match that form's
-choices exactly. Google drops values it does not recognise without reporting an
-error, so a typo here loses real responses silently.
+`/join.html` links out to the club's Google Form (same form the earlier React
+build posted to directly) plus a 3-step "how to join" list.
+
+## Live task data
+
+`site/assets/data/work.json` is **not edited by hand** — it's overwritten by
+scheduled GitHub Actions running in the team's private repos:
+
+- `sync-roadmap.mjs` (deployed in the Admin repo) publishes each Vehicle
+  project board's tasks for the per-program Roadmap timelines on
+  `program.html`.
+- `sync-heatmap.mjs` (deployed identically in Engineering, Business, and
+  Admin) publishes each repo's closed-issue counts for the homepage activity
+  heatmap.
+
+Full setup, field-name assumptions, and the safety rules both scripts follow
+(never touch `main` before it's the live branch, never clobber each other's
+data) are documented in the project folder's `docs/work-sync/README.md` —
+that folder isn't part of this repo since it's about infrastructure in other
+repos, not this site.
+
+## Deployment
+
+Every push to `main` deploys on its own via Vercel's GitHub integration —
+`vercel.json` points it at `site/` as the output directory, no build command.
+
+**Keep this repository public.** Vercel's free Hobby plan will not deploy a
+private repository owned by an organisation. Switch it to private and
+deploys silently stop firing while the dashboard still reports "Connected" —
+nothing reports the failure, which makes it hard to diagnose.
+
+`www.flybexa.com` redirects to the apex domain, which is canonical (a Vercel
+domain setting, not anything in this repo).
+
+If the domain ever changes, update it in `site/sitemap.xml` and
+`site/robots.txt` — those are the only two places the origin is hard-coded
+in this static rebuild (the old React build also had it in
+`src/lib/constants.ts` and `index.html`; neither exists as hard-coded origin
+strings here since there's no `SITE_URL` constant or canonical `<link>` tag
+in the current pages).
 
 ## Accounts
 
@@ -52,7 +104,7 @@ member.
 | Service | What it does |
 |---------|--------------|
 | Porkbun | Registers the flybexa.com domain |
-| GitHub  | Holds this code, at `bexa-aero/BEXA` |
+| GitHub  | Holds this code, at `bexa-aero/BEXA` (see below — there's a second, non-deploying copy too) |
 | Vercel  | Builds and serves the site |
 
 Access questions go to bexa.aero@gmail.com. When officers change over, hand off
@@ -64,58 +116,33 @@ Read this before you push anything.
 
 | Remote | Repository | Deploys? |
 |--------|------------|----------|
-| `origin` | `bexa-aero/BEXA` | **Yes.** Vercel watches this one |
-| `org` | `Buckeye-Experimental-Aeronautics/Website` | No |
+| `bexa-aero` | `bexa-aero/BEXA` | **Yes.** Vercel watches this one |
+| `origin` (this repo) | `Buckeye-Experimental-Aeronautics/Website` | No |
 
-The org copy exists so officers get access through org membership instead of
-sharing the `bexa-aero` login. Nothing is served from it.
+This org copy exists so officers get access through org membership instead of
+sharing the `bexa-aero` login. **Nothing is served from it by Vercel** — as of
+this rebuild it also runs a GitHub Pages preview (see below), which is a
+separate, unrelated deployment that only exists here.
 
-**Pushing only to the org repo will look completely successful and change
-nothing on the live site.** There is no warning and no error. Push to both:
+**Pushing only to this org repo will look completely successful and change
+nothing on flybexa.com.** There is no warning and no error. To actually ship a
+change to production, it has to reach `bexa-aero/BEXA`'s `main` — that
+requires push access to `bexa-aero/BEXA` specifically, which the agent that
+did this rebuild did not have.
 
-```bash
-git push origin main && git push org main
-```
-
-If they ever drift, `origin` is the one that matters, because it is what the
-public sees.
-
-Pointing Vercel at the org repo instead would remove this trap entirely. It is
-a few clicks in the Vercel dashboard under Settings, Git, and it needs the club
+Pointing Vercel at this org repo instead would remove this trap entirely. It's
+a few clicks in the Vercel dashboard under Settings → Git, and needs the club
 Vercel login. Nobody has done it yet.
 
-## Deployment
+## GitHub Pages preview (this repo only, temporary)
 
-Every push to `main` on `bexa-aero/BEXA` deploys on its own. No button, no
-dashboard. Vercel clones the repo, runs `pnpm install` and `pnpm build` on its
-own Linux machine, and swaps the result in behind flybexa.com. It takes about
-20 seconds.
-
-Two things follow from that. A build passing on your machine does not prove it
-passes on Vercel, so run `pnpm build` before pushing rather than after. And a
-build that fails cannot take the site down, because Vercel only swaps in a
-build that succeeded; the previous deployment keeps serving.
-
-Only `main` reaches flybexa.com. Any other branch can be pushed safely.
-
-To undo a deploy, revert the commit and push:
-
-```bash
-git revert -m 1 <merge commit> && git push origin main && git push org main
-```
-
-The Vercel dashboard also has Instant Rollback, which swaps back to an earlier
-deployment without rebuilding. That is faster but needs the club login.
-
-`vercel.json` handles the single-page-app routing rewrites.
-
-`www.flybexa.com` is a 308 redirect to the apex domain, which is canonical.
-
-**Keep this repository public.** Vercel's free Hobby plan will not deploy a
-private repository owned by an organisation. Switch it to private and deploys
-stop firing while the dashboard still reports "Connected". Nothing reports the
-failure, which makes it hard to diagnose.
-
-If the domain ever changes, update `SITE_URL` in `src/lib/constants.ts` plus
-the matching URLs in `public/sitemap.xml`, `public/robots.txt`, and
-`index.html`. Those four are the only places the origin is hard-coded.
+Since this repo doesn't reach flybexa.com, pushes to its `main` also publish a
+throwaway preview via GitHub Pages (`.github/workflows/deploy-pages.yml`) so
+people can look at the rebuild without Tailscale/local-server access. It's
+served under `/Website/`, so the build step rewrites root-absolute paths
+(`/team.html`, `/assets/...`) to `/Website/team.html` etc. **in the published
+copy only** — nothing in `site/` itself changes, so this has no effect on the
+real Vercel deployment. Every page in the Pages copy also gets a blanket
+`noindex` injected so it can't get crawled as duplicate content under the
+wrong domain. Delete the workflow whenever this repo starts deploying for
+real, or whenever the preview is no longer needed.

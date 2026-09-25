@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programs — BExA</title>
+<meta name="description" content="Every BExA aircraft and test stand: status, targets and progress.">
+<link rel="icon" href="/assets/img/favicon-96.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=79">
+</head>
+<body>
+
+<div class="site-top">
+  <div class="site-header">
+    <a href="/"><img class="logo" src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <nav class="site-nav">
+      <a href="/program.html" class="current">Programs</a>
+      <a href="/process.html">Process</a>
+      <a href="/team.html">Team</a>
+      <a href="/sponsors.html">Sponsors</a>
+      <a href="/join.html" class="btn btn-fill-cream sm"><span>Join</span></a>
+    </nav>
+  </div>
+  <svg class="taper-bar" id="progress-bar" height="26" aria-hidden="true">
+      <rect id="pb-track" y="12" width="1440" height="1" fill="rgba(255,241,220,0.28)"></rect>
+      <polygon id="pb-body" points="0,12 96,9.5 96,15.5 0,13" fill="#fff1dc"></polygon>
+      <polygon id="pb-head" points="120,12.5 84,1.5 92.5,12.5 87.5,19.3" fill="#fff1dc"></polygon>
+    </svg>
+</div>
+
+<section class="block" id="programs" style="background:var(--black);">
+  <div class="wrap">
+    <div class="prog-strip" role="tablist" aria-label="Programs"><div class="prog-chipcol"><span class="prog-yr">2026</span><a class="prog-chip" href="#vehicle-01" data-i="0"><span>Vehicle 01</span></a></div><div class="prog-chipcol"><span class="prog-yr">2026</span><a class="prog-chip" href="#thrust-stand" data-i="1"><span>Thrust Stand</span></a></div><div class="prog-chipcol"><span class="prog-yr">2027</span><a class="prog-chip is-plan" href="#vehicle-02" data-i="2"><span>Vehicle 02</span></a></div><div class="prog-chipcol"><span class="prog-yr">2027</span><a class="prog-chip is-plan" href="#vehicle-03" data-i="3"><span>Vehicle 03</span></a></div><div class="prog-chipcol"><span class="prog-yr">2028</span><a class="prog-chip is-plan" href="#vehicle-04" data-i="4"><span>Vehicle 04</span></a></div></div>
+    <div class="prog-panel">
+    <article class="prog-article" id="vehicle-01" data-i="0">
+      <div class="prog-band">
+        <div><h2>Vehicle 01</h2><div class="prog-sub">EDF test platform</div></div>
+        <p>Use a consumer grade EDF aircraft as a workhorse testing platform to validate, test, and develop the avionics and control systems for following programs. Prove that BExA's processes and procedures work along the way.</p>
+      </div>
+      <div class="prog-stagewrap"><button type="button" class="prog-chev prog-prev" aria-label="Previous photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="20,4 4,32 20,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button><div class="prog-stage" data-imgs="/assets/img/hero-night.jpg,/assets/img/v01-team-testing.jpg" data-n="0" style="background-image:url('/assets/img/hero-night.jpg');background-position:center" role="img" aria-label="Vehicle 01: EDF test platform"></div><div class="prog-bars" role="tablist" aria-label="Photos"><i class="on" data-k="0"></i><i data-k="1"></i></div><button type="button" class="prog-chev prog-next" aria-label="Next photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="4,4 20,32 4,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button></div>
+      <div class="prog-detail">
+        <div>
+          <h3>Progress</h3>
+          <ul class="prog-checks"><li data-status="done"><span>System Requirements Review</span></li><li data-status="done"><span>Static Engine &amp; Avionics Testing</span></li><li data-status="doing"><span>Stock Configuration Flight</span></li><li data-status="todo"><span>Conceptual Design Review</span></li><li data-status="todo"><span>V02 Avionics Integration</span></li><li data-status="todo"><span>Preliminary Design Review</span></li><li data-status="todo"><span>Flight Readiness Review</span></li><li data-status="todo"><span>V02 Avionics testing</span></li></ul>
+        </div>
+        <div>
+          <h3>Specifications</h3>
+          <dl class="prog-kv"><dt>Status</dt><dd>In progress</dd><dt>Target</dt><dd>Fall 2026</dd><dt>Stage</dt><dd>Foundation</dd><dt>Propulsion</dt><dd>Electric ducted fan (90 mm)</dd><dt>Director</dt><dd>Ethan Hess</dd></dl>
+        </div>
+      </div>
+      <div class="prog-roadmap">
+        <div class="wt-card wt-app" data-program="Vehicle 01">
+          <div class="wt-bar"><span class="wt-title">Roadmap</span><span class="wt-ex">Example data</span></div>
+          <div class="wt-view"></div>
+        </div>
+      </div>
+      <div class="prog-log">
+        <h3>Updates</h3>
+        <p class="prog-empty">No updates posted yet. Dated progress notes, test results and photos for Vehicle 01 will appear here.</p>
+      </div>
+    </article>
+    <article class="prog-article" id="thrust-stand" data-i="1" hidden>
+      <div class="prog-band">
+        <div><h2>Thrust Stand</h2><div class="prog-sub">Turbine hotfire</div></div>
+        <p>Ground-test the microturbine: instrumentation, test stand, data acquisition and the safe operating procedures that jet power requires.</p>
+      </div>
+      <div class="prog-stagewrap"><button type="button" class="prog-chev prog-prev" aria-label="Previous photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="20,4 4,32 20,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button><div class="prog-stage" data-imgs="/assets/img/v01-fan-install.jpg,/assets/img/v01-assembly.jpg" data-n="0" style="background-image:url('/assets/img/v01-fan-install.jpg');background-position:center" role="img" aria-label="Thrust Stand: Turbine hotfire"></div><div class="prog-bars" role="tablist" aria-label="Photos"><i class="on" data-k="0"></i><i data-k="1"></i></div><button type="button" class="prog-chev prog-next" aria-label="Next photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="4,4 20,32 4,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button></div>
+      <div class="prog-detail">
+        <div>
+          <h3>Progress</h3>
+          <ul class="prog-checks"><li data-status="doing"><span>System Requirements Review</span></li><li data-status="doing"><span>Conceptual Design Review</span></li></ul>
+        </div>
+        <div>
+          <h3>Specifications</h3>
+          <dl class="prog-kv"><dt>Status</dt><dd>In progress</dd><dt>Target</dt><dd>Fall 2026</dd><dt>Stage</dt><dd>Foundation</dd><dt>Propulsion</dt><dd>JetCat P180 microturbine</dd><dt>Director</dt><dd>TBD</dd></dl>
+        </div>
+      </div>
+      <div class="prog-log">
+        <h3>Updates</h3>
+        <p class="prog-empty">No updates posted yet. Dated progress notes, test results and photos for Thrust Stand will appear here.</p>
+      </div>
+    </article>
+    <article class="prog-article" id="vehicle-02" data-i="2" hidden>
+      <div class="prog-band">
+        <div><h2>Vehicle 02</h2><div class="prog-sub">25–100kg, 15km record</div></div>
+        <p>The first jet demonstrator, targeting the <a href="https://arc.osu.edu/news/2017/09/ohio-state-sets-drone-world-speed-record" target="_blank" rel="noopener">drone speed record Ohio State set in 2017</a> with our advisor Dr. Matthew McCrink on the team. A 70-pound autonomous jet averaged 147 mph over 28 miles across Lake Erie.</p>
+      </div>
+      <div class="prog-stagewrap"><button type="button" class="prog-chev prog-prev" aria-label="Previous photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="20,4 4,32 20,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button><div class="prog-stage" data-imgs="/assets/img/supersonic-teaser.jpg,/assets/img/v01-assembly.jpg" data-n="0" style="background-image:url('/assets/img/supersonic-teaser.jpg');background-position:center" role="img" aria-label="Vehicle 02: 25–100kg, 15km record"></div><div class="prog-bars" role="tablist" aria-label="Photos"><i class="on" data-k="0"></i><i data-k="1"></i></div><button type="button" class="prog-chev prog-next" aria-label="Next photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="4,4 20,32 4,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button></div>
+      <div class="prog-detail">
+        <div>
+          <h3>Progress</h3>
+          <ul class="prog-checks"><li data-status="done"><span>System Requirements Review</span></li><li data-status="doing"><span>Conceptual Design Review</span></li></ul>
+        </div>
+        <div>
+          <h3>Specifications</h3>
+          <dl class="prog-kv"><dt>Status</dt><dd>Planned</dd><dt>Target</dt><dd>Spring 2027</dd><dt>Stage</dt><dd>Demonstrators</dd><dt>Propulsion</dt><dd>JetCat P180 microturbine</dd><dt>Director</dt><dd>TBD</dd></dl>
+        </div>
+      </div>
+      <div class="prog-roadmap">
+        <div class="wt-card wt-app" data-program="Vehicle 02">
+          <div class="wt-bar"><span class="wt-title">Roadmap</span><span class="wt-ex">Example data</span></div>
+          <div class="wt-view"></div>
+        </div>
+      </div>
+      <div class="prog-log">
+        <h3>Updates</h3>
+        <p class="prog-empty">No updates posted yet. Dated progress notes, test results and photos for Vehicle 02 will appear here.</p>
+      </div>
+    </article>
+    <article class="prog-article" id="vehicle-03" data-i="3" hidden>
+      <div class="prog-band">
+        <div><h2>Vehicle 03</h2><div class="prog-sub">World record</div></div>
+        <p>Breaking the current Guinness RC Jet world record of 465 MPH set by Niels Herbrich in 2017.</p>
+      </div>
+      <div class="prog-stagewrap"><button type="button" class="prog-chev prog-prev" aria-label="Previous photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="20,4 4,32 20,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button><div class="prog-stage" data-imgs="/assets/img/supersonic-teaser.jpg,/assets/img/team-legacy.jpg" data-n="0" style="background-image:url('/assets/img/supersonic-teaser.jpg');background-position:center" role="img" aria-label="Vehicle 03: World record"></div><div class="prog-bars" role="tablist" aria-label="Photos"><i class="on" data-k="0"></i><i data-k="1"></i></div><button type="button" class="prog-chev prog-next" aria-label="Next photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="4,4 20,32 4,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button></div>
+      <div class="prog-detail">
+        <div>
+          <h3>Progress</h3>
+          <ul class="prog-checks"><li data-status="todo"><span>System Requirements Review</span></li></ul>
+        </div>
+        <div>
+          <h3>Specifications</h3>
+          <dl class="prog-kv"><dt>Status</dt><dd>Planned</dd><dt>Target</dt><dd>2027</dd><dt>Stage</dt><dd>Advanced demonstrators</dd><dt>Propulsion</dt><dd>TBD</dd><dt>Director</dt><dd>TBD</dd></dl>
+        </div>
+      </div>
+      <div class="prog-log">
+        <h3>Updates</h3>
+        <p class="prog-empty">No updates posted yet. Dated progress notes, test results and photos for Vehicle 03 will appear here.</p>
+      </div>
+    </article>
+    <article class="prog-article" id="vehicle-04" data-i="4" hidden>
+      <div class="prog-band">
+        <div><h2>Vehicle 04</h2><div class="prog-sub">Supersonic attempt</div></div>
+        
+      </div>
+      <div class="prog-stagewrap"><button type="button" class="prog-chev prog-prev" aria-label="Previous photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="20,4 4,32 20,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button><div class="prog-stage" data-imgs="/assets/img/supersonic-teaser.jpg,/assets/img/hero-night.jpg" data-n="0" style="background-image:url('/assets/img/supersonic-teaser.jpg');background-position:center" role="img" aria-label="Vehicle 04: Supersonic attempt"></div><div class="prog-bars" role="tablist" aria-label="Photos"><i class="on" data-k="0"></i><i data-k="1"></i></div><button type="button" class="prog-chev prog-next" aria-label="Next photo"><svg viewBox="0 0 24 64" width="24" height="64" aria-hidden="true"><polyline points="4,4 20,32 4,60" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></button></div>
+      <div class="prog-detail">
+        <div>
+          <h3>Progress</h3>
+          <ul class="prog-checks"><li data-status="todo"><span>System Requirements Review</span></li></ul>
+        </div>
+        <div>
+          <h3>Specifications</h3>
+          <dl class="prog-kv"><dt>Status</dt><dd>Planned</dd><dt>Target</dt><dd>2028</dd><dt>Stage</dt><dd>Flagship attempt</dd><dt>Propulsion</dt><dd>TBD</dd><dt>Director</dt><dd>TBD</dd></dl>
+        </div>
+      </div>
+      <div class="prog-log">
+        <h3>Updates</h3>
+        <p class="prog-empty">No updates posted yet. Dated progress notes, test results and photos for Vehicle 04 will appear here.</p>
+      </div>
+    </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:var(--panel);">
+  <div class="wrap">
+    <h2 style="font-size:32px;">Nobody has done this in a remotely piloted jet.</h2>
+    <div style="margin-top:32px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:32px;">
+      <div>
+        <div style="font-family:var(--font-display);font-weight:700;font-size:20px;">Guinness RC jet record</div>
+        <p style="color:var(--gray);font-size:16px;line-height:1.6;margin-top:10px;">Niels Herbrich, 2017 — 749.2 km/h (Mach 0.61). An unverified 2026 run by Tomas Salve reportedly reached ~805 km/h (Mach 0.657). Nobody has taken a remotely piloted, air-breathing jet past Mach 1 in level flight.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-display);font-weight:700;font-size:20px;">The Boom Prize</div>
+        <p style="color:var(--gray);font-size:16px;line-height:1.6;margin-top:10px;">A standing open competition for exactly that: a remotely piloted, air-breathing airplane exceeding Mach 1 in level flight. It's the specific target our roadmap is built to reach.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-display);font-weight:700;font-size:20px;">Other university attempts</div>
+        <p style="color:var(--gray);font-size:16px;line-height:1.6;margin-top:10px;">Purdue's High Speed Plane, the University of Bath's Mach Initiative, and Yale's Project Jet are all working the same problem. A multi-university effort, Project Boom, has since ended.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="background:var(--black);text-align:center;">
+  <div class="wrap" style="max-width:760px;margin-left:auto;margin-right:auto;">
+    <p style="font-family:var(--font-display);font-weight:700;font-size:30px;line-height:1.3;letter-spacing:-0.01em;">"We aren't just building an aircraft. We are building the team that will create the next one."</p>
+    <p style="color:var(--gray);font-size:15px;margin-top:20px;">— Viktor Bakhurynskyy, President</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="col-brand">
+    <a href="/"><img src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <div class="sub">Buckeye Experimental Aeronautics<br>The Ohio State University</div>
+  </div>
+  <div class="col-links">
+    <h4>Site</h4>
+    <a href="/program.html">Programs</a>
+    <a href="/process.html">Process</a>
+    <a href="/team.html">Team</a>
+    <a href="/sponsors.html">Sponsors</a>
+  </div>
+  <div class="col-contact">
+    <h4>Contact</h4>
+    President — <a href="mailto:bakhurynskyy.1@osu.edu">bakhurynskyy.1@osu.edu</a><br>
+    Engineering Director — <a href="mailto:patterson.1368@osu.edu">patterson.1368@osu.edu</a><br>
+    Vice President — <a href="mailto:cohen.1344@osu.edu">cohen.1344@osu.edu</a><br>
+    Advisor: Dr. Matthew H. McCrink
+  </div>
+</footer>
+
+<script src="/assets/js/programs.js?v=4"></script>
+<script src="/assets/js/worktracking.js?v=9"></script>
+<script src="/assets/js/site.js?v=7"></script>
+</body>
+</html>

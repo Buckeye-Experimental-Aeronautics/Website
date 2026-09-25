@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>BExA style guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=17">
+<style>
+  .sg{max-width:1120px;margin:0 auto;padding:64px 32px 160px;}
+  .sg h2{font-size:40px;margin-top:96px;padding-top:32px;border-top:1px solid var(--line);}
+  .sg h2 small{display:block;font:500 13px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);margin-bottom:10px;}
+  .sg p.note{color:var(--gray);max-width:680px;line-height:1.6;margin:12px 0 0;}
+  .demo{margin-top:28px;padding:32px;border:1px dashed var(--line);}
+  .demo.cream{background:var(--cream);color:var(--ink);}
+  .swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:16px;margin-top:28px;}
+  .sw{overflow:hidden;border:1px solid var(--line);font-size:13px;}
+  .sw i{display:block;height:72px;}
+  .sw b{display:block;padding:10px 12px 0;font-family:'JetBrains Mono',monospace;font-weight:500;}
+  .sw span{display:block;padding:2px 12px 12px;color:var(--gray);}
+  .type-row{display:flex;align-items:baseline;gap:24px;padding:16px 0;border-top:1px solid var(--line);}
+  .type-row .k{flex:0 0 150px;font:500 12px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);}
+  .radius-row{display:flex;gap:24px;flex-wrap:wrap;}
+  .radius-row div{width:120px;height:80px;background:var(--panel-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font:500 12px 'JetBrains Mono',monospace;color:var(--gray);}
+  .space-row{display:flex;align-items:flex-end;gap:14px;}
+  .space-row div{background:var(--red);width:28px;}
+  .space-row span{display:block;font:500 11px 'JetBrains Mono',monospace;color:var(--gray);margin-top:6px;text-align:center;}
+  .sticky-note{font:500 13px 'JetBrains Mono',monospace;color:var(--gray);}
+  .rules{margin-top:20px;color:var(--gray);line-height:1.65;max-width:760px;font-size:16px;}
+  .rules ul{margin:8px 0 0;padding-left:20px;}
+  .rules li{margin:4px 0;}
+  .rules b{color:var(--cream);font-weight:600;}
+  .rules code,.sg code{font-family:'JetBrains Mono',monospace;font-size:13px;background:var(--panel-2);padding:2px 6px;color:var(--cream);}
+  .dec{display:inline-block;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;background:var(--red);color:var(--cream);padding:2px 7px;margin-right:6px;}
+  .sg table.t{width:100%;border-collapse:collapse;margin-top:20px;font-size:15px;}
+  .sg table.t th{text-align:left;font:500 12px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);padding:10px 12px;border-bottom:1px solid var(--line);}
+  .sg table.t td{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--gray);vertical-align:top;}
+  .sg table.t td:first-child{color:var(--cream);}
+  .toc{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:24px;font:500 13px 'JetBrains Mono',monospace;letter-spacing:.04em;text-transform:uppercase;}
+  .toc a{color:var(--gray);text-decoration:none;}.toc a:hover{color:var(--cream);}
+  /* v0.3: proposed two-radius (4/8px) language. Scoped here so the live site is unchanged until sign-off. */
+  :root{--r-s:4px;--r-m:8px;}
+  .btn,.pill,.radius-row .s{border-radius:var(--r-s) !important;}
+  .mission-card,.team-accordion,.demo,.sw,.radius-row .m{border-radius:var(--r-m) !important;}
+  .pill{max-width:200px;}
+  .sw{overflow:hidden;}
+  
+</style>
+</head>
+<body>
+
+<div class="site-top">
+  <div class="site-header">
+    <a href="/"><img class="logo" src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <nav class="site-nav"><a href="/">Back to site</a></nav>
+  </div>
+  <svg class="taper-bar" id="progress-bar" height="26" aria-hidden="true">
+    <rect id="pb-track" y="12" width="1440" height="1" fill="rgba(255,241,220,0.28)"></rect>
+    <polygon id="pb-body" points="0,12 340,8 340,17 0,13" fill="#fff1dc"></polygon>
+    <polygon id="pb-head" points="336,3 368,12.5 336,22" fill="#fff1dc"></polygon>
+  </svg>
+</div>
+
+<div class="sg">
+  <span class="tag">v0.5 draft — the only style guide file</span>
+  <h1 style="font-size:56px;">BExA style guide</h1>
+  <p class="note">The single source of truth for how BExA looks: rules and live examples on one page, rendered with the site's real CSS. We iterate here; once signed off, the site is refactored to match. Items tagged <span class="dec">Decision</span> are proposals to accept, change or reject.</p>
+  <div class="toc"><a href="#principles">Principles</a><a href="#color">Color</a><a href="#type">Type</a><a href="#space">Spacing</a><a href="#buttons">Buttons</a><a href="#taper">Arrow</a><a href="#cards">Cards</a><a href="#mission">Mission table</a><a href="#accordion">Accordion</a><a href="#rhythm">Rhythm</a><a href="#more">Imagery/motion</a><a href="#open">Open questions</a></div>
+
+  <h2 id="principles"><small>00</small>Principles</h2>
+  <div class="rules"><ul>
+    <li><b>Engineering, not marketing.</b> Plain words, real numbers, no filler. Say it once.</li>
+    <li><b>The logo is the design language.</b> Skew angle, taper line and scarlet come from the BExA mark; nothing decorative that isn't derived from it.</li>
+    <li><b>Homemade but professional.</b> Real photos, honest labels, slightly technical. No stock icons or decorative gradients.</li>
+    <li><b>One size per role.</b> If two things do the same job they look the same.</li>
+    <li><b>Dark by default, cream for emphasis.</b> Red is an accent and a brand block, never body text.</li>
+  </ul></div>
+  <table class="t"><tr><th>Inconsistent today</th><th>Current state</th></tr>
+    <tr><td>Section headings</td><td>32 / 34 / 36 / 40 / 44px used interchangeably</td></tr>
+    <tr><td>Corner radius</td><td>4, 6, 12, 16, 24, 28, 999px all in use; target is 4px (controls) and 8px (surfaces)</td></tr>
+    <tr><td>Buttons</td><td>skewed parallelograms, full pills and plain outlines mixed</td></tr>
+    <tr><td>Section padding</td><td>72px mostly; 80 / 64 / 56 on hand-built sections</td></tr>
+    <tr><td>Grays / reds</td><td>#a9a8a2, rgba(255,255,255,.5), #6b6a66, #8a8a86 &middot; #BA0C2F, #a80f16, #8c0925, #b70f20</td></tr>
+    <tr><td>Layout</td><td>inline <code>style=""</code> everywhere, nothing reusable</td></tr></table>
+
+  <h2 id="color"><small>01</small>Color</h2>
+  <div class="rules">Body text on dark is <b>cream</b> (primary) or <b>gray</b> (secondary), never pure white. Red text is for eyebrows, numbers and status only, at 18px+ or bold. Max one full-bleed red block per screen.
+  <br><span class="dec">Decision</span>Collapse every stray gray/red to these tokens; retire <code>--red-deep</code> #a80f16 and loose <code>rgba(255,255,255,.5)</code>.</div>
+  <div class="swatches">
+    <div class="sw"><i style="background:#BA0C2F"></i><b>--red</b><span>#BA0C2F · brand</span></div>
+    <div class="sw"><i style="background:#8c0925"></i><b>--red-bar</b><span>#8c0925 · top bar</span></div>
+    <div class="sw"><i style="background:#fff1dc"></i><b style="color:#fff1dc">--cream</b><span>#fff1dc · text / fill</span></div>
+    <div class="sw"><i style="background:#0c0c0d"></i><b>--black</b><span>#0c0c0d · page</span></div>
+    <div class="sw"><i style="background:#131315"></i><b>--panel</b><span>#131315 · alt section</span></div>
+    <div class="sw"><i style="background:#1a1a1c"></i><b>--panel-2</b><span>#1a1a1c · cards</span></div>
+    <div class="sw"><i style="background:#2c2c2f"></i><b>--line</b><span>#2c2c2f · hairlines</span></div>
+    <div class="sw"><i style="background:#a9a8a2"></i><b>--gray</b><span>#a9a8a2 · secondary</span></div>
+    <div class="sw"><i style="background:#161616"></i><b>--ink</b><span>#161616 · text on cream</span></div>
+    <div class="sw"><i style="background:#4a463f"></i><b>--ink-soft</b><span>#4a463f · on cream</span></div>
+    <div class="sw"><i style="background:#cbbfa6"></i><b style="color:#cbbfa6">--tan</b><span>#cbbfa6 · lines on cream</span></div>
+  </div>
+
+  <h2 id="type"><small>02</small>Typography</h2>
+  <div class="rules">Display <b>Space Grotesk</b> (700, &minus;0.03em tracking) &middot; Body <b>Inter</b> &middot; Labels <b>JetBrains Mono</b>. Mobile sizes: H1 38, H2 30.
+  <ul><li>Headings are sentence case. A period only if the heading is a full sentence, imperative included (<b>Become a sponsor.</b>); a phrase or fragment gets none, single- or multi-word alike (<b>Our teams</b>, <b>What we're up to</b>).</li><li>No exclamation marks. Digits for numbers (<code>30+</code>, <code>15km</code>); en-dash for ranges (<code>25&ndash;100kg</code>).</li><li>Button labels: verbs, 3 words or fewer; <code>&rarr;</code> only when linking to another page.</li></ul>
+  <span class="dec">Decision</span>Exactly one H2 size (40px) sitewide.</div>
+  <div class="demo">
+    <div class="type-row"><div class="k">Hero H1 68</div><div style="font:700 68px/1.06 var(--font-display);letter-spacing:-.03em;">We build engineers.</div></div>
+    <div class="type-row"><div class="k">Page H1 56</div><div style="font:700 56px/1.08 var(--font-display);letter-spacing:-.03em;">Our team</div></div>
+    <div class="type-row"><div class="k">H2 40 (only size)</div><div style="font:700 40px/1.08 var(--font-display);letter-spacing:-.03em;">Our teams</div></div>
+    <div class="type-row"><div class="k">H3 24</div><div style="font:700 24px/1.2 var(--font-display);letter-spacing:-.02em;">Turbine hotfire</div></div>
+    <div class="type-row"><div class="k">Eyebrow 13</div><span class="tag" style="margin:0">Gate by gate</span></div>
+    <div class="type-row"><div class="k">Lede 20</div><div style="font-size:20px;line-height:1.5;color:var(--gray);max-width:560px;">Ohio State's student team for experimental aircraft.</div></div>
+    <div class="type-row"><div class="k">Body 16</div><div style="font-size:16px;line-height:1.6;max-width:560px;">Every subsystem starts as a written, testable requirement.</div></div>
+    <div class="type-row"><div class="k">Small 14</div><div style="font-size:14px;color:var(--gray);">Photo: EDF platform, Fall 2026</div></div>
+    <div class="type-row"><div class="k">Mono label 13</div><div style="font:400 13px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--gray);">Date &nbsp; Milestone &nbsp; Stage</div></div>
+  </div>
+
+  <h2 id="space"><small>03</small>Spacing &amp; radius.</h2>
+  <div class="rules">8px base unit. Page max width 1440px, side gutter 64px (24px at 900px and below). <b>Section padding 72px vertical</b> (48px mobile). Card grids: <code>auto-fit,minmax(260px,1fr)</code>, 32px gap.
+  <ul><li><b>Two radii only.</b> <code>--r-s: 4px</code> for small controls: buttons, status tags, inputs. <code>--r-m: 8px</code> for surfaces: cards, photos, tables, the team accordion, the program table.</li><li>Nothing over 8px. No pills, no circles.</li></ul>
+  <span class="dec">Decision</span>Collapse every radius (6, 12, 16, 24, 28, 999px) to 4px or 8px by role.</div>
+  <div class="demo">
+    <div class="space-row">
+      <div><div style="height:4px"></div><span>4</span></div><div><div style="height:8px"></div><span>8</span></div><div><div style="height:12px"></div><span>12</span></div>
+      <div><div style="height:16px"></div><span>16</span></div><div><div style="height:24px"></div><span>24</span></div><div><div style="height:32px"></div><span>32</span></div>
+      <div><div style="height:40px"></div><span>40</span></div><div><div style="height:56px"></div><span>56</span></div><div><div style="height:72px"></div><span>72</span></div><div><div style="height:96px"></div><span>96</span></div>
+    </div>
+    <div class="radius-row" style="margin-top:32px;">
+      <div class="m">8 &middot; cards</div><div class="m">8 &middot; photos</div><div class="m">8 &middot; tables</div><div class="s">4 &middot; buttons</div><div class="s">4 &middot; status tags</div><div style="border-radius:16px !important;opacity:.45;text-decoration:line-through">16+ &middot; banned</div><div style="border-radius:999px !important;opacity:.45;text-decoration:line-through">pill &middot; banned</div>
+    </div>
+  </div>
+
+  <h2 id="buttons"><small>04</small>Buttons</h2>
+  <div class="rules">The skew is the brand: <code>transform:skewX(-10deg)</code> on the button, counter-skew on the inner span so text stays upright. <b>Primary</b> cream fill / red text, at most one per section &middot; <b>Secondary</b> 2px cream outline &middot; <b>Ink</b> for cream sections &middot; <b>.sm</b> for headers and section corners. Corners: 4px. There are no pill buttons.</div>
+  <div class="demo" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;">
+    <a class="btn btn-fill-cream"><span>Primary</span></a>
+    <a class="btn btn-outline-cream"><span>Secondary</span></a>
+    <a class="btn btn-fill-cream sm"><span>Small primary</span></a>
+    <a class="btn btn-outline-cream sm"><span>See all programs →</span></a>
+  </div>
+  <div class="demo cream" style="display:flex;gap:16px;flex-wrap:wrap;">
+    <a class="btn btn-fill-cream" style="background:var(--ink);color:var(--cream)"><span>Ink (on cream)</span></a>
+    <a class="btn btn-outline-cream" style="border-color:var(--ink);color:var(--ink)"><span>Ink outline</span></a>
+  </div>
+
+  <h2 id="taper"><small>05</small>Arrow &amp; taper line.</h2>
+  <div class="rules">The arrow is redrawn from the one in the logo's <b>X</b>: a red blade that sweeps up and tapers to a point, ending in a <b>dart head</b> &mdash; swept-back upper barb, shorter lower barb, notched back. On the site the blade is the taper line and the dart is its head; the blade runs into the notch so they connect. Use as a divider sparingly; never on photos. The sticky bar uses it as scroll progress: bar <code>--red-bar</code> #8c0925, 80px condensing to 52px after 160px of scroll, tracer on the bar's bottom edge, nothing below it filled.</div>
+  <div class="demo" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;">
+    <div><div class="type-row" style="border:0;padding:0 0 12px"><div class="k">In the logo</div></div><img src="/assets/img/bexa-logo.png" alt="BExA logo" style="height:64px;width:auto;filter:brightness(0) invert(1);"></div>
+    <div><div class="type-row" style="border:0;padding:0 0 12px"><div class="k">Redrawn</div></div>
+      <svg width="100%" height="40" viewBox="0 0 420 26" preserveAspectRatio="xMinYMid meet"><rect y="12" width="420" height="1" fill="rgba(255,241,220,.28)"/><polygon points="0,12 286,9.5 286,15.5 0,13" fill="#fff1dc"/><polygon points="310,12.5 274,1.5 282.5,12.5 277.5,19.3" fill="#fff1dc"/></svg></div>
+    <div style="grid-column:1/-1"><div class="type-row" style="border:0;padding:0 0 12px"><div class="k">Head, enlarged</div></div>
+      <svg width="360" height="120" viewBox="230 -2 90 30"><polygon points="0,12 286,9.5 286,15.5 0,13" fill="#fff1dc"/><polygon points="310,12.5 274,1.5 282.5,12.5 277.5,19.3" fill="#fff1dc"/><g fill="#BA0C2F"><circle cx="310" cy="12.5" r="0.9"/><circle cx="274" cy="1.5" r="0.9"/><circle cx="282.5" cy="12.5" r="0.9"/><circle cx="277.5" cy="19.3" r="0.9"/></g></svg>
+      <p class="note" style="margin-top:8px">Points (tip, upper barb, notch, lower barb) relative to the tip: <code>0,0 &middot; &minus;36,&minus;11 &middot; &minus;27.5,0 &middot; &minus;32.5,+6.8</code>: traced from the logo, with the lower barb eased out slightly but still noticeably shorter than the upper, so the head stays lopsided like the mark. The blade runs into the notch, so blade and head read as one shape.</p></div>
+  </div>
+
+  <h2 id="cards"><small>06</small>Cards &amp; stats.</h2>
+  <div class="rules">Standard card: <code>--panel-2</code>, 1px <code>--line</code> border, 8px radius, 32px padding, no shadow. The red card is allowed once per page (join CTA). Stat: 40px red number + 14px gray label. Numbered rows: red Space Grotesk numerals, hairline between rows, no boxes.</div>
+  <div class="demo" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;">
+    <div style="background:var(--panel-2);border:1px solid var(--line);padding:32px;border-radius:8px;"><div class="tag" style="margin-bottom:8px">Sponsors &amp; faculty</div><h3 style="font-size:24px;">Work with us.</h3><p style="color:var(--gray);margin:12px 0 0;line-height:1.6;">Standard card: panel-2, hairline, 8px radius.</p></div>
+    <div style="background:var(--red);padding:32px;border-radius:8px;"><div style="font-size:13px;opacity:.85;margin-bottom:8px">Students</div><h3 style="font-size:24px;">Come build with us.</h3><p style="margin:12px 0 0;line-height:1.6;">Red card: once per page.</p></div>
+    <div style="padding:8px 0;"><div style="font:700 40px var(--font-display);color:var(--red)">30+</div><div style="color:var(--gray);font-size:14px;margin-top:4px">Members this season</div></div>
+  </div>
+
+  <h2 id="mission"><small>07</small>Mission table &amp; pills.</h2>
+  <div class="rules">Black card, mono-caps gray header, rows separated by 1px hairlines. Status vocabulary: <b>In progress</b> (filled cream tag) &middot; <b>Planned</b> (outline tag); status tags use the 4px control radius, not pills &middot; <b>Complete</b>. Stacks to a list under 900px.</div>
+  <div class="mission-card" style="margin-top:28px;">
+    <div class="mission-table">
+      <div class="mission-row mission-cols"><span>Date</span><span>Milestone</span><span>Stage</span><span></span></div>
+      <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-name">EDF test platform</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live">In progress</a></span></div>
+      <div class="mission-row"><span class="m-date">2028</span><span class="m-name">Supersonic attempt</span><span class="m-dim">Flagship attempt</span><span class="m-status"><a class="pill">Planned</a></span></div>
+    </div>
+  </div>
+
+  <h2 id="accordion"><small>08</small>Photo accordion.</h2>
+  <div class="rules">Subteams: 7 columns, 420px tall, 8px radius, 4px gap. Hover/focus grows the column (flex 3.4) and slides the description up; the name is always visible bottom-left; no numbers. Mobile: stacked 180px cards with the description always on. Photos are real BExA photos only.</div>
+  <div class="team-accordion" style="margin-top:28px;">
+    <a class="team-panel" style="background-image:url('/assets/img/edf-test-bed.jpg')"><div class="tp-overlay"></div><div class="tp-content"><div class="tp-name">Aerothermal</div><p class="tp-desc">Hover: column grows, description slides up.</p></div></a>
+    <a class="team-panel" style="background-image:url('/assets/img/v01-assembly.jpg')"><div class="tp-overlay"></div><div class="tp-content"><div class="tp-name">Structures</div><p class="tp-desc">Airframe, load paths and layup.</p></div></a>
+    <a class="team-panel" style="background-image:url('/assets/img/v01-fan-install.jpg')"><div class="tp-overlay"></div><div class="tp-content"><div class="tp-name">Propulsion</div><p class="tp-desc">EDF and turbine integration.</p></div></a>
+  </div>
+
+  <h2 id="rhythm"><small>09</small>Section rhythm.</h2>
+  <div class="rules">hero red &rarr; black &rarr; panel &rarr; black &rarr; cream (process) &rarr; black CTA &rarr; footer. Adjacent sections must differ in background; a <code>--line</code> hairline separates same-tone sections.</div>
+  <div class="demo" style="padding:0;overflow:hidden;">
+    <div style="background:var(--red);padding:20px 32px;">Hero — brand red</div>
+    <div style="background:var(--black);padding:20px 32px;border-top:1px solid var(--line)">Programs — black</div>
+    <div style="background:var(--panel);padding:20px 32px;border-top:1px solid var(--line)">Alt section — panel</div>
+    <div style="background:var(--black);padding:20px 32px;border-top:1px solid var(--line)">Teams — black</div>
+    <div style="background:var(--cream);color:var(--ink);padding:20px 32px;">Process — cream</div>
+    <div style="background:var(--black);padding:20px 32px;">CTA — black with cards</div>
+    <div style="background:var(--black);padding:20px 32px;border-top:1px solid var(--line);color:var(--gray)">Footer</div>
+  </div>
+
+  <h2 id="more"><small>10</small>Imagery, motion, responsive.</h2>
+  <div class="rules"><ul>
+    <li><b>Imagery:</b> real BExA photos only, <code>object-fit:cover</code>, 8px corners, no borders/shadows/overlays (except the accordion gradient). Hero is the night hangar jet. Sponsor logos are monochrome black on white; the sponsor strip is a 180px marquee, 22s, pauses on hover.</li>
+    <li><b>Motion:</b> 0.3s ease for hover and condensing; 0.45s cubic-bezier(.22,.8,.28,1) for the accordion. <span class="dec">Decision</span>Add <code>prefers-reduced-motion</code> support.</li>
+    <li><b>Responsive:</b> 900px (nav wraps, padding shrinks) and 640px (accordion stacks, mission table becomes a list, hero H1 38px). Desktop-first; nothing may cause horizontal scroll.</li>
+    <li><b>Links / focus:</b> body links underline on hover only; nav links never underlined except the current page; focus ring 2px cream.</li>
+  </ul></div>
+
+  <h2 id="open"><small>11</small>Open questions &amp; plan.</h2>
+  <div class="rules"><ul>
+    <li>Keep the cream Process section, or go all-dark?</li>
+    <li>Should the join CTA card stay red, or become cream?</li>
+    <li>Should status tags be skewed like buttons, or stay plain 4px-radius rectangles?</li>
+    <li>Keep JetBrains Mono for labels, or use Inter caps?</li>
+  </ul>
+  <b>After sign-off:</b> move inline styles into reusable classes (<code>.section</code>, <code>.card</code>, <code>.stat</code>, <code>.row</code>, <code>.eyebrow</code>), enforce one H2 size / padding / radius / token set, then retire <code>concepts.html</code> and unused tokens.</div>
+</div>
+<script>window.BEXA_ARROW="dart";</script>
+<script src="/assets/js/site.js?v=7"></script>
+</body>
+</html>

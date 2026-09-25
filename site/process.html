@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Process — BExA</title>
+<meta name="description" content="We run NASA's systems-engineering process: written requirements, staged design reviews, and evidence at every gate.">
+<link rel="icon" href="/assets/img/favicon-96.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/assets/css/styles.css?v=70">
+</head>
+<body>
+
+<div class="site-top">
+  <div class="site-header">
+    <a href="/"><img class="logo" src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <nav class="site-nav">
+      <a href="/program.html">Programs</a>
+      <a href="/process.html" class="current">Process</a>
+      <a href="/team.html">Team</a>
+      <a href="/sponsors.html">Sponsors</a>
+      <a href="/join.html" class="btn btn-fill-cream sm"><span>Join</span></a>
+    </nav>
+  </div>
+  <svg class="taper-bar" id="progress-bar" height="26" aria-hidden="true">
+      <rect id="pb-track" y="12" width="1440" height="1" fill="rgba(255,241,220,0.28)"></rect>
+      <polygon id="pb-body" points="0,12 96,9.5 96,15.5 0,13" fill="#fff1dc"></polygon>
+      <polygon id="pb-head" points="120,12.5 84,1.5 92.5,12.5 87.5,19.3" fill="#fff1dc"></polygon>
+    </svg>
+</div>
+
+
+<section class="block" id="reviews" style="background:var(--panel);">
+  <div class="wrap">
+    <h2 style="margin-bottom:32px;">Design reviews</h2>
+    <div class="prog-strip" role="tablist" aria-label="Design reviews"><div class="prog-chipcol"><a class="prog-chip" href="#srr-dcr" data-i="0"><span>SRR / DCR</span></a></div><div class="prog-chipcol"><a class="prog-chip" href="#codr" data-i="1"><span>CoDR</span></a></div><div class="prog-chipcol"><a class="prog-chip" href="#pdr" data-i="2"><span>PDR</span></a></div><div class="prog-chipcol"><a class="prog-chip" href="#cdr" data-i="3"><span>CDR</span></a></div><div class="prog-chipcol"><a class="prog-chip" href="#mrr" data-i="4"><span>MRR</span></a></div><div class="prog-chipcol"><a class="prog-chip" href="#trr" data-i="5"><span>TRR</span></a></div><div class="prog-chipcol"><a class="prog-chip" href="#frr" data-i="6"><span>FRR</span></a></div></div>
+    <div class="prog-panel">
+    <article class="prog-article" id="srr-dcr" data-i="0">
+      <div class="prog-band">
+        <div><h2>SRR / DCR</h2><div class="prog-sub">System Requirements Review / Design Criteria Review</div></div>
+        <p>Are the need, constraints, requirements, success criteria, and initial design problem sufficiently defined?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Begin structured concept development.</p></div>
+        <div><h3>Required</h3><p class="rev-text">New Programs or major scope changes.</p></div>
+      </div><div class="rev-ev"><h3>Evidence reviewed</h3><ul class="rev-list"><li>Need and mission</li><li>System boundary</li><li>Requirements</li><li>Constraints</li><li>Success criteria</li><li>Initial concept space</li><li>Feasibility and risk</li><li>Initial work structure</li><li>Plan forward</li></ul></div>
+    </article>
+    <article class="prog-article" id="codr" data-i="1" hidden>
+      <div class="prog-band">
+        <div><h2>CoDR</h2><div class="prog-sub">Conceptual Design Review</div></div>
+        <p>Has a preferred concept been selected from credible alternatives, with acceptable feasibility and risk?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Adopt the baseline concept and begin preliminary design.</p></div>
+        <div><h3>Required</h3><p class="rev-text">Where meaningful configuration alternatives exist.</p></div>
+      </div><div class="rev-ev"><h3>Evidence reviewed</h3><ul class="rev-list"><li>Requirements and criteria</li><li>Candidate concepts</li><li>Trade studies</li><li>Concept definition</li><li>Feasibility</li><li>Interfaces and budgets</li><li>Risk and uncertainty</li><li>Work decomposition</li><li>Plan forward</li></ul></div>
+    </article>
+    <article class="prog-article" id="pdr" data-i="2" hidden>
+      <div class="prog-band">
+        <div><h2>PDR</h2><div class="prog-sub">Preliminary Design Review</div></div>
+        <p>Is the preliminary design complete enough to demonstrate that requirements can be met and interfaces can be controlled?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Begin detailed design and long-lead procurement as authorized.</p></div>
+        <div><h3>Required</h3><p class="rev-text">Every Program.</p></div>
+      </div><div class="rev-ev"><h3>Evidence reviewed</h3><ul class="rev-list"><li>Design baseline</li><li>Requirements compliance</li><li>Engineering analysis</li><li>Interfaces</li><li>Budgets and margins</li><li>Risk and safety</li><li>Verification and validation</li><li>Manufacturability and implementation</li><li>Work decomposition</li><li>Plan forward</li></ul></div>
+    </article>
+    <article class="prog-article" id="cdr" data-i="3" hidden>
+      <div class="prog-band">
+        <div><h2>CDR</h2><div class="prog-sub">Critical Design Review</div></div>
+        <p>Is the detailed design complete, internally consistent, verifiable, and releasable for manufacture or implementation?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Release the design baseline for build or implementation.</p></div>
+        <div><h3>Required</h3><p class="rev-text">Before release of the integrated design baseline.</p></div>
+      </div>
+    </article>
+    <article class="prog-article" id="mrr" data-i="4" hidden>
+      <div class="prog-band">
+        <div><h2>MRR</h2><div class="prog-sub">Manufacturing Readiness Review</div></div>
+        <p>Are the design, materials, tooling, procedures, work orders, personnel, and inspection controls ready to produce conforming hardware?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Begin controlled manufacturing or assembly.</p></div>
+        <div><h3>Required</h3><p class="rev-text">Before integration.</p></div>
+      </div>
+    </article>
+    <article class="prog-article" id="trr" data-i="5" hidden>
+      <div class="prog-band">
+        <div><h2>TRR</h2><div class="prog-sub">Test Readiness Review</div></div>
+        <p>Are the test article, facility, instrumentation, procedure, hazards, personnel, and data system ready to execute the test safely and usefully?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Begin the approved test activity.</p></div>
+        <div><h3>Required</h3><p class="rev-text">Before an integrated test campaign.</p></div>
+      </div>
+    </article>
+    <article class="prog-article" id="frr" data-i="6" hidden>
+      <div class="prog-band">
+        <div><h2>FRR</h2><div class="prog-sub">Flight Readiness Review</div></div>
+        <p>Are the integrated vehicle or component, crew, site, procedures, weather limits, contingency plans, and open risks acceptable for flight?</p>
+      </div>
+      <div class="prog-detail">
+        <div><h3>Authorizes</h3><p class="rev-text">Conduct the authorized flight operation.</p></div>
+        <div><h3>Required</h3><p class="rev-text">Before flight.</p></div>
+      </div>
+    </article>
+    </div>
+    <div class="outcomes"><h3>Outcomes</h3><div class="outcome-grid"><div><b>Approved</b><span>All mandatory exit criteria are satisfied.</span></div><div><b>Conditionally approved</b><span>The work may proceed only within stated constraints while specified actions close.</span></div><div><b>Held</b><span>Readiness is not demonstrated. The work remains in the current phase.</span></div><div><b>Rejected</b><span>The proposed baseline is unacceptable or no longer aligned with Program objectives.</span></div></div></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="col-brand">
+    <a href="/"><img src="/assets/img/bexa-logo.png" alt="BExA"></a>
+    <div class="sub">Buckeye Experimental Aeronautics<br>The Ohio State University</div>
+  </div>
+  <div class="col-links">
+    <h4>Site</h4>
+    <a href="/program.html">Programs</a>
+    <a href="/process.html">Process</a>
+    <a href="/team.html">Team</a>
+    <a href="/sponsors.html">Sponsors</a>
+  </div>
+  <div class="col-contact">
+    <h4>Contact</h4>
+    President — <a href="mailto:bakhurynskyy.1@osu.edu">bakhurynskyy.1@osu.edu</a><br>
+    Engineering Director — <a href="mailto:patterson.1368@osu.edu">patterson.1368@osu.edu</a><br>
+    Vice President — <a href="mailto:cohen.1344@osu.edu">cohen.1344@osu.edu</a><br>
+    Advisor: Dr. Matthew H. McCrink
+  </div>
+</footer>
+
+<script src="/assets/js/programs.js?v=4"></script>
+<script src="/assets/js/site.js?v=7"></script>
+</body>
+</html>
