@@ -1,9 +1,296 @@
 {
-  "items": [],
+  "items": [
+    {
+      "title": "OPS-012: Stock Vehicle Flight Test TRR",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-007: Installation of Stock Viper GPS + Transmitter firmware",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "PROP-002: EDF Static Thrust Stand",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "INT-001: Establish the Baseline Vehicle Definition",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "AERO-001: Measure Baseline Aircraft Geometry",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "INT-002: Measure Baseline Mass and Center of Gravity",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "PROP-001: Characterize the Stock Propulsion Configuration",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-001: Characterize the Stock Avionics and Control System",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "STR-001: Survey Airframe Construction and Available Integration Volume",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-001: Conduct Stock Aircraft Operational Evaluation",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-002: Define Vehicle 01 Operational Use",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "FDC-001: Define Representative Vehicle 01 Missions",
+      "status": "In Review",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-003: Define Nominal Flight and Ground Operations",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-002: Define Engineering Data-Collection Objectives",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "AERO-002: CFD Template for a ~1m Long Plane",
+      "status": "In Progress",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-004: Stock Vehicle Flight Requirements and Goals",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-005: Stock Vehicle Flight Test Documentation",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-003: Stock Vehicle Battery Selection",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-004: Stock Vehicle Transmitter Selection",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "FDC-002: Stock Vehicle Controls Configuration Investigation",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-006: Stock Vehicle Flight Test Airspace",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-005: Stock Vehicle Ground Charging Station",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-007: Transportation Logistics for Stock Vehicle",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-008: Viper Transportation Solution",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "ELE-006: Stock Vehicle Speed Tracking",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "FDC-004: Stock Vehicle Flight Test Maneuver",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-009: Stock Vehicle Registration",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-010: Paper Printed Items for Stock Vehicle Flight Test",
+      "status": "Backlog",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "OPS-011: Stock Vehicle Marking",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "STR-006: Internal Volume CAD for Baseline Aircraft",
+      "status": "Ready",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "STR-003: Reverse Engineering Viper Cockpit",
+      "status": "Ready",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "STR-004: Reverse Engineering Viper Nosecone",
+      "status": "Ready",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "BUS-001: Stock Vehicle Flight Test Media",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "STR-005: STR-003: Reverse Engineering Viper Ventral Fins",
+      "status": "Ready",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "FDC-003: Stock Vehicle Physical Configuration Recommendations",
+      "status": "Done",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "INT-003: Identify Operational Constraints on Vehicle Architecture",
+      "status": "Ready",
+      "program": "Vehicle 01"
+    },
+    {
+      "title": "AERO-002: CFD Template for a ~1m Long Plane",
+      "status": "In Progress",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "INT-004: Vehicle 02 SRR Presentation",
+      "status": "Done",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PGM-001: Determine V02 CoDR Candidate Concepts",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PGM-002: Build Mission and Operating-Path Overlays",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "AERO-004: Mach 0.35 Aerodynamic Feasibility",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "AERO-005: Mach 0.35 Performance Closure",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PROP-003: Build CoDR P180-RXi Thrust Model",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PROP-004: Concept Propulsion and Fuel System Feasibility",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "STR-007: Build Concept Mass Models",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "STR-008: Concept Structural Feasibility Screening",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "FDC-005: Concept Stability, Trim, and Control Feasibility",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "ELE-009: Determine Software and Flight-Data Feasibility",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "FIT-013: Define FAA Pathway for Each Concept",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "FIT-014: Determine U-1 Record Campaign Requirements",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "FIT-015: Define Test-Site Requirements and Screen Candidate Sites",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "FIT-016: Define Concept-Level Launch, Recovery, and Abort Approach",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PGM-003: Compare Concept Cost, Procurement, and Schedule",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PGM-004: Integrate CoDR Concept Comparison",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    },
+    {
+      "title": "PGM-005: Vehicle 02 CoDR Package",
+      "status": "Backlog",
+      "program": "Vehicle 02"
+    }
+  ],
   "completions": {
     "bySource": {
       "Admin": {}
     },
     "generatedAt": "2026-09-25T06:31:50.703Z"
-  }
+  },
+  "itemsGeneratedAt": "2026-09-25T06:31:52.929Z"
 }
