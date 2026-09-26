@@ -219,7 +219,7 @@
     },
     {
       "title": "STR-004: Reverse Engineering Viper Nosecone",
-      "status": "Ready",
+      "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-18",
       "end": "2026-09-26"
@@ -421,5 +421,5 @@
     },
     "generatedAt": "2026-09-26T15:14:52.974Z"
   },
-  "itemsGeneratedAt": "2026-09-26T03:53:25.692Z"
+  "itemsGeneratedAt": "2026-09-26T15:56:06.835Z"
 }
