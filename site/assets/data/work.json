@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-09-25"
+      "end": "2026-09-26"
     },
     {
       "title": "INT-001: Establish the Baseline Vehicle Definition",
@@ -268,7 +268,7 @@
     },
     {
       "title": "PGM-001: Determine V02 CoDR Candidate Concepts",
-      "status": "Backlog",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-24",
       "end": "2026-09-24"
@@ -421,5 +421,5 @@
     },
     "generatedAt": "2026-09-26T02:17:43.778Z"
   },
-  "itemsGeneratedAt": "2026-09-25T16:43:37.428Z"
+  "itemsGeneratedAt": "2026-09-26T03:53:25.692Z"
 }
