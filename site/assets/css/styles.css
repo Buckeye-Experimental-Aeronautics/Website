@@ -89,11 +89,16 @@ h1,h2,h3{font-family:var(--font-display);font-weight:700;letter-spacing:-0.03em;
   background:#fff;border-top:1px solid #e4e4e0;border-bottom:1px solid #e4e4e0;
   display:flex;align-items:center;overflow:hidden;height:180px;
 }
-.sponsor-track{display:flex;align-items:center;flex:none;width:max-content;white-space:nowrap;
+.sponsor-track{display:flex;align-items:center;flex:none;gap:96px;width:max-content;white-space:nowrap;
   animation:bexa-sponsor-scroll 44s linear infinite;will-change:transform;}
-/* each logo carries its own trailing gap, so 4 identical sets make -50% an exact whole number of sets: seamless loop */
+/* identical duplicated sets make -50% an exact whole number of sets: seamless loop */
 .sponsor-row:hover .sponsor-track{animation-play-state:paused;}
-.sponsor-track img{width:auto;flex:none;margin-right:96px;}
+.sponsor-track img{width:auto;flex:none;}
+/* too few logos to need scrolling: site.js measures this and adds .is-static,
+   hiding the duplicate copy and centering the one real set instead of
+   looping a single logo pointlessly */
+.sponsor-row.is-static{justify-content:center;}
+.sponsor-row.is-static .sponsor-track{animation:none;width:auto;}
 
 /* ---------- footer ---------- */
 .site-footer{
