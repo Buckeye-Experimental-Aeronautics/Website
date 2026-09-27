@@ -27,3 +27,31 @@
   window.addEventListener('load',draw);
   draw();
 })();
+
+/* Sponsor marquee: the track holds two identical copies of the logo set so
+   the -50% scroll loop is seamless. If there are only one or two sponsors,
+   even a single set is narrower than most screens — scrolling it just loops
+   the same couple of logos pointlessly. When that's the case, hide the
+   duplicate copy and center the real one statically instead. */
+(function(){
+  var row=document.querySelector('.sponsor-row');
+  if(!row)return;
+  var track=row.querySelector('.sponsor-track');
+  if(!track)return;
+  var all=[].slice.call(track.children);
+  var half=all.slice(0,all.length/2);
+  function check(){
+    all.forEach(function(el){el.style.display='';});
+    var setWidth=half.reduce(function(w,el){return w+el.getBoundingClientRect().width;},0)
+      +96*Math.max(0,half.length-1); // matches .sponsor-track's CSS gap
+    if(setWidth<=row.clientWidth){
+      row.classList.add('is-static');
+      all.slice(half.length).forEach(function(el){el.style.display='none';});
+    }else{
+      row.classList.remove('is-static');
+    }
+  }
+  window.addEventListener('resize',check);
+  window.addEventListener('load',check);
+  check();
+})();
