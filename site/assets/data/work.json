@@ -65,7 +65,7 @@
     },
     {
       "title": "OPS-001: Conduct Stock Aircraft Operational Evaluation",
-      "status": "In Progress",
+      "status": "On Hold",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-25"
@@ -191,7 +191,7 @@
     },
     {
       "title": "OPS-010: Paper Printed Items for Stock Vehicle Flight Test",
-      "status": "Backlog",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-18",
       "end": "2026-09-25"
@@ -253,8 +253,15 @@
       "end": "2026-09-25"
     },
     {
+      "title": "OPS-013: Stock Vehicle Flight Test FRR",
+      "status": "Backlog",
+      "program": "Vehicle 01",
+      "start": "2026-09-27",
+      "end": "2026-09-28"
+    },
+    {
       "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-26"
@@ -422,5 +429,5 @@
     },
     "generatedAt": "2026-09-27T15:54:47.039Z"
   },
-  "itemsGeneratedAt": "2026-09-27T04:03:19.102Z"
+  "itemsGeneratedAt": "2026-09-27T16:32:11.108Z"
 }
