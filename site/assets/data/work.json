@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-09-26"
+      "end": "2026-09-27"
     },
     {
       "title": "INT-001: Establish the Baseline Vehicle Definition",
@@ -253,11 +253,25 @@
       "end": "2026-09-25"
     },
     {
+      "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-09-25",
+      "end": "2026-09-26"
+    },
+    {
       "title": "AERO-002: CFD Template for a ~1m Long Plane",
       "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-08-31",
       "end": "2026-09-27"
+    },
+    {
+      "title": "PGM-001: Determine V02 CoDR Candidate Concepts",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-09-24",
+      "end": "2026-09-24"
     },
     {
       "title": "INT-004: Vehicle 02 SRR Presentation",
@@ -267,25 +281,11 @@
       "end": "2026-09-24"
     },
     {
-      "title": "PGM-001: Determine V02 CoDR Candidate Concepts",
-      "status": "Done",
-      "program": "Vehicle 02",
-      "start": "2026-09-24",
-      "end": "2026-09-24"
-    },
-    {
       "title": "PGM-002: Build Mission and Operating-Path Overlays",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-09-28",
       "end": "2026-09-28"
-    },
-    {
-      "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-09-25",
-      "end": "2026-09-26"
     },
     {
       "title": "AERO-004: Mach 0.35 Aerodynamic Feasibility",
@@ -421,5 +421,5 @@
     },
     "generatedAt": "2026-09-27T02:12:30.244Z"
   },
-  "itemsGeneratedAt": "2026-09-26T15:56:06.835Z"
+  "itemsGeneratedAt": "2026-09-27T04:03:19.102Z"
 }
