@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-09-27"
+      "end": "2026-09-28"
     },
     {
       "title": "INT-001: Establish the Baseline Vehicle Definition",
@@ -65,7 +65,7 @@
     },
     {
       "title": "OPS-001: Conduct Stock Aircraft Operational Evaluation",
-      "status": "In Progress",
+      "status": "On Hold",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-25"
@@ -191,7 +191,7 @@
     },
     {
       "title": "OPS-010: Paper Printed Items for Stock Vehicle Flight Test",
-      "status": "Backlog",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-18",
       "end": "2026-09-25"
@@ -205,7 +205,7 @@
     },
     {
       "title": "STR-006: Internal Volume CAD for Baseline Aircraft",
-      "status": "Ready",
+      "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-22",
       "end": "2026-09-27"
@@ -253,6 +253,13 @@
       "end": "2026-09-25"
     },
     {
+      "title": "OPS-013: Stock Vehicle Flight Test FRR",
+      "status": "Backlog",
+      "program": "Vehicle 01",
+      "start": "2026-09-27",
+      "end": "2026-09-28"
+    },
+    {
       "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
       "status": "In Progress",
       "program": "Vehicle 02",
@@ -268,7 +275,7 @@
     },
     {
       "title": "PGM-001: Determine V02 CoDR Candidate Concepts",
-      "status": "In Progress",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-24",
       "end": "2026-09-24"
@@ -351,15 +358,15 @@
       "end": "2026-10-05"
     },
     {
-      "title": "FIT-013: Define FAA Pathway for Each Concept",
-      "status": "Backlog",
+      "title": "FIT-013: Define FAA/Verification Pathway for Each Concept",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-27"
     },
     {
       "title": "FIT-014: Determine U-1 Record Campaign Requirements",
-      "status": "Backlog",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-25"
@@ -413,14 +420,14 @@
         "2026-09-20": 1,
         "2026-09-23": 4,
         "2026-09-18": 4,
-        "2026-09-27": 1,
-        "2026-09-26": 1
+        "2026-09-27": 2,
+        "2026-09-28": 1
       },
       "Business": {
         "2026-09-23": 1
       }
     },
-    "generatedAt": "2026-09-27T15:54:47.039Z"
+    "generatedAt": "2026-09-28T04:36:36.342Z"
   },
-  "itemsGeneratedAt": "2026-09-27T04:03:19.102Z"
+  "itemsGeneratedAt": "2026-09-28T04:04:30.820Z"
 }
