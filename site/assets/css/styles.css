@@ -200,7 +200,9 @@ section.block.cream p.lede{color:#4a463f;}
 .roster-row{display:flex;gap:40px;flex-wrap:wrap;margin-top:40px;}
 .roster-row:first-child{margin-top:0;}
 .roster-row .roster-group{margin-top:0;flex:1;min-width:280px;}
-.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:10px;}
+/* min-width is set so the longest real email (22 chars at 11px) fits on one
+   line without truncating — shrink this and the ellipsis starts eating them */
+.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;}
 .person{background:var(--panel-2);border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;display:flex;flex-direction:column;}
 .person-photo{aspect-ratio:1/1;background:var(--panel) url('/assets/img/bexa-logo.png') center/36% no-repeat;position:relative;}
 .person-photo::after{content:"";position:absolute;inset:0;background:rgba(19,19,21,.86);} /* placeholder: dims the logo until a real portrait is added */

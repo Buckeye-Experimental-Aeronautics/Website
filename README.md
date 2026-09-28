@@ -8,8 +8,8 @@ Live at [flybexa.com](https://flybexa.com).
 ## Stack
 
 Static multi-page HTML/CSS/JS — **no build step, no framework, no
-dependencies to install.** Deployed on Vercel, which serves `site/` directly
-(see `vercel.json`).
+dependencies to install.** Deployed on GitHub Pages, which publishes `site/`
+as-is (see `.github/workflows/deploy-pages.yml`).
 
 ## Development
 
@@ -70,31 +70,56 @@ scheduled GitHub Actions running in the team's private repos:
   Admin) publishes each repo's closed-issue counts for the homepage activity
   heatmap.
 
+Both push straight to this repo's `main`, so **a sync run is a live deploy** —
+each one triggers the Pages workflow and updates flybexa.com within a minute.
+That's intended; it's how the roadmap and heatmap stay current without anyone
+touching the site.
+
 Full setup, field-name assumptions, and the safety rules both scripts follow
-(never touch `main` before it's the live branch, never clobber each other's
-data) are documented in the project folder's `docs/work-sync/README.md` —
-that folder isn't part of this repo since it's about infrastructure in other
-repos, not this site.
+(they only ever write `site/assets/data/work.json`, never clobber each other's
+data, and retry instead of force-pushing) are documented in the project
+folder's `docs/work-sync/README.md` — that folder isn't part of this repo
+since it's about infrastructure in other repos, not this site.
 
 ## Deployment
 
-Every push to `main` deploys on its own via Vercel's GitHub integration —
-`vercel.json` points it at `site/` as the output directory, no build command.
+Every push to `main` deploys on its own via GitHub Pages
+(`.github/workflows/deploy-pages.yml`). There is no build step — the workflow
+uploads `site/` exactly as it is and publishes it. It takes well under a
+minute. A failed run can't take the site down; the previous deployment keeps
+serving.
 
-**Keep this repository public.** Vercel's free Hobby plan will not deploy a
-private repository owned by an organisation. Switch it to private and
-deploys silently stop firing while the dashboard still reports "Connected" —
-nothing reports the failure, which makes it hard to diagnose.
+Only `main` deploys. Any other branch can be pushed safely.
 
-`www.flybexa.com` redirects to the apex domain, which is canonical (a Vercel
-domain setting, not anything in this repo).
+### The custom domain
 
-If the domain ever changes, update it in `site/sitemap.xml` and
-`site/robots.txt` — those are the only two places the origin is hard-coded
-in this static rebuild (the old React build also had it in
-`src/lib/constants.ts` and `index.html`; neither exists as hard-coded origin
-strings here since there's no `SITE_URL` constant or canonical `<link>` tag
-in the current pages).
+`site/CNAME` contains `flybexa.com`, which is what tells Pages to serve at the
+custom domain instead of `buckeye-experimental-aeronautics.github.io/Website/`.
+
+**Don't delete `site/CNAME`.** Without it, Pages falls back to serving under
+the `/Website/` subpath, and every root-absolute path in the markup
+(`/team.html`, `/assets/...`) breaks at once — the pages load but with no CSS,
+no images, and dead nav links.
+
+DNS lives at Porkbun and must point at GitHub:
+
+| Record | Host | Value |
+|--------|------|-------|
+| A | `@` | `185.199.108.153` |
+| A | `@` | `185.199.109.153` |
+| A | `@` | `185.199.110.153` |
+| A | `@` | `185.199.111.153` |
+| CNAME | `www` | `buckeye-experimental-aeronautics.github.io.` |
+
+After DNS propagates, tick **Enforce HTTPS** in the repo's Settings → Pages.
+It stays greyed out until GitHub has verified the domain, which can take up to
+a few hours on first setup.
+
+**Keep this repository public.** GitHub Pages doesn't serve from private repos
+on the free plan.
+
+If the domain ever changes, update it in `site/CNAME`, `site/sitemap.xml`, and
+`site/robots.txt` — those three are the only places the origin is hard-coded.
 
 ## Accounts
 
@@ -103,46 +128,20 @@ member.
 
 | Service | What it does |
 |---------|--------------|
-| Porkbun | Registers the flybexa.com domain |
-| GitHub  | Holds this code, at `bexa-aero/BEXA` (see below — there's a second, non-deploying copy too) |
-| Vercel  | Builds and serves the site |
+| Porkbun | Registers the flybexa.com domain, and points its DNS at GitHub Pages |
+| GitHub  | Holds this code **and serves the site**, from this repo |
 
 Access questions go to bexa.aero@gmail.com. When officers change over, hand off
-all three, not just this repo.
+both, not just this repo.
 
-## Two copies of this repo, and only one of them deploys
+## The old Vercel setup, and the old second repo
 
-Read this before you push anything.
+The site used to be a React/Vite app deployed by Vercel from a **different**
+repo, `bexa-aero/BEXA`, with this org repo existing only as a non-deploying
+copy for officer access. That was a genuine trap: pushing here looked
+successful and changed nothing on flybexa.com.
 
-| Remote | Repository | Deploys? |
-|--------|------------|----------|
-| `bexa-aero` | `bexa-aero/BEXA` | **Yes.** Vercel watches this one |
-| `origin` (this repo) | `Buckeye-Experimental-Aeronautics/Website` | No |
-
-This org copy exists so officers get access through org membership instead of
-sharing the `bexa-aero` login. **Nothing is served from it by Vercel** — as of
-this rebuild it also runs a GitHub Pages preview (see below), which is a
-separate, unrelated deployment that only exists here.
-
-**Pushing only to this org repo will look completely successful and change
-nothing on flybexa.com.** There is no warning and no error. To actually ship a
-change to production, it has to reach `bexa-aero/BEXA`'s `main` — that
-requires push access to `bexa-aero/BEXA` specifically, which the agent that
-did this rebuild did not have.
-
-Pointing Vercel at this org repo instead would remove this trap entirely. It's
-a few clicks in the Vercel dashboard under Settings → Git, and needs the club
-Vercel login. Nobody has done it yet.
-
-## GitHub Pages preview (this repo only, temporary)
-
-Since this repo doesn't reach flybexa.com, pushes to its `main` also publish a
-throwaway preview via GitHub Pages (`.github/workflows/deploy-pages.yml`) so
-people can look at the rebuild without Tailscale/local-server access. It's
-served under `/Website/`, so the build step rewrites root-absolute paths
-(`/team.html`, `/assets/...`) to `/Website/team.html` etc. **in the published
-copy only** — nothing in `site/` itself changes, so this has no effect on the
-real Vercel deployment. Every page in the Pages copy also gets a blanket
-`noindex` injected so it can't get crawled as duplicate content under the
-wrong domain. Delete the workflow whenever this repo starts deploying for
-real, or whenever the preview is no longer needed.
+That's over. This repo is now the one that deploys, via GitHub Pages. If
+`bexa-aero/BEXA` still exists and Vercel is still connected to it, **turn that
+deployment off** — otherwise two systems think they own flybexa.com and
+whichever holds the DNS wins, silently.

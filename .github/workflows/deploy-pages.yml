@@ -1,14 +1,12 @@
-# TEMPORARY preview only. This repo is NOT what Vercel deploys from — see
-# README.md ("Two copies of this repo, and only one of them deploys"). This
-# workflow exists purely so people can look at this rebuild without
-# Tailscale/local-server access, since nothing else here reaches the public.
+# This is how flybexa.com deploys. Every push to main publishes site/ to
+# GitHub Pages, which serves it at the custom domain in site/CNAME.
 #
-# It publishes a COPY of site/ with root-absolute paths rewritten to work
-# under GitHub Pages' /Website/ subpath, and a noindex tag injected into
-# every page. Nothing in site/ itself is touched — the real Vercel site is
-# completely unaffected by this. Delete this file once bexa-aero/BEXA is
-# updated for real, or once this preview is no longer needed.
-name: Deploy GitHub Pages preview
+# site/ is published as-is: no build step, no path rewriting. The custom
+# domain means the site is served from the root (/), so the root-absolute
+# paths used throughout the markup (/team.html, /assets/...) work directly.
+# If the custom domain is ever removed, Pages falls back to serving under
+# /Website/ and those paths would break — keep site/CNAME in place.
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -25,47 +23,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Build a path-rewritten copy for the /Website/ subpath
-        run: |
-          set -e
-          REPO="Website"
-          cp -r site build
-
-          # Every /assets/... reference, in any quoting context (href, src,
-          # CSS url(), JS fetch string) — this is the one path prefix used
-          # everywhere in this codebase, so a single literal substitution
-          # covers all of them safely.
-          find build -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' \) \
-            -exec sed -i "s#/assets/#/$REPO/assets/#g" {} +
-
-          # Root-relative page links: href="/", href="/<page>.html", and
-          # href="/<page>.html#fragment" (the mission-table/team-accordion
-          # links on the homepage all carry a #fragment, so the file
-          # extension alone isn't the end of the match)
-          find build -name '*.html' \
-            -exec sed -i "s#href=\"/\"#href=\"/$REPO/\"#g" {} + \
-            -exec sed -i -E "s@href=\"/([a-zA-Z0-9_-]+\.html)(#[^\"]*)?\"@href=\"/$REPO/\1\2\"@g" {} +
-
-          # Never let this temporary preview get indexed under the wrong domain
-          find build -name '*.html' \
-            -exec sed -i 's#<head>#<head>\n<meta name="robots" content="noindex, nofollow">#' {} +
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: build
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
       - id: deployment
         uses: actions/deploy-pages@v4
