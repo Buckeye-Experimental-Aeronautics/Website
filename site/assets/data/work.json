@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-09-27"
+      "end": "2026-09-28"
     },
     {
       "title": "INT-001: Establish the Baseline Vehicle Definition",
@@ -205,7 +205,7 @@
     },
     {
       "title": "STR-006: Internal Volume CAD for Baseline Aircraft",
-      "status": "Ready",
+      "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-22",
       "end": "2026-09-27"
@@ -261,7 +261,7 @@
     },
     {
       "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
-      "status": "In Review",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-26"
@@ -275,7 +275,7 @@
     },
     {
       "title": "PGM-001: Determine V02 CoDR Candidate Concepts",
-      "status": "In Progress",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-24",
       "end": "2026-09-24"
@@ -358,15 +358,15 @@
       "end": "2026-10-05"
     },
     {
-      "title": "FIT-013: Define FAA Pathway for Each Concept",
-      "status": "Backlog",
+      "title": "FIT-013: Define FAA/Verification Pathway for Each Concept",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-27"
     },
     {
       "title": "FIT-014: Determine U-1 Record Campaign Requirements",
-      "status": "Backlog",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-25"
@@ -429,5 +429,5 @@
     },
     "generatedAt": "2026-09-28T02:16:49.793Z"
   },
-  "itemsGeneratedAt": "2026-09-27T16:32:11.108Z"
+  "itemsGeneratedAt": "2026-09-28T04:04:30.820Z"
 }
