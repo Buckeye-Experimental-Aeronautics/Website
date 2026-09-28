@@ -17,11 +17,11 @@
   <div class="site-header">
     <a href="/"><img class="logo" src="/assets/img/bexa-logo.png" alt="BExA"></a>
     <nav class="site-nav">
-      <a href="/program.html">Programs</a>
-      <a href="/process.html">Process</a>
-      <a href="/team.html">Team</a>
-      <a href="/sponsors.html">Sponsors</a>
-      <a href="/join.html" class="btn btn-fill-cream sm"><span>Join</span></a>
+      <a href="/program">Programs</a>
+      <a href="/process">Process</a>
+      <a href="/team">Team</a>
+      <a href="/sponsors">Sponsors</a>
+      <a href="/join" class="btn btn-fill-cream sm"><span>Join</span></a>
     </nav>
   </div>
   <svg class="taper-bar" id="progress-bar" height="26" aria-hidden="true">
@@ -37,8 +37,8 @@
       <h1 class="hero-h1" style="font-size:68px;line-height:1.06;">We build engineers. Aircraft are how.</h1>
       <p style="margin:28px 0 0;font-size:22px;line-height:1.45;max-width:560px;">Ohio State's student team for experimental aircraft. We design, build and flight-test, then do it again, faster.</p>
       <div style="display:flex;gap:12px;margin-top:36px;flex-wrap:wrap;">
-        <a href="/join.html" class="btn btn-fill-cream"><span>Join the team</span></a>
-        <a href="/sponsors.html" class="btn btn-outline-cream"><span>Sponsor us</span></a>
+        <a href="/join" class="btn btn-fill-cream"><span>Join the team</span></a>
+        <a href="/sponsors" class="btn btn-outline-cream"><span>Sponsor us</span></a>
       </div>
     </div>
     <div class="hero-photo" style="flex:1 1 420px;max-width:576px;min-width:0;height:380px;border-radius:var(--r-m);background:var(--red-deep);overflow:hidden;position:relative;">
@@ -58,8 +58,11 @@
 <!-- WHAT WE'RE UP TO -->
 <section class="block" style="background:var(--black);">
   <div class="wrap">
-    <div class="mission-head">
-      <h2>What we're up to</h2>
+    <div class="mission-head" style="align-items:flex-start;margin-bottom:24px;">
+      <div>
+        <h2>What we're up to</h2>
+        <p class="lede" style="margin-top:8px;">Take a look at real task completion data, updated live from our task management system.</p>
+      </div>
     </div>
     <div class="wt-card">
       <div class="wt-bar"><span class="wt-title">Tasks completed per day<span id="hm-total" style="color:var(--gray);font-weight:500;"></span></span><span class="wt-ex">Example data</span></div>
@@ -76,15 +79,15 @@
     <div class="mission-card">
       <div class="mission-head">
         <h2>Programs</h2>
-        <a href="/program.html" class="btn btn-outline-cream sm"><span>See all programs →</span></a>
+        <a href="/program" class="btn btn-outline-cream sm"><span>See all programs →</span></a>
       </div>
       <div class="mission-table">
         <div class="mission-row mission-cols"><span>Date</span><span>Program</span><span>Milestone</span><span>Stage</span><span></span></div>
-        <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-prog">Vehicle 01</span><span class="m-name">Electric Test Platform</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live" href="/program.html#vehicle-01">In progress</a></span></div>
-        <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-prog">Thrust Stand</span><span class="m-name">Microturbine Hotfire</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live" href="/program.html#thrust-stand">In progress</a></span></div>
-        <div class="mission-row"><span class="m-date">Spring 2027</span><span class="m-prog">Vehicle 02</span><span class="m-name">High-Speed Demonstrator</span><span class="m-dim">Intermediate Step</span><span class="m-status"><a class="pill" href="/program.html#vehicle-02">Planned</a></span></div>
-        <div class="mission-row"><span class="m-date">2027</span><span class="m-prog">Vehicle 03</span><span class="m-name">World Record</span><span class="m-dim">Flagship</span><span class="m-status"><a class="pill" href="/program.html#vehicle-03">Planned</a></span></div>
-        <div class="mission-row"><span class="m-date">2028</span><span class="m-prog">Vehicle 04</span><span class="m-name">Supersonic Attempt</span><span class="m-dim">Target</span><span class="m-status"><a class="pill" href="/program.html#vehicle-04">Planned</a></span></div>
+        <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-prog">Vehicle 01</span><span class="m-name">Electric Test Platform</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live" href="/program#vehicle-01">In progress</a></span></div>
+        <div class="mission-row"><span class="m-date">Fall 2026</span><span class="m-prog">Thrust Stand</span><span class="m-name">Microturbine Hotfire</span><span class="m-dim">Foundation</span><span class="m-status"><a class="pill pill-live" href="/program#thrust-stand">In progress</a></span></div>
+        <div class="mission-row"><span class="m-date">Spring 2027</span><span class="m-prog">Vehicle 02</span><span class="m-name">High-Speed Demonstrator</span><span class="m-dim">Intermediate Step</span><span class="m-status"><a class="pill" href="/program#vehicle-02">Planned</a></span></div>
+        <div class="mission-row"><span class="m-date">2027</span><span class="m-prog">Vehicle 03</span><span class="m-name">World Record</span><span class="m-dim">Flagship</span><span class="m-status"><a class="pill" href="/program#vehicle-03">Planned</a></span></div>
+        <div class="mission-row"><span class="m-date">2028</span><span class="m-prog">Vehicle 04</span><span class="m-name">Supersonic Attempt</span><span class="m-dim">Target</span><span class="m-status"><a class="pill" href="/program#vehicle-04">Planned</a></span></div>
       </div>
     </div>
   </div>
@@ -100,49 +103,49 @@
     </div>
 
     <div class="team-accordion" style="margin-top:40px;">
-      <a class="team-panel" href="/team.html#aerothermal" style="background-image:url('/assets/img/edf-test-bed.jpg');">
+      <a class="team-panel" href="/team#aerothermal" style="background-image:url('/assets/img/edf-test-bed.jpg');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Aerothermal</div>
           <p class="tp-desc">The Aerothermal Subteam is responsible for understanding and predicting the aerodynamic and thermal environments of the BExA prototype aircraft across all phases of flight.</p>
         </div>
       </a>
-      <a class="team-panel" href="/team.html#structures" style="background-image:url('/assets/img/v01-assembly.jpg');">
+      <a class="team-panel" href="/team#structures" style="background-image:url('/assets/img/v01-assembly.jpg');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Structures</div>
           <p class="tp-desc">The Structures Subteam is responsible for the design, analysis, manufacturing, and testing of the BExA prototype aircraft primary structure.</p>
         </div>
       </a>
-      <a class="team-panel" href="/team.html#propulsion" style="background-image:url('/assets/img/v01-fan-install.jpg');">
+      <a class="team-panel" href="/team#propulsion" style="background-image:url('/assets/img/v01-fan-install.jpg');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Propulsion</div>
           <p class="tp-desc">The Propulsion Subteam is responsible for the design, integration, testing, and validation of all propulsion systems.</p>
         </div>
       </a>
-      <a class="team-panel" href="/team.html#controls" style="background-image:url('/assets/img/v01-team-testing.jpg');">
+      <a class="team-panel" href="/team#controls" style="background-image:url('/assets/img/v01-team-testing.jpg');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Controls</div>
           <p class="tp-desc">The Controls Subteam designs, develops, and validates the dynamic models, control architectures, and autonomous flight systems required to ensure stable, predictable, and repeatable aircraft behavior across all flight regimes.</p>
         </div>
       </a>
-      <a class="team-panel" href="/team.html#avionics" style="background-image:url('/assets/img/v01-viper-scan.jpg');">
+      <a class="team-panel" href="/team#avionics" style="background-image:url('/assets/img/v01-viper-scan.jpg');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Avionics</div>
           <p class="tp-desc">The Avionics Subteam designs, develops, integrates, and validates all electronic systems that support sensing, communication, power distribution, and onboard computation for the aircraft.</p>
         </div>
       </a>
-      <a class="team-panel" href="/team.html#flight-ops" style="background-image:url('/assets/img/hero-night.jpg');">
+      <a class="team-panel" href="/team#flight-ops" style="background-image:url('/assets/img/hero-night.jpg');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Flight Integration and Test</div>
           <p class="tp-desc">The Flight Integration and Test Subteam plans, executes, and evaluates all flight operations to ensure safe, controlled, and repeatable testing of BExA prototype aircraft.</p>
         </div>
       </a>
-      <a class="team-panel" href="/team.html#business" style="background-image:url('/assets/img/team-photo.webp');">
+      <a class="team-panel" href="/team#business" style="background-image:url('/assets/img/team-photo.webp');">
         <div class="tp-overlay"></div>
         <div class="tp-content">
           <div class="tp-name">Business</div>
@@ -159,7 +162,7 @@
     <div style="flex:1 1 380px;max-width:520px;">
       <h2>Process</h2>
       <p class="lede">We build to NASA's systems-engineering process, with a review at every stage. If we can't explain why it flies, it doesn't fly.</p>
-      <a href="/process.html" class="btn btn-outline-cream sm" style="border-color:#161616;color:#161616;margin-top:28px;"><span>How we build →</span></a>
+      <a href="/process" class="btn btn-outline-cream sm" style="border-color:#161616;color:#161616;margin-top:28px;"><span>How we build →</span></a>
     </div>
     <div style="flex:1 1 380px;max-width:640px;border-top:1.5px solid #161616;">
       <div class="proc-row" style="display:flex;gap:24px;height:64px;align-items:center;border-bottom:1px solid #cbbfa6;"><span class="proc-num" style="color:var(--red);font-weight:700;width:28px;">01</span><span class="proc-label" style="font-weight:700;font-size:28px;letter-spacing:-0.02em;width:170px;font-family:var(--font-display);">Define</span><span class="proc-cap" style="font-size:18px;color:#4a463f;">The mission</span></div>
@@ -175,11 +178,11 @@
   <div class="wrap proc-cta" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
     <div style="background:var(--panel-2);border-radius:var(--r-m);padding:36px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;">
       <div><div style="font-size:15px;color:var(--gray);">Sponsors &amp; faculty</div><div style="font-weight:700;font-size:38px;letter-spacing:-0.03em;line-height:1.05;margin-top:10px;font-family:var(--font-display);">Work with us.</div></div>
-      <a href="/sponsors.html" class="btn btn-outline-cream" style="align-self:flex-start;"><span>Partner with us</span></a>
+      <a href="/sponsors" class="btn btn-outline-cream" style="align-self:flex-start;"><span>Partner with us</span></a>
     </div>
     <div style="background:var(--red);border-radius:var(--r-m);padding:36px 40px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;">
       <div><div style="font-size:15px;opacity:0.85;">Students</div><div style="font-weight:700;font-size:38px;letter-spacing:-0.03em;line-height:1.05;margin-top:10px;font-family:var(--font-display);">Come build with us.</div></div>
-      <a href="/join.html" class="btn btn-fill-cream" style="align-self:flex-start;"><span>Join the team</span></a>
+      <a href="/join" class="btn btn-fill-cream" style="align-self:flex-start;"><span>Join the team</span></a>
     </div>
   </div>
 </section>
@@ -192,10 +195,10 @@
   </div>
   <div class="col-links">
     <h4>Site</h4>
-    <a href="/program.html">Programs</a>
-    <a href="/process.html">Process</a>
-    <a href="/team.html">Team</a>
-    <a href="/sponsors.html">Sponsors</a>
+    <a href="/program">Programs</a>
+    <a href="/process">Process</a>
+    <a href="/team">Team</a>
+    <a href="/sponsors">Sponsors</a>
   </div>
   <div class="col-contact">
     <h4>Contact</h4>
