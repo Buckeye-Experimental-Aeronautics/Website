@@ -2,7 +2,7 @@
   "items": [
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 01",
       "start": "2026-09-23",
       "end": "2026-09-28"
@@ -34,6 +34,13 @@
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-15"
+    },
+    {
+      "title": "STR-003: Reverse Engineering Viper Cockpit",
+      "status": "In Progress",
+      "program": "Vehicle 01",
+      "start": "2026-09-18",
+      "end": "2026-09-30"
     },
     {
       "title": "AERO-001: Measure Baseline Aircraft Geometry",
@@ -86,7 +93,7 @@
     },
     {
       "title": "FDC-001: Define Representative Vehicle 01 Missions",
-      "status": "In Review",
+      "status": "On Hold",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-15"
@@ -100,7 +107,7 @@
     },
     {
       "title": "ELE-002: Define Engineering Data-Collection Objectives",
-      "status": "In Progress",
+      "status": "On Hold",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-25"
@@ -218,13 +225,6 @@
       "end": "2026-09-27"
     },
     {
-      "title": "STR-003: Reverse Engineering Viper Cockpit",
-      "status": "Ready",
-      "program": "Vehicle 01",
-      "start": "2026-09-18",
-      "end": "2026-09-30"
-    },
-    {
       "title": "STR-004: Reverse Engineering Viper Nosecone",
       "status": "In Progress",
       "program": "Vehicle 01",
@@ -254,7 +254,7 @@
     },
     {
       "title": "INT-003: Identify Operational Constraints on Vehicle Architecture",
-      "status": "Ready",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-25"
@@ -317,7 +317,7 @@
     },
     {
       "title": "PROP-003: Build CoDR P180-RXi Thrust Model",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-09-24",
       "end": "2026-09-26"
@@ -437,5 +437,5 @@
     },
     "generatedAt": "2026-09-29T17:09:18.988Z"
   },
-  "itemsGeneratedAt": "2026-09-29T04:37:34.399Z"
+  "itemsGeneratedAt": "2026-09-29T17:46:27.198Z"
 }
