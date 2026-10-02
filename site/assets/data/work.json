@@ -2,10 +2,24 @@
   "items": [
     {
       "title": "OPS-013: Stock Vehicle Flight Test FRR",
-      "status": "In Progress",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-27",
       "end": "2026-09-28"
+    },
+    {
+      "title": "PROP-001: Characterize the Stock Propulsion Configuration",
+      "status": "Done",
+      "program": "Vehicle 01",
+      "start": "2026-09-08",
+      "end": "2026-09-15"
+    },
+    {
+      "title": "PROP-002: EDF Static Thrust Stand",
+      "status": "In Progress",
+      "program": "Vehicle 01",
+      "start": "2026-09-17",
+      "end": "2026-10-02"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -29,13 +43,6 @@
       "end": "2026-09-23"
     },
     {
-      "title": "PROP-002: EDF Static Thrust Stand",
-      "status": "In Progress",
-      "program": "Vehicle 01",
-      "start": "2026-09-17",
-      "end": "2026-09-30"
-    },
-    {
       "title": "INT-001: Establish the Baseline Vehicle Definition",
       "status": "In Progress",
       "program": "Vehicle 01",
@@ -50,22 +57,8 @@
       "end": "2026-09-30"
     },
     {
-      "title": "AERO-001: Measure Baseline Aircraft Geometry",
-      "status": "In Progress",
-      "program": "Vehicle 01",
-      "start": "2026-09-08",
-      "end": "2026-09-30"
-    },
-    {
       "title": "INT-002: Measure Baseline Mass and Center of Gravity",
       "status": "Done",
-      "program": "Vehicle 01",
-      "start": "2026-09-08",
-      "end": "2026-09-15"
-    },
-    {
-      "title": "PROP-001: Characterize the Stock Propulsion Configuration",
-      "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-15"
@@ -93,14 +86,14 @@
     },
     {
       "title": "OPS-002: Define Vehicle 01 Operational Use",
-      "status": "In Progress",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-15"
     },
     {
       "title": "FDC-001: Define Representative Vehicle 01 Missions",
-      "status": "On Hold",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-15"
@@ -114,10 +107,17 @@
     },
     {
       "title": "ELE-002: Define Engineering Data-Collection Objectives",
-      "status": "On Hold",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-25"
+    },
+    {
+      "title": "AERO-001: Measure Baseline Aircraft Geometry",
+      "status": "On Hold",
+      "program": "Vehicle 01",
+      "start": "2026-09-08",
+      "end": "2026-09-30"
     },
     {
       "title": "AERO-002: CFD Template for a ~1m Long Plane",
@@ -267,6 +267,13 @@
       "end": "2026-09-25"
     },
     {
+      "title": "STR-007: Build Concept Mass Models",
+      "status": "Ready",
+      "program": "Vehicle 02",
+      "start": "2026-09-29",
+      "end": "2026-09-30"
+    },
+    {
       "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
       "status": "Done",
       "program": "Vehicle 02",
@@ -296,14 +303,35 @@
     },
     {
       "title": "PGM-002: Build Mission and Operating-Path Overlays",
-      "status": "Backlog",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-09-28",
       "end": "2026-09-28"
     },
     {
+      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-03",
+      "end": "2026-10-04"
+    },
+    {
+      "title": "FDC-005: Concept Stability, Trim, and Control Feasibility",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-01",
+      "end": "2026-10-03"
+    },
+    {
+      "title": "PROP-004: Concept Propulsion and Fuel System Feasibility",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-09-27",
+      "end": "2026-09-28"
+    },
+    {
       "title": "AERO-004: Mach 0.35 Aerodynamic Feasibility",
-      "status": "Backlog",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-09-29",
       "end": "2026-10-02"
@@ -316,46 +344,11 @@
       "end": "2026-10-04"
     },
     {
-      "title": "PROP-003: Build CoDR P180-RXi Thrust Model",
-      "status": "In Review",
-      "program": "Vehicle 02",
-      "start": "2026-09-24",
-      "end": "2026-09-26"
-    },
-    {
-      "title": "PROP-004: Concept Propulsion and Fuel System Feasibility",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-09-27",
-      "end": "2026-09-28"
-    },
-    {
-      "title": "STR-007: Build Concept Mass Models",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-09-29",
-      "end": "2026-09-30"
-    },
-    {
       "title": "STR-008: Concept Structural Feasibility Screening",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-01",
       "end": "2026-10-03"
-    },
-    {
-      "title": "FDC-005: Concept Stability, Trim, and Control Feasibility",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-10-01",
-      "end": "2026-10-03"
-    },
-    {
-      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-10-03",
-      "end": "2026-10-04"
     },
     {
       "title": "ELE-009: Determine Software and Flight-Data Feasibility",
@@ -366,7 +359,7 @@
     },
     {
       "title": "FIT-013: Define FAA/Verification Pathway for Each Concept",
-      "status": "In Review",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-27"
@@ -415,17 +408,24 @@
     },
     {
       "title": "FIT-017: Vehicle/operations requirements to satisfy FAI Section 12",
-      "status": "In Review",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-28",
       "end": "2026-09-29"
     },
     {
       "title": "FIT-019: V02 FAI Records to Pursue",
-      "status": "In Review",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-28",
       "end": "2026-09-29"
+    },
+    {
+      "title": "PROP-003: Build CoDR P180-RXi Thrust Model",
+      "status": "Done",
+      "program": "Vehicle 02",
+      "start": "2026-09-24",
+      "end": "2026-09-26"
     }
   ],
   "completions": {
@@ -452,5 +452,5 @@
     },
     "generatedAt": "2026-09-30T04:51:06.963Z"
   },
-  "itemsGeneratedAt": "2026-09-30T04:21:26.547Z"
+  "itemsGeneratedAt": "2026-10-02T13:37:46.061Z"
 }
