@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-03"
+      "end": "2026-10-04"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -267,18 +267,18 @@
       "end": "2026-09-25"
     },
     {
-      "title": "STR-007: Build Concept Mass Models",
-      "status": "Ready",
-      "program": "Vehicle 02",
-      "start": "2026-09-29",
-      "end": "2026-09-30"
-    },
-    {
       "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
       "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-26"
+    },
+    {
+      "title": "STR-007: Build Concept Mass Models",
+      "status": "Ready",
+      "program": "Vehicle 02",
+      "start": "2026-09-29",
+      "end": "2026-09-30"
     },
     {
       "title": "AERO-002: CFD Template for a ~1m Long Plane",
@@ -454,5 +454,5 @@
     },
     "generatedAt": "2026-10-04T03:09:37.162Z"
   },
-  "itemsGeneratedAt": "2026-10-03T15:50:08.117Z"
+  "itemsGeneratedAt": "2026-10-04T04:40:11.185Z"
 }
