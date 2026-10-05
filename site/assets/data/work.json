@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-04"
+      "end": "2026-10-05"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -454,5 +454,5 @@
     },
     "generatedAt": "2026-10-05T02:43:28.903Z"
   },
-  "itemsGeneratedAt": "2026-10-04T16:32:21.480Z"
+  "itemsGeneratedAt": "2026-10-05T04:27:40.561Z"
 }
