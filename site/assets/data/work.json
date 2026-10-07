@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-06"
+      "end": "2026-10-07"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -303,14 +303,14 @@
     },
     {
       "title": "PGM-002: Build Mission and Operating-Path Overlays",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-09-28",
       "end": "2026-09-28"
     },
     {
       "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-10-03",
       "end": "2026-10-04"
@@ -352,7 +352,7 @@
     },
     {
       "title": "ELE-009: Determine Software and Flight-Data Feasibility",
-      "status": "Backlog",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-05",
       "end": "2026-10-05"
@@ -454,5 +454,5 @@
     },
     "generatedAt": "2026-10-07T03:01:12.524Z"
   },
-  "itemsGeneratedAt": "2026-10-06T18:01:21.245Z"
+  "itemsGeneratedAt": "2026-10-07T04:42:10.064Z"
 }
