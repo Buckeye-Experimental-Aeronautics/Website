@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-07"
+      "end": "2026-10-08"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -247,7 +247,7 @@
     },
     {
       "title": "STR-005: STR-003: Reverse Engineering Viper Ventral Fins",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 01",
       "start": "2026-09-18",
       "end": "2026-09-26"
@@ -272,13 +272,6 @@
       "program": "Vehicle 02",
       "start": "2026-09-25",
       "end": "2026-09-26"
-    },
-    {
-      "title": "STR-007: Build Concept Mass Models",
-      "status": "Ready",
-      "program": "Vehicle 02",
-      "start": "2026-09-29",
-      "end": "2026-09-30"
     },
     {
       "title": "AERO-002: CFD Template for a ~1m Long Plane",
@@ -331,17 +324,10 @@
     },
     {
       "title": "AERO-004: Mach 0.35 Aerodynamic Feasibility",
-      "status": "In Progress",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-09-29",
       "end": "2026-10-02"
-    },
-    {
-      "title": "AERO-005: Mach 0.35 Performance Closure",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-10-03",
-      "end": "2026-10-04"
     },
     {
       "title": "STR-008: Concept Structural Feasibility Screening",
@@ -356,6 +342,20 @@
       "program": "Vehicle 02",
       "start": "2026-10-05",
       "end": "2026-10-05"
+    },
+    {
+      "title": "STR-007: Build Concept Mass Models",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-09-29",
+      "end": "2026-09-30"
+    },
+    {
+      "title": "AERO-005: Mach 0.35 Performance Closure",
+      "status": "Done",
+      "program": "Vehicle 02",
+      "start": "2026-10-03",
+      "end": "2026-10-04"
     },
     {
       "title": "FIT-013: Define FAA/Verification Pathway for Each Concept",
@@ -455,5 +455,5 @@
     },
     "generatedAt": "2026-10-08T03:18:00.212Z"
   },
-  "itemsGeneratedAt": "2026-10-07T18:32:20.113Z"
+  "itemsGeneratedAt": "2026-10-08T04:52:30.971Z"
 }
