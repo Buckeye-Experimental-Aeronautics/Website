@@ -380,7 +380,7 @@
     },
     {
       "title": "FIT-016: Define Concept-Level Launch, Recovery, and Abort Approach",
-      "status": "Backlog",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-01",
       "end": "2026-10-01"
@@ -455,5 +455,5 @@
     },
     "generatedAt": "2026-10-08T18:04:59.627Z"
   },
-  "itemsGeneratedAt": "2026-10-08T04:52:30.971Z"
+  "itemsGeneratedAt": "2026-10-08T18:31:35.960Z"
 }
