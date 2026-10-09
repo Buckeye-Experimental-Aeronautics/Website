@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-08"
+      "end": "2026-10-09"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -373,14 +373,14 @@
     },
     {
       "title": "FIT-015: Define Test-Site Requirements and Screen Candidate Sites",
-      "status": "Backlog",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-03",
       "end": "2026-10-05"
     },
     {
       "title": "FIT-016: Define Concept-Level Launch, Recovery, and Abort Approach",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-10-01",
       "end": "2026-10-01"
@@ -455,5 +455,5 @@
     },
     "generatedAt": "2026-10-09T03:23:40.248Z"
   },
-  "itemsGeneratedAt": "2026-10-08T18:31:35.960Z"
+  "itemsGeneratedAt": "2026-10-09T04:55:28.743Z"
 }
