@@ -338,7 +338,7 @@
     },
     {
       "title": "ELE-009: Determine Software and Flight-Data Feasibility",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-10-05",
       "end": "2026-10-05"
@@ -373,7 +373,7 @@
     },
     {
       "title": "FIT-015: Define Test-Site Requirements and Screen Candidate Sites",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-10-03",
       "end": "2026-10-05"
@@ -457,5 +457,5 @@
     },
     "generatedAt": "2026-10-09T17:38:38.015Z"
   },
-  "itemsGeneratedAt": "2026-10-09T04:55:28.743Z"
+  "itemsGeneratedAt": "2026-10-09T18:02:54.386Z"
 }
