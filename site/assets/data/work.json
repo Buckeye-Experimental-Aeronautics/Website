@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-09"
+      "end": "2026-10-10"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -247,7 +247,7 @@
     },
     {
       "title": "STR-005: STR-003: Reverse Engineering Viper Ventral Fins",
-      "status": "In Review",
+      "status": "Done",
       "program": "Vehicle 01",
       "start": "2026-09-18",
       "end": "2026-09-26"
@@ -295,20 +295,6 @@
       "end": "2026-09-24"
     },
     {
-      "title": "PGM-002: Build Mission and Operating-Path Overlays",
-      "status": "In Review",
-      "program": "Vehicle 02",
-      "start": "2026-09-28",
-      "end": "2026-09-28"
-    },
-    {
-      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
-      "status": "In Review",
-      "program": "Vehicle 02",
-      "start": "2026-10-03",
-      "end": "2026-10-04"
-    },
-    {
       "title": "FDC-005: Concept Stability, Trim, and Control Feasibility",
       "status": "In Progress",
       "program": "Vehicle 02",
@@ -330,25 +316,39 @@
       "end": "2026-10-02"
     },
     {
-      "title": "STR-008: Concept Structural Feasibility Screening",
-      "status": "Backlog",
-      "program": "Vehicle 02",
-      "start": "2026-10-01",
-      "end": "2026-10-03"
-    },
-    {
-      "title": "ELE-009: Determine Software and Flight-Data Feasibility",
-      "status": "In Review",
-      "program": "Vehicle 02",
-      "start": "2026-10-05",
-      "end": "2026-10-05"
-    },
-    {
       "title": "STR-007: Build Concept Mass Models",
       "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-09-29",
       "end": "2026-09-30"
+    },
+    {
+      "title": "STR-008: Concept Structural Feasibility Screening",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-01",
+      "end": "2026-10-03"
+    },
+    {
+      "title": "PGM-002: Build Mission and Operating-Path Overlays",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-09-28",
+      "end": "2026-09-28"
+    },
+    {
+      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-03",
+      "end": "2026-10-04"
+    },
+    {
+      "title": "ELE-009: Determine Software and Flight-Data Feasibility",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-05",
+      "end": "2026-10-05"
     },
     {
       "title": "AERO-005: Mach 0.35 Performance Closure",
@@ -380,7 +380,7 @@
     },
     {
       "title": "FIT-016: Define Concept-Level Launch, Recovery, and Abort Approach",
-      "status": "In Review",
+      "status": "Done",
       "program": "Vehicle 02",
       "start": "2026-10-01",
       "end": "2026-10-01"
@@ -459,5 +459,5 @@
     },
     "generatedAt": "2026-10-10T03:03:28.174Z"
   },
-  "itemsGeneratedAt": "2026-10-09T18:02:54.386Z"
+  "itemsGeneratedAt": "2026-10-10T04:41:19.021Z"
 }
