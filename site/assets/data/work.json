@@ -302,13 +302,6 @@
       "end": "2026-10-03"
     },
     {
-      "title": "PROP-004: Concept Propulsion and Fuel System Feasibility",
-      "status": "In Progress",
-      "program": "Vehicle 02",
-      "start": "2026-09-27",
-      "end": "2026-09-28"
-    },
-    {
       "title": "AERO-004: Mach 0.35 Aerodynamic Feasibility",
       "status": "Done",
       "program": "Vehicle 02",
@@ -331,7 +324,7 @@
     },
     {
       "title": "PGM-002: Build Mission and Operating-Path Overlays",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-09-28",
       "end": "2026-09-28"
@@ -377,6 +370,13 @@
       "program": "Vehicle 02",
       "start": "2026-10-03",
       "end": "2026-10-05"
+    },
+    {
+      "title": "PROP-004: Concept Propulsion and Fuel System Feasibility",
+      "status": "In Review",
+      "program": "Vehicle 02",
+      "start": "2026-09-27",
+      "end": "2026-09-28"
     },
     {
       "title": "FIT-016: Define Concept-Level Launch, Recovery, and Abort Approach",
@@ -459,5 +459,5 @@
     },
     "generatedAt": "2026-10-12T20:30:56.799Z"
   },
-  "itemsGeneratedAt": "2026-10-12T04:42:03.447Z"
+  "itemsGeneratedAt": "2026-10-12T20:59:26.029Z"
 }
