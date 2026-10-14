@@ -267,11 +267,18 @@
       "end": "2026-09-25"
     },
     {
+      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
+      "status": "Done",
+      "program": "Vehicle 02",
+      "start": "2026-10-06",
+      "end": "2026-10-13"
+    },
+    {
       "title": "AERO-003: Develop Candidate Aerodynamic Configurations",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-09-25",
-      "end": "2026-09-26"
+      "start": "2026-09-27",
+      "end": "2026-10-07"
     },
     {
       "title": "AERO-002: CFD Template for a ~1m Long Plane",
@@ -298,29 +305,29 @@
       "title": "FDC-005: Concept Stability, Trim, and Control Feasibility",
       "status": "In Review",
       "program": "Vehicle 02",
-      "start": "2026-10-01",
-      "end": "2026-10-03"
+      "start": "2026-10-04",
+      "end": "2026-10-14"
     },
     {
       "title": "AERO-004: Mach 0.35 Aerodynamic Feasibility",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-09-29",
-      "end": "2026-10-02"
+      "start": "2026-10-06",
+      "end": "2026-10-07"
     },
     {
       "title": "STR-007: Build Concept Mass Models",
-      "status": "In Review",
+      "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-09-29",
-      "end": "2026-09-30"
+      "start": "2026-10-01",
+      "end": "2026-10-13"
     },
     {
       "title": "STR-008: Concept Structural Feasibility Screening",
       "status": "In Progress",
       "program": "Vehicle 02",
-      "start": "2026-10-01",
-      "end": "2026-10-03"
+      "start": "2026-10-08",
+      "end": "2026-10-14"
     },
     {
       "title": "PGM-002: Build Mission and Operating-Path Overlays",
@@ -330,32 +337,25 @@
       "end": "2026-09-28"
     },
     {
-      "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
-      "status": "In Progress",
-      "program": "Vehicle 02",
-      "start": "2026-10-03",
-      "end": "2026-10-04"
-    },
-    {
       "title": "ELE-009: Determine Software and Flight-Data Feasibility",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-10-05",
-      "end": "2026-10-05"
+      "start": "2026-10-07",
+      "end": "2026-10-09"
     },
     {
       "title": "AERO-005: Mach 0.35 Performance Closure",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-10-03",
-      "end": "2026-10-04"
+      "start": "2026-10-06",
+      "end": "2026-10-07"
     },
     {
       "title": "FIT-013: Define FAA/Verification Pathway for Each Concept",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-09-25",
-      "end": "2026-09-27"
+      "start": "2026-09-28",
+      "end": "2026-09-29"
     },
     {
       "title": "FIT-014: Determine U-1 Record Campaign Requirements",
@@ -368,43 +368,43 @@
       "title": "FIT-015: Define Test-Site Requirements and Screen Candidate Sites",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-10-03",
-      "end": "2026-10-05"
+      "start": "2026-10-08",
+      "end": "2026-10-13"
     },
     {
       "title": "PROP-004: Concept Propulsion and Fuel System Feasibility",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-09-27",
-      "end": "2026-09-28"
+      "start": "2026-10-11",
+      "end": "2026-10-13"
     },
     {
       "title": "FIT-016: Define Concept-Level Launch, Recovery, and Abort Approach",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-10-01",
-      "end": "2026-10-01"
+      "start": "2026-10-09",
+      "end": "2026-10-10"
     },
     {
       "title": "PGM-003: Compare Concept Cost, Procurement, and Schedule",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-06",
-      "end": "2026-10-06"
+      "start": "2026-10-14",
+      "end": "2026-10-14"
     },
     {
       "title": "PGM-004: Integrate CoDR Concept Comparison",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-07",
-      "end": "2026-10-07"
+      "start": "2026-10-14",
+      "end": "2026-10-14"
     },
     {
       "title": "PGM-005: Vehicle 02 CoDR Package",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-07",
-      "end": "2026-10-08"
+      "start": "2026-10-14",
+      "end": "2026-10-15"
     },
     {
       "title": "FIT-017: Vehicle/operations requirements to satisfy FAI Section 12",
@@ -424,8 +424,15 @@
       "title": "PROP-003: Build CoDR P180-RXi Thrust Model",
       "status": "Done",
       "program": "Vehicle 02",
-      "start": "2026-09-24",
-      "end": "2026-09-26"
+      "start": "2026-09-25",
+      "end": "2026-10-01"
+    },
+    {
+      "title": "PGM-006: V02 Optimization Stage 2",
+      "status": "Done",
+      "program": "Vehicle 02",
+      "start": "2026-10-13",
+      "end": "2026-10-14"
     }
   ],
   "completions": {
@@ -461,5 +468,5 @@
     },
     "generatedAt": "2026-10-14T16:04:44.022Z"
   },
-  "itemsGeneratedAt": "2026-10-14T03:50:16.941Z"
+  "itemsGeneratedAt": "2026-10-14T16:41:31.039Z"
 }
