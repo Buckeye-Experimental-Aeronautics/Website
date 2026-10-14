@@ -19,7 +19,7 @@
       "status": "In Progress",
       "program": "Vehicle 01",
       "start": "2026-09-17",
-      "end": "2026-10-13"
+      "end": "2026-10-14"
     },
     {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
@@ -310,7 +310,7 @@
     },
     {
       "title": "STR-007: Build Concept Mass Models",
-      "status": "In Progress",
+      "status": "In Review",
       "program": "Vehicle 02",
       "start": "2026-09-29",
       "end": "2026-09-30"
@@ -331,7 +331,7 @@
     },
     {
       "title": "ELE-008: Define Concept Avionics and Telemetry Feasibility",
-      "status": "Done",
+      "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-03",
       "end": "2026-10-04"
@@ -460,5 +460,5 @@
     },
     "generatedAt": "2026-10-14T02:26:34.254Z"
   },
-  "itemsGeneratedAt": "2026-10-13T18:58:04.075Z"
+  "itemsGeneratedAt": "2026-10-14T03:50:16.941Z"
 }
