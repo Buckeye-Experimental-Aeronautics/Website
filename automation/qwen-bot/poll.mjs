@@ -182,7 +182,18 @@ function runQwen(promptText, branchName) {
     `${siteDir} (plain HTML/CSS/JS, no build step, no framework). ` +
     `Only edit files under that site/ directory. Make the minimal, correct ` +
     `change that satisfies the request below -- don't refactor unrelated ` +
-    `code or add features that weren't asked for.\n\n${promptText}`;
+    `code or add features that weren't asked for.\n\n` +
+    `The request may contain links to files uploaded to the GitHub issue ` +
+    `(URLs like github.com/user-attachments/... or ` +
+    `user-images.githubusercontent.com/...). Do NOT assume every such link ` +
+    `is meant to become a site asset -- most attached images are just ` +
+    `screenshots or reference material for context. Only download one and ` +
+    `add it to the site if the request text explicitly asks you to (e.g. ` +
+    `"use this as the new logo", "add this photo to the team page"). When ` +
+    `it does: download it with a shell command (e.g. ` +
+    `Invoke-WebRequest -Uri <url> -OutFile <path>) into site/assets/img/ ` +
+    `with a short descriptive filename, then reference it from the ` +
+    `relevant page.\n\n${promptText}`;
   try {
     const out = execSync(`qwen ${JSON.stringify(fullPrompt)}`, {
       cwd: WORKDIR,

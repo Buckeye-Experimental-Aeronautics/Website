@@ -8,3 +8,8 @@
 # in sync rather than hardcoding usernames anywhere else.
 
 OrangeBannana
+VikiBax
+SamP521
+quinn-cohen
+# Jinit Patel -- pending exact GitHub username (several ambiguous matches,
+# none confirmed yet)
