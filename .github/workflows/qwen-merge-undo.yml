@@ -1,0 +1,38 @@
+# The ONLY part of the Qwen automation system that isn't AI and doesn't
+# depend on the admin's laptop being on. An admin commenting #MERGE or
+# #UNDO on an issue should always work, even if automation/qwen-bot/poll.mjs
+# (which runs locally and does the actual AI-driven editing) is down.
+#
+# See automation/README.md for the full system. automation/handle-command.mjs
+# does all the actual work here -- this workflow just wires it up.
+name: Qwen merge/undo commands
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  handle:
+    if: github.event.issue.pull_request == null
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Handle #MERGE / #UNDO
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_AUTHOR: ${{ github.event.comment.user.login }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: node automation/handle-command.mjs
