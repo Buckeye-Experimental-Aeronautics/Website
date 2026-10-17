@@ -1,0 +1,10 @@
+# GitHub usernames allowed to trigger the Qwen automation (issue tagging,
+# feedback iteration, #MERGE, #UNDO). One per line. Lines starting with #
+# are comments. Not case-sensitive when checked.
+#
+# This file is read by both automation/qwen-bot/poll.mjs (runs on the admin's
+# laptop) and automation/handle-command.mjs (runs in GitHub Actions) -- it's
+# the single source of truth for "who is allowed to do this", so keep it
+# in sync rather than hardcoding usernames anywhere else.
+
+OrangeBannana

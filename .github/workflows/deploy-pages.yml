@@ -6,11 +6,19 @@
 # paths used throughout the markup (/team.html, /assets/...) work directly.
 # If the custom domain is ever removed, Pages falls back to serving under
 # /Website/ and those paths would break — keep site/CNAME in place.
+#
+# Also publishes /prototype/ -- the live preview for whatever branch the
+# Qwen automation (automation/README.md) is currently working on, per
+# automation/prototype-branch.txt on main. This runs on pushes to main AND
+# to any ai/* branch so the prototype updates the moment Qwen pushes a new
+# commit, without waiting for something to land on main first. /prototype/
+# is just an overlay on top of the normal site/ deploy -- if the pointer is
+# empty or the branch is gone, /prototype/ is simply omitted.
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, "ai/**"]
   workflow_dispatch: {}
 
 permissions:
@@ -30,9 +38,30 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Build dist (site/ + optional /prototype/ overlay)
+        run: |
+          mkdir -p dist
+          cp -r site/. dist/
+
+          PROTO_BRANCH=$(cat automation/prototype-branch.txt 2>/dev/null | tr -d '[:space:]')
+          if [ -n "$PROTO_BRANCH" ]; then
+            echo "Overlaying prototype branch: $PROTO_BRANCH"
+            if git clone --depth 1 --branch "$PROTO_BRANCH" "https://github.com/${{ github.repository }}.git" /tmp/proto 2>/dev/null; then
+              mkdir -p dist/prototype
+              cp -r /tmp/proto/site/. dist/prototype/
+            else
+              echo "::warning::Prototype branch $PROTO_BRANCH not found, skipping overlay"
+            fi
+          else
+            echo "No active prototype"
+          fi
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: dist
       - id: deployment
         uses: actions/deploy-pages@v4
