@@ -22,13 +22,6 @@
       "end": "2026-09-15"
     },
     {
-      "title": "PROP-002: EDF Static Thrust Stand",
-      "status": "In Progress",
-      "program": "Vehicle 01",
-      "start": "2026-09-17",
-      "end": "2026-10-23"
-    },
-    {
       "title": "OPS-012: Stock Vehicle Flight Test TRR",
       "status": "Done",
       "program": "Vehicle 01",
@@ -118,6 +111,13 @@
       "program": "Vehicle 01",
       "start": "2026-09-08",
       "end": "2026-09-30"
+    },
+    {
+      "title": "PROP-002: EDF Static Thrust Stand",
+      "status": "On Hold",
+      "program": "Vehicle 01",
+      "start": "2026-09-17",
+      "end": "2026-10-24"
     },
     {
       "title": "AERO-002: CFD Template for a ~1m Long Plane",
@@ -433,6 +433,13 @@
       "program": "Vehicle 02",
       "start": "2026-10-13",
       "end": "2026-10-14"
+    },
+    {
+      "title": "PROP-005: Nozzle Continuity",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-23",
+      "end": "2026-10-24"
     }
   ],
   "completions": {
@@ -468,5 +475,5 @@
     },
     "generatedAt": "2026-10-24T02:15:23.610Z"
   },
-  "itemsGeneratedAt": "2026-10-23T16:35:46.913Z"
+  "itemsGeneratedAt": "2026-10-24T03:34:58.232Z"
 }
