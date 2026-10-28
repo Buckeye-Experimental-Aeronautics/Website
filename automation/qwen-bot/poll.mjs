@@ -120,9 +120,16 @@ function getCandidateIssues(admins) {
 }
 
 function getComments(number) {
-  return ghJson(
-    `api repos/${REPO}/issues/${number}/comments --paginate --jq '[.[] | {login: .user.login, body: .body, created_at: .created_at}]'`
-  );
+  // No --jq filter here on purpose: execSync runs through cmd.exe on
+  // Windows, which quotes shell arguments differently than the POSIX sh a
+  // jq filter string assumes, and mangles it. Fetch the raw objects and map
+  // the three fields we need in JS instead, which needs no shell quoting at all.
+  const raw = ghJson(`api repos/${REPO}/issues/${number}/comments --paginate`);
+  return raw.map((c) => ({
+    login: c.user.login,
+    body: c.body,
+    created_at: c.created_at,
+  }));
 }
 
 function postComment(number, body) {
