@@ -25,7 +25,7 @@
  * See automation/README.md for the full design and how to run this.
  */
 
-import { execSync } from "node:child_process";
+import { execSync, execFileSync } from "node:child_process";
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import path from "node:path";
 
@@ -228,9 +228,17 @@ function runQwen(promptText, branchName) {
     `with a short descriptive filename, then reference it from the ` +
     `relevant page.\n\n${promptText}`;
   try {
-    const out = execSync(`qwen ${JSON.stringify(fullPrompt)}`, {
+    // execFileSync with the prompt as its own argv element (not a shell
+    // string) -- issue text routinely contains characters cmd.exe treats
+    // specially (<, >, &, nested quotes, e.g. a pasted <img src="..."> tag),
+    // and no amount of JSON.stringify-style escaping is the right escaping
+    // for cmd.exe. shell: true is required on Windows because `qwen` is a
+    // .cmd shim, not a real .exe; Node applies its own correct per-argument
+    // cmd.exe quoting in that mode when args are passed as an array.
+    const out = execFileSync("qwen", [fullPrompt], {
       cwd: WORKDIR,
       encoding: "utf8",
+      shell: true,
     });
     writeFileSync(logFile, out, { flag: "a" });
     return true;
@@ -250,7 +258,13 @@ function commitAndPush(branchName, message) {
   } catch {
     // staged diff exists
   }
-  sh(`git commit -m ${JSON.stringify(message)}`);
+  // Same reasoning as the qwen invocation above: the commit message embeds
+  // a free-text issue title, which can contain cmd.exe-special characters.
+  // execFileSync with git's own argv avoids a shell entirely for this one.
+  execFileSync("git", ["commit", "-m", message], {
+    cwd: WORKDIR,
+    encoding: "utf8",
+  });
   sh(`git push -f origin ${branchName}`);
   return true;
 }
