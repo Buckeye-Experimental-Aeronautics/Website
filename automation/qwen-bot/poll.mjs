@@ -30,9 +30,19 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import path from "node:path";
 
 const REPO = "Buckeye-Experimental-Aeronautics/Website";
+// MAIN_DIR is where this script itself lives and always stays on `main` --
+// never branch-switched. WORKDIR is a SEPARATE, disposable clone used only
+// for checking out ai/issue-N branches and running Qwen. These must not be
+// the same directory: this script used to run from the same clone it
+// checked out branches in, which meant every checkout silently replaced the
+// running code (including bugfixes to this very file) with whatever
+// automation/ looked like on that branch at fork time.
+const MAIN_DIR =
+  process.env.QWEN_BOT_MAIN_DIR ||
+  "C:\\Workspace\\projects\\bexa-website\\repos\\Website";
 const WORKDIR =
   process.env.QWEN_BOT_WORKDIR ||
-  "C:\\Workspace\\projects\\bexa-website\\repos\\Website";
+  "C:\\Workspace\\projects\\bexa-website\\automation-runtime\\qwen-workdir";
 const LOG_DIR =
   process.env.QWEN_BOT_LOG_DIR ||
   "C:\\Workspace\\projects\\bexa-website\\automation-logs";
@@ -40,6 +50,18 @@ const POLL_INTERVAL_MS = Number(process.env.QWEN_BOT_POLL_MS || 60_000);
 const QWEN_TAG = "[QWEN]";
 const BOT_MARKER = "<!-- qwen-bot:status -->";
 const COMMAND_RE = /(^|\s)#(merge|undo)(\s|$)/i;
+
+function ensureWorkdir() {
+  if (existsSync(path.join(WORKDIR, ".git"))) return;
+  log(`WORKDIR ${WORKDIR} doesn't exist yet -- cloning it`);
+  mkdirSync(path.dirname(WORKDIR), { recursive: true });
+  execSync(
+    `git clone https://github.com/${REPO}.git ${JSON.stringify(WORKDIR)}`,
+    { stdio: "inherit" }
+  );
+  execSync(`git config user.name "Qwen Bot"`, { cwd: WORKDIR });
+  execSync(`git config user.email "bexa.aero@gmail.com"`, { cwd: WORKDIR });
+}
 
 function loadGhToken() {
   // Read once, keep only in this process's env -- never log it.
@@ -78,8 +100,12 @@ function log(msg) {
 }
 
 function readAdmins() {
+  // From MAIN_DIR, not WORKDIR -- WORKDIR spends most of its time checked
+  // out to an ai/issue-N branch, and admins.txt should always mean "what's
+  // on main right now", not whatever an in-progress branch happened to
+  // fork with.
   const text = readFileSync(
-    path.join(WORKDIR, "automation", "admins.txt"),
+    path.join(MAIN_DIR, "automation", "admins.txt"),
     "utf8"
   );
   return new Set(
@@ -368,6 +394,7 @@ function tick() {
 
 async function loop() {
   loadGhToken();
+  ensureWorkdir();
   ensureLabelExists("qwen:queued", "fbca04", "Waiting for the prototype slot");
   ensureLabelExists("qwen:active", "0e8a16", "Currently occupying the prototype slot");
   ensureLabelExists("qwen:merged", "6f42c1", "Qwen's changes were merged to main");
