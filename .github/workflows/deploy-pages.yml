@@ -14,6 +14,16 @@
 # commit, without waiting for something to land on main first. /prototype/
 # is just an overlay on top of the normal site/ deploy -- if the pointer is
 # empty or the branch is gone, /prototype/ is simply omitted.
+#
+# The /prototype/ copy has every root-absolute reference (/assets/...,
+# nav links, etc.) rewritten to /prototype/assets/... etc. Without this, a
+# page under /prototype/ still points at the REAL site root for everything,
+# since root-absolute paths ignore whatever subpath they're served from --
+# an asset that only exists on the prototype branch (not yet merged to
+# main) would 404 forever, even though the file is right there in the
+# deployed /prototype/ folder. Found this the hard way: an image Qwen
+# added rendered as a broken image on the preview because the browser was
+# requesting flybexa.com/assets/... instead of flybexa.com/prototype/assets/....
 name: Deploy to GitHub Pages
 
 on:
@@ -52,6 +62,17 @@ jobs:
             if git clone --depth 1 --branch "$PROTO_BRANCH" "https://github.com/${{ github.repository }}.git" /tmp/proto 2>/dev/null; then
               mkdir -p dist/prototype
               cp -r /tmp/proto/site/. dist/prototype/
+              find dist/prototype -type f \( -name "*.html" -o -name "*.css" -o -name "*.js" -o -name "*.json" \) -print0 \
+                | xargs -0 sed -i \
+                    -e 's#href="/#href="/prototype/#g' \
+                    -e "s#href='/#href='/prototype/#g" \
+                    -e 's#src="/#src="/prototype/#g' \
+                    -e "s#src='/#src='/prototype/#g" \
+                    -e 's#url("/#url("/prototype/#g' \
+                    -e "s#url('/#url('/prototype/#g" \
+                    -e 's#url(/#url(/prototype/#g' \
+                    -e 's#fetch("/#fetch("/prototype/#g' \
+                    -e "s#fetch('/#fetch('/prototype/#g"
             else
               echo "::warning::Prototype branch $PROTO_BRANCH not found, skipping overlay"
             fi
