@@ -439,77 +439,203 @@
       "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-23",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-006: Outer Mold Line (OML)",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-007: Thermal Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-008: Control Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-009: Aerodynamic Force Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-010: Wind Tunnel Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-011: Baseline Geometry CAD",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-012: Aero Test Conditions",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-013: Wing and Airfoil Selection",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-014: Fuselage and Packing Envelope",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
     },
     {
       "title": "AERO-015: Empennage Design",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-29"
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-020: Launch Mechanism",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-29",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-024: Initial Rail Catapult Design",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-29",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-025: Launch Mechanism CAD",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-29",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-026: Launch Mechanism Analysis",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-027: Launch Mechanism Potential Risk and Transportation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-028: Launch Mechanism Testing Procedure",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-10: Power System",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-16: Wiring Map Drawing",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-019: Flight Controller Investigation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-21: Telemetry Module Investigation",
+      "status": "In Progress",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-021: Recovery Mechanism",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-029: Initial Recovery Design",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-030: Recovery Mechanism CAD",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-031: Recovery Mechanism Analysis",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-032: Recovery Mechanism Potential Risk and Transportation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-033: Launch Mechanism Testing Procedure",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-022: Ground Support and Checkout System",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-023: Flight Range and Operation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
     }
   ],
   "completions": {
@@ -547,5 +673,5 @@
     },
     "generatedAt": "2026-10-30T03:15:21.583Z"
   },
-  "itemsGeneratedAt": "2026-10-29T18:07:17.969Z"
+  "itemsGeneratedAt": "2026-10-30T04:42:12.463Z"
 }
