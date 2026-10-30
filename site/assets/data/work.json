@@ -515,53 +515,53 @@
       "title": "FIT-020: Launch Mechanism",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-29",
-      "end": "2026-10-30"
+      "start": "2026-11-04",
+      "end": "2026-11-13"
     },
     {
       "title": "FIT-024: Initial Rail Catapult Design",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-29",
-      "end": "2026-10-30"
+      "start": "2026-11-04",
+      "end": "2026-11-06"
     },
     {
       "title": "FIT-025: Launch Mechanism CAD",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-29",
-      "end": "2026-10-30"
+      "start": "2026-11-10",
+      "end": "2026-11-10"
     },
     {
       "title": "FIT-026: Launch Mechanism Analysis",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-11",
+      "end": "2026-11-11"
     },
     {
       "title": "FIT-027: Launch Mechanism Potential Risk and Transportation",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-12",
+      "end": "2026-11-12"
     },
     {
       "title": "FIT-028: Launch Mechanism Testing Procedure",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-13",
+      "end": "2026-11-13"
     },
     {
-      "title": "ELE-10: Power System",
+      "title": "ELE-010: Power System",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
       "end": "2026-10-30"
     },
     {
-      "title": "ELE-16: Wiring Map Drawing",
+      "title": "ELE-016: Wiring Map Drawing",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
@@ -575,7 +575,7 @@
       "end": "2026-10-30"
     },
     {
-      "title": "ELE-21: Telemetry Module Investigation",
+      "title": "ELE-021: Telemetry Module Investigation",
       "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-30",
@@ -585,57 +585,204 @@
       "title": "FIT-021: Recovery Mechanism",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-04",
+      "end": "2026-11-19"
     },
     {
       "title": "FIT-029: Initial Recovery Design",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-07",
+      "end": "2026-11-09"
     },
     {
       "title": "FIT-030: Recovery Mechanism CAD",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-14",
+      "end": "2026-11-14"
     },
     {
       "title": "FIT-031: Recovery Mechanism Analysis",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-15",
+      "end": "2026-11-17"
     },
     {
       "title": "FIT-032: Recovery Mechanism Potential Risk and Transportation",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-18",
+      "end": "2026-11-18"
     },
     {
       "title": "FIT-033: Launch Mechanism Testing Procedure",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-19",
+      "end": "2026-11-19"
     },
     {
       "title": "FIT-022: Ground Support and Checkout System",
       "status": "Backlog",
       "program": "Vehicle 02",
-      "start": "2026-10-30",
-      "end": "2026-10-30"
+      "start": "2026-11-20",
+      "end": "2026-11-21"
     },
     {
       "title": "FIT-023: Flight Range and Operation",
       "status": "Backlog",
       "program": "Vehicle 02",
+      "start": "2026-11-01",
+      "end": "2026-11-24"
+    },
+    {
+      "title": "ELE-011: Flight Controller System",
+      "status": "Backlog",
+      "program": "Vehicle 02",
       "start": "2026-10-30",
       "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-025: ECU Component Identification",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-013: Propulsion Electronics",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-022: Servo Research",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-023: Receiver Selection",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-024: Transmitter Selection",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-012: Component Selection",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-017: Electronics Packaging & Envelope",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-020: Flight Controller Software Implementation & Research",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-026: Online Data Smoother Investigation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "ELE-027: Offline Data Smoother Investigation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-034: Equipment and Personnel",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-20",
+      "end": "2026-11-21"
+    },
+    {
+      "title": "ELE-014: Data Interpretation Methods",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-035: Preflight Checklist",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-20",
+      "end": "2026-11-21"
+    },
+    {
+      "title": "ELE-015: Battery Investigation",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-036: Checkout System",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-20",
+      "end": "2026-11-21"
+    },
+    {
+      "title": "ELE-018: Failure Modes & Failsafes",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-10-30",
+      "end": "2026-10-30"
+    },
+    {
+      "title": "FIT-037: Flight path(s)",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-01",
+      "end": "2026-11-01"
+    },
+    {
+      "title": "FIT-038: Flight Location",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-02",
+      "end": "2026-11-02"
+    },
+    {
+      "title": "FIT-039: Failsafe and Abort Requirements",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-03",
+      "end": "2026-11-03"
+    },
+    {
+      "title": "FIT-040: FAA Part 107 Waiver Drafts",
+      "status": "Backlog",
+      "program": "Vehicle 02",
+      "start": "2026-11-22",
+      "end": "2026-11-24"
     }
   ],
   "completions": {
@@ -673,5 +820,5 @@
     },
     "generatedAt": "2026-10-30T17:21:36.876Z"
   },
-  "itemsGeneratedAt": "2026-10-30T04:42:12.463Z"
+  "itemsGeneratedAt": "2026-10-30T17:47:27.299Z"
 }
