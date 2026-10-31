@@ -439,77 +439,77 @@
       "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-23",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-006: Outer Mold Line (OML)",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-007: Thermal Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-008: Control Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-009: Aerodynamic Force Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-010: Wind Tunnel Model",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-011: Baseline Geometry CAD",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-012: Aero Test Conditions",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-013: Wing and Airfoil Selection",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-014: Fuselage and Packing Envelope",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "AERO-015: Empennage Design",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-27",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "FIT-020: Launch Mechanism",
@@ -558,28 +558,28 @@
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-016: Wiring Map Drawing",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-019: Flight Controller Investigation",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-021: Telemetry Module Investigation",
       "status": "In Progress",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "FIT-021: Recovery Mechanism",
@@ -642,77 +642,77 @@
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-025: ECU Component Identification",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-013: Propulsion Electronics",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-022: Servo Research",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-023: Receiver Selection",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-024: Transmitter Selection",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-012: Component Selection",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-017: Electronics Packaging & Envelope",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-020: Flight Controller Software Implementation & Research",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-026: Online Data Smoother Investigation",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "ELE-027: Offline Data Smoother Investigation",
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "FIT-034: Equipment and Personnel",
@@ -726,7 +726,7 @@
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "FIT-035: Preflight Checklist",
@@ -740,7 +740,7 @@
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "FIT-036: Checkout System",
@@ -754,7 +754,7 @@
       "status": "Backlog",
       "program": "Vehicle 02",
       "start": "2026-10-30",
-      "end": "2026-10-30"
+      "end": "2026-10-31"
     },
     {
       "title": "FIT-037: Flight path(s)",
@@ -820,5 +820,5 @@
     },
     "generatedAt": "2026-10-31T02:58:56.784Z"
   },
-  "itemsGeneratedAt": "2026-10-30T17:47:27.299Z"
+  "itemsGeneratedAt": "2026-10-31T04:26:18.981Z"
 }
